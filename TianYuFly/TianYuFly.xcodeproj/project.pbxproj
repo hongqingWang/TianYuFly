@@ -7,21 +7,91 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1843EDAC1F2AD191006A487C /* part.json in Resources */ = {isa = PBXBuildFile; fileRef = 1843EDAB1F2AD191006A487C /* part.json */; };
+		1843EDB51F2AE38E006A487C /* HQEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDB41F2AE38E006A487C /* HQEViewController.swift */; };
+		1843EDB71F2AE39F006A487C /* HQFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDB61F2AE39F006A487C /* HQFViewController.swift */; };
+		1843EDB91F2AE3AB006A487C /* HQGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDB81F2AE3AB006A487C /* HQGViewController.swift */; };
+		1843EDBB1F2AE3B3006A487C /* HQHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDBA1F2AE3B3006A487C /* HQHViewController.swift */; };
+		1843EDBD1F2AE3BD006A487C /* HQIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDBC1F2AE3BD006A487C /* HQIViewController.swift */; };
+		1843EDBF1F2AE3C7006A487C /* HQJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDBE1F2AE3C7006A487C /* HQJViewController.swift */; };
+		1843EDC11F2AE3D0006A487C /* HQKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDC01F2AE3D0006A487C /* HQKViewController.swift */; };
+		1843EDC61F2B0D36006A487C /* HQPartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDC31F2B0D36006A487C /* HQPartCell.swift */; };
+		1843EDC71F2B0D36006A487C /* HQPartCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDC41F2B0D36006A487C /* HQPartCollectionView.swift */; };
+		1843EDC81F2B0D36006A487C /* HQPartViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDC51F2B0D36006A487C /* HQPartViewLayout.swift */; };
 		1844466A1F288D24006BF41B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184446691F288D24006BF41B /* AppDelegate.swift */; };
-		1844466C1F288D24006BF41B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844466B1F288D24006BF41B /* ViewController.swift */; };
-		1844466F1F288D24006BF41B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1844466D1F288D24006BF41B /* Main.storyboard */; };
 		184446711F288D24006BF41B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184446701F288D24006BF41B /* Assets.xcassets */; };
-		184446741F288D24006BF41B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184446721F288D24006BF41B /* LaunchScreen.storyboard */; };
+		18C33F5B1F29E3C90043C448 /* HQMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C33F5A1F29E3C90043C448 /* HQMainView.swift */; };
+		18C96E461F29C9F600774ACE /* HQStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E1F1F29C9F600774ACE /* HQStatus.swift */; };
+		18C96E471F29C9F600774ACE /* HQCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E221F29C9F600774ACE /* HQCommon.swift */; };
+		18C96E481F29C9F600774ACE /* HQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E241F29C9F600774ACE /* HQBarButtonItem.swift */; };
+		18C96E491F29C9F600774ACE /* HQBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E251F29C9F600774ACE /* HQBundle.swift */; };
+		18C96E4A1F29C9F600774ACE /* HQButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E261F29C9F600774ACE /* HQButton.swift */; };
+		18C96E4B1F29C9F600774ACE /* HQColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E271F29C9F600774ACE /* HQColor.swift */; };
+		18C96E4C1F29C9F600774ACE /* HQImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E281F29C9F600774ACE /* HQImage.swift */; };
+		18C96E4D1F29C9F600774ACE /* HQImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E291F29C9F600774ACE /* HQImageView.swift */; };
+		18C96E4E1F29C9F600774ACE /* HQLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E2A1F29C9F600774ACE /* HQLable.swift */; };
+		18C96E4F1F29C9F600774ACE /* HQScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E2B1F29C9F600774ACE /* HQScreen.swift */; };
+		18C96E501F29C9F600774ACE /* HQTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E2C1F29C9F600774ACE /* HQTextField.swift */; };
+		18C96E511F29C9F600774ACE /* HQNetWorkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E2E1F29C9F600774ACE /* HQNetWorkManager+Extension.swift */; };
+		18C96E521F29C9F600774ACE /* HQNetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E2F1F29C9F600774ACE /* HQNetWorkManager.swift */; };
+		18C96E531F29C9F600774ACE /* HQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E321F29C9F600774ACE /* HQAViewController.swift */; };
+		18C96E541F29C9F600774ACE /* HQBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E341F29C9F600774ACE /* HQBViewController.swift */; };
+		18C96E551F29C9F600774ACE /* HQCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E361F29C9F600774ACE /* HQCViewController.swift */; };
+		18C96E561F29C9F600774ACE /* HQDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E381F29C9F600774ACE /* HQDViewController.swift */; };
+		18C96E571F29C9F600774ACE /* HQLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E3A1F29C9F600774ACE /* HQLoginController.swift */; };
+		18C96E581F29C9F600774ACE /* HQBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E3C1F29C9F600774ACE /* HQBaseViewController.swift */; };
+		18C96E591F29C9F600774ACE /* HQMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E3D1F29C9F600774ACE /* HQMainViewController.swift */; };
+		18C96E5A1F29C9F600774ACE /* HQNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E3E1F29C9F600774ACE /* HQNavigationController.swift */; };
+		18C96E5C1F29C9F600774ACE /* HQDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E411F29C9F600774ACE /* HQDemoViewController.swift */; };
+		18C96E5D1F29C9F600774ACE /* HQVistorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E431F29C9F600774ACE /* HQVistorView.swift */; };
+		18C96E5E1F29C9F600774ACE /* HQStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E451F29C9F600774ACE /* HQStatusListViewModel.swift */; };
+		3C367367431C189CF69239D0 /* Pods_TianYuFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19320E539E743654C2786C87 /* Pods_TianYuFly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1843EDAB1F2AD191006A487C /* part.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = part.json; sourceTree = "<group>"; };
+		1843EDB41F2AE38E006A487C /* HQEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQEViewController.swift; sourceTree = "<group>"; };
+		1843EDB61F2AE39F006A487C /* HQFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQFViewController.swift; sourceTree = "<group>"; };
+		1843EDB81F2AE3AB006A487C /* HQGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQGViewController.swift; sourceTree = "<group>"; };
+		1843EDBA1F2AE3B3006A487C /* HQHViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQHViewController.swift; sourceTree = "<group>"; };
+		1843EDBC1F2AE3BD006A487C /* HQIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQIViewController.swift; sourceTree = "<group>"; };
+		1843EDBE1F2AE3C7006A487C /* HQJViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQJViewController.swift; sourceTree = "<group>"; };
+		1843EDC01F2AE3D0006A487C /* HQKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQKViewController.swift; sourceTree = "<group>"; };
+		1843EDC31F2B0D36006A487C /* HQPartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQPartCell.swift; sourceTree = "<group>"; };
+		1843EDC41F2B0D36006A487C /* HQPartCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQPartCollectionView.swift; sourceTree = "<group>"; };
+		1843EDC51F2B0D36006A487C /* HQPartViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQPartViewLayout.swift; sourceTree = "<group>"; };
 		184446661F288D24006BF41B /* TianYuFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TianYuFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184446691F288D24006BF41B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1844466B1F288D24006BF41B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1844466E1F288D24006BF41B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		184446701F288D24006BF41B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		184446731F288D24006BF41B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		184446751F288D24006BF41B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C33F5A1F29E3C90043C448 /* HQMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQMainView.swift; sourceTree = "<group>"; };
+		18C96E1F1F29C9F600774ACE /* HQStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQStatus.swift; sourceTree = "<group>"; };
+		18C96E221F29C9F600774ACE /* HQCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQCommon.swift; sourceTree = "<group>"; };
+		18C96E241F29C9F600774ACE /* HQBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQBarButtonItem.swift; sourceTree = "<group>"; };
+		18C96E251F29C9F600774ACE /* HQBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQBundle.swift; sourceTree = "<group>"; };
+		18C96E261F29C9F600774ACE /* HQButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQButton.swift; sourceTree = "<group>"; };
+		18C96E271F29C9F600774ACE /* HQColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQColor.swift; sourceTree = "<group>"; };
+		18C96E281F29C9F600774ACE /* HQImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQImage.swift; sourceTree = "<group>"; };
+		18C96E291F29C9F600774ACE /* HQImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQImageView.swift; sourceTree = "<group>"; };
+		18C96E2A1F29C9F600774ACE /* HQLable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLable.swift; sourceTree = "<group>"; };
+		18C96E2B1F29C9F600774ACE /* HQScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQScreen.swift; sourceTree = "<group>"; };
+		18C96E2C1F29C9F600774ACE /* HQTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQTextField.swift; sourceTree = "<group>"; };
+		18C96E2E1F29C9F600774ACE /* HQNetWorkManager+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HQNetWorkManager+Extension.swift"; sourceTree = "<group>"; };
+		18C96E2F1F29C9F600774ACE /* HQNetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQNetWorkManager.swift; sourceTree = "<group>"; };
+		18C96E321F29C9F600774ACE /* HQAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQAViewController.swift; sourceTree = "<group>"; };
+		18C96E341F29C9F600774ACE /* HQBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQBViewController.swift; sourceTree = "<group>"; };
+		18C96E361F29C9F600774ACE /* HQCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQCViewController.swift; sourceTree = "<group>"; };
+		18C96E381F29C9F600774ACE /* HQDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQDViewController.swift; sourceTree = "<group>"; };
+		18C96E3A1F29C9F600774ACE /* HQLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLoginController.swift; sourceTree = "<group>"; };
+		18C96E3C1F29C9F600774ACE /* HQBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQBaseViewController.swift; sourceTree = "<group>"; };
+		18C96E3D1F29C9F600774ACE /* HQMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQMainViewController.swift; sourceTree = "<group>"; };
+		18C96E3E1F29C9F600774ACE /* HQNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQNavigationController.swift; sourceTree = "<group>"; };
+		18C96E411F29C9F600774ACE /* HQDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQDemoViewController.swift; sourceTree = "<group>"; };
+		18C96E431F29C9F600774ACE /* HQVistorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQVistorView.swift; sourceTree = "<group>"; };
+		18C96E451F29C9F600774ACE /* HQStatusListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQStatusListViewModel.swift; sourceTree = "<group>"; };
+		19320E539E743654C2786C87 /* Pods_TianYuFly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TianYuFly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C11E7DBDF884B3E67DB2EC5 /* Pods-TianYuFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianYuFly.release.xcconfig"; path = "Pods/Target Support Files/Pods-TianYuFly/Pods-TianYuFly.release.xcconfig"; sourceTree = "<group>"; };
+		90D6F2B2B57E314D7A08CDD0 /* Pods-TianYuFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianYuFly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TianYuFly/Pods-TianYuFly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +99,94 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C367367431C189CF69239D0 /* Pods_TianYuFly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03599D3C05E22DE97B99CA26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19320E539E743654C2786C87 /* Pods_TianYuFly.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1843EDAD1F2AE354006A487C /* E */ = {
+			isa = PBXGroup;
+			children = (
+				1843EDB41F2AE38E006A487C /* HQEViewController.swift */,
+			);
+			path = E;
+			sourceTree = "<group>";
+		};
+		1843EDAE1F2AE354006A487C /* F */ = {
+			isa = PBXGroup;
+			children = (
+				1843EDB61F2AE39F006A487C /* HQFViewController.swift */,
+			);
+			path = F;
+			sourceTree = "<group>";
+		};
+		1843EDAF1F2AE354006A487C /* G */ = {
+			isa = PBXGroup;
+			children = (
+				1843EDB81F2AE3AB006A487C /* HQGViewController.swift */,
+			);
+			path = G;
+			sourceTree = "<group>";
+		};
+		1843EDB01F2AE354006A487C /* H */ = {
+			isa = PBXGroup;
+			children = (
+				1843EDBA1F2AE3B3006A487C /* HQHViewController.swift */,
+			);
+			path = H;
+			sourceTree = "<group>";
+		};
+		1843EDB11F2AE354006A487C /* I */ = {
+			isa = PBXGroup;
+			children = (
+				1843EDBC1F2AE3BD006A487C /* HQIViewController.swift */,
+			);
+			path = I;
+			sourceTree = "<group>";
+		};
+		1843EDB21F2AE354006A487C /* J */ = {
+			isa = PBXGroup;
+			children = (
+				1843EDBE1F2AE3C7006A487C /* HQJViewController.swift */,
+			);
+			path = J;
+			sourceTree = "<group>";
+		};
+		1843EDB31F2AE354006A487C /* K */ = {
+			isa = PBXGroup;
+			children = (
+				1843EDC01F2AE3D0006A487C /* HQKViewController.swift */,
+			);
+			path = K;
+			sourceTree = "<group>";
+		};
+		1843EDC21F2B0CEB006A487C /* Part */ = {
+			isa = PBXGroup;
+			children = (
+				1843EDC41F2B0D36006A487C /* HQPartCollectionView.swift */,
+				1843EDC51F2B0D36006A487C /* HQPartViewLayout.swift */,
+				1843EDC31F2B0D36006A487C /* HQPartCell.swift */,
+			);
+			path = Part;
+			sourceTree = "<group>";
+		};
 		1844465D1F288D24006BF41B = {
 			isa = PBXGroup;
 			children = (
 				184446681F288D24006BF41B /* TianYuFly */,
 				184446671F288D24006BF41B /* Products */,
+				B0AAB94D6D27E91502D0E66A /* Pods */,
+				03599D3C05E22DE97B99CA26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +201,182 @@
 		184446681F288D24006BF41B /* TianYuFly */ = {
 			isa = PBXGroup;
 			children = (
+				18C96E1D1F29C9F600774ACE /* Classes */,
 				184446691F288D24006BF41B /* AppDelegate.swift */,
-				1844466B1F288D24006BF41B /* ViewController.swift */,
-				1844466D1F288D24006BF41B /* Main.storyboard */,
 				184446701F288D24006BF41B /* Assets.xcassets */,
-				184446721F288D24006BF41B /* LaunchScreen.storyboard */,
 				184446751F288D24006BF41B /* Info.plist */,
 			);
 			path = TianYuFly;
+			sourceTree = "<group>";
+		};
+		18C96E1D1F29C9F600774ACE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E1E1F29C9F600774ACE /* Model */,
+				18C96E301F29C9F600774ACE /* View */,
+				18C96E441F29C9F600774ACE /* ViewModel */,
+				18C96E201F29C9F600774ACE /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		18C96E1E1F29C9F600774ACE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E1F1F29C9F600774ACE /* HQStatus.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18C96E201F29C9F600774ACE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E2D1F29C9F600774ACE /* Network */,
+				18C96E231F29C9F600774ACE /* Extensions */,
+				18C96E211F29C9F600774ACE /* Common */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		18C96E211F29C9F600774ACE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E221F29C9F600774ACE /* HQCommon.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		18C96E231F29C9F600774ACE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E241F29C9F600774ACE /* HQBarButtonItem.swift */,
+				18C96E251F29C9F600774ACE /* HQBundle.swift */,
+				18C96E261F29C9F600774ACE /* HQButton.swift */,
+				18C96E271F29C9F600774ACE /* HQColor.swift */,
+				18C96E281F29C9F600774ACE /* HQImage.swift */,
+				18C96E291F29C9F600774ACE /* HQImageView.swift */,
+				18C96E2A1F29C9F600774ACE /* HQLable.swift */,
+				18C96E2B1F29C9F600774ACE /* HQScreen.swift */,
+				18C96E2C1F29C9F600774ACE /* HQTextField.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18C96E2D1F29C9F600774ACE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E2E1F29C9F600774ACE /* HQNetWorkManager+Extension.swift */,
+				18C96E2F1F29C9F600774ACE /* HQNetWorkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		18C96E301F29C9F600774ACE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E3B1F29C9F600774ACE /* Main */,
+				18C96E421F29C9F600774ACE /* Vistor */,
+				18C96E391F29C9F600774ACE /* Login */,
+				18C96E311F29C9F600774ACE /* A */,
+				18C96E331F29C9F600774ACE /* B */,
+				18C96E351F29C9F600774ACE /* C */,
+				18C96E371F29C9F600774ACE /* D */,
+				1843EDAD1F2AE354006A487C /* E */,
+				1843EDAE1F2AE354006A487C /* F */,
+				1843EDAF1F2AE354006A487C /* G */,
+				1843EDB01F2AE354006A487C /* H */,
+				1843EDB11F2AE354006A487C /* I */,
+				1843EDB21F2AE354006A487C /* J */,
+				1843EDB31F2AE354006A487C /* K */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18C96E311F29C9F600774ACE /* A */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E321F29C9F600774ACE /* HQAViewController.swift */,
+			);
+			path = A;
+			sourceTree = "<group>";
+		};
+		18C96E331F29C9F600774ACE /* B */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E341F29C9F600774ACE /* HQBViewController.swift */,
+			);
+			path = B;
+			sourceTree = "<group>";
+		};
+		18C96E351F29C9F600774ACE /* C */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E361F29C9F600774ACE /* HQCViewController.swift */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		18C96E371F29C9F600774ACE /* D */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E381F29C9F600774ACE /* HQDViewController.swift */,
+			);
+			path = D;
+			sourceTree = "<group>";
+		};
+		18C96E391F29C9F600774ACE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E3A1F29C9F600774ACE /* HQLoginController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		18C96E3B1F29C9F600774ACE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E3D1F29C9F600774ACE /* HQMainViewController.swift */,
+				18C96E3E1F29C9F600774ACE /* HQNavigationController.swift */,
+				18C96E3C1F29C9F600774ACE /* HQBaseViewController.swift */,
+				1843EDC21F2B0CEB006A487C /* Part */,
+				18C33F5A1F29E3C90043C448 /* HQMainView.swift */,
+				1843EDAB1F2AD191006A487C /* part.json */,
+				18C96E401F29C9F600774ACE /* Test */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		18C96E401F29C9F600774ACE /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E411F29C9F600774ACE /* HQDemoViewController.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		18C96E421F29C9F600774ACE /* Vistor */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E431F29C9F600774ACE /* HQVistorView.swift */,
+			);
+			path = Vistor;
+			sourceTree = "<group>";
+		};
+		18C96E441F29C9F600774ACE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				18C96E451F29C9F600774ACE /* HQStatusListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B0AAB94D6D27E91502D0E66A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90D6F2B2B57E314D7A08CDD0 /* Pods-TianYuFly.debug.xcconfig */,
+				6C11E7DBDF884B3E67DB2EC5 /* Pods-TianYuFly.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +386,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 184446781F288D24006BF41B /* Build configuration list for PBXNativeTarget "TianYuFly" */;
 			buildPhases = (
+				4982555A811FC23196249F0A /* [CP] Check Pods Manifest.lock */,
 				184446621F288D24006BF41B /* Sources */,
 				184446631F288D24006BF41B /* Frameworks */,
 				184446641F288D24006BF41B /* Resources */,
+				06BC78087FF28FFBE0A70984 /* [CP] Embed Pods Frameworks */,
+				E8744BBEBA7021045FBA9B08 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -90,6 +408,7 @@
 		1844465E1F288D24006BF41B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HQ;
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "王红庆";
@@ -123,44 +442,106 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184446741F288D24006BF41B /* LaunchScreen.storyboard in Resources */,
 				184446711F288D24006BF41B /* Assets.xcassets in Resources */,
-				1844466F1F288D24006BF41B /* Main.storyboard in Resources */,
+				1843EDAC1F2AD191006A487C /* part.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06BC78087FF28FFBE0A70984 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TianYuFly/Pods-TianYuFly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4982555A811FC23196249F0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E8744BBEBA7021045FBA9B08 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TianYuFly/Pods-TianYuFly-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		184446621F288D24006BF41B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1844466C1F288D24006BF41B /* ViewController.swift in Sources */,
+				18C96E5D1F29C9F600774ACE /* HQVistorView.swift in Sources */,
+				18C96E551F29C9F600774ACE /* HQCViewController.swift in Sources */,
+				18C96E531F29C9F600774ACE /* HQAViewController.swift in Sources */,
+				18C96E511F29C9F600774ACE /* HQNetWorkManager+Extension.swift in Sources */,
+				1843EDBB1F2AE3B3006A487C /* HQHViewController.swift in Sources */,
+				18C96E521F29C9F600774ACE /* HQNetWorkManager.swift in Sources */,
+				18C96E581F29C9F600774ACE /* HQBaseViewController.swift in Sources */,
+				18C96E4F1F29C9F600774ACE /* HQScreen.swift in Sources */,
+				18C96E491F29C9F600774ACE /* HQBundle.swift in Sources */,
+				18C96E501F29C9F600774ACE /* HQTextField.swift in Sources */,
+				1843EDB71F2AE39F006A487C /* HQFViewController.swift in Sources */,
+				1843EDC61F2B0D36006A487C /* HQPartCell.swift in Sources */,
+				1843EDC11F2AE3D0006A487C /* HQKViewController.swift in Sources */,
+				18C96E461F29C9F600774ACE /* HQStatus.swift in Sources */,
+				18C96E5C1F29C9F600774ACE /* HQDemoViewController.swift in Sources */,
+				18C96E4B1F29C9F600774ACE /* HQColor.swift in Sources */,
+				18C96E4A1F29C9F600774ACE /* HQButton.swift in Sources */,
+				18C96E4C1F29C9F600774ACE /* HQImage.swift in Sources */,
+				1843EDB91F2AE3AB006A487C /* HQGViewController.swift in Sources */,
+				18C96E5A1F29C9F600774ACE /* HQNavigationController.swift in Sources */,
+				18C96E4E1F29C9F600774ACE /* HQLable.swift in Sources */,
+				1843EDBD1F2AE3BD006A487C /* HQIViewController.swift in Sources */,
+				18C96E481F29C9F600774ACE /* HQBarButtonItem.swift in Sources */,
+				18C96E541F29C9F600774ACE /* HQBViewController.swift in Sources */,
+				18C96E561F29C9F600774ACE /* HQDViewController.swift in Sources */,
+				18C96E591F29C9F600774ACE /* HQMainViewController.swift in Sources */,
+				1843EDC81F2B0D36006A487C /* HQPartViewLayout.swift in Sources */,
+				18C96E4D1F29C9F600774ACE /* HQImageView.swift in Sources */,
+				18C96E571F29C9F600774ACE /* HQLoginController.swift in Sources */,
+				1843EDB51F2AE38E006A487C /* HQEViewController.swift in Sources */,
+				1843EDBF1F2AE3C7006A487C /* HQJViewController.swift in Sources */,
+				1843EDC71F2B0D36006A487C /* HQPartCollectionView.swift in Sources */,
+				18C96E5E1F29C9F600774ACE /* HQStatusListViewModel.swift in Sources */,
+				18C96E471F29C9F600774ACE /* HQCommon.swift in Sources */,
+				18C33F5B1F29E3C90043C448 /* HQMainView.swift in Sources */,
 				1844466A1F288D24006BF41B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		1844466D1F288D24006BF41B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1844466E1F288D24006BF41B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		184446721F288D24006BF41B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				184446731F288D24006BF41B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		184446761F288D24006BF41B /* Debug */ = {
@@ -258,9 +639,12 @@
 		};
 		184446791F288D24006BF41B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90D6F2B2B57E314D7A08CDD0 /* Pods-TianYuFly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TianYuFly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HNAGroup.Unicare.TianYuFly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -270,9 +654,12 @@
 		};
 		1844467A1F288D24006BF41B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C11E7DBDF884B3E67DB2EC5 /* Pods-TianYuFly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TianYuFly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HNAGroup.Unicare.TianYuFly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +686,7 @@
 				1844467A1F288D24006BF41B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
