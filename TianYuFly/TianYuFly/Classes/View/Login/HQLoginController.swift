@@ -60,14 +60,14 @@ extension HQLoginController {
     /// 注册
     @objc fileprivate func registe() {
         
-        let vc = HQAViewController()
+        let vc = HQRegisteController()
         vc.navItem.title = "注册"
         navigationController?.pushViewController(vc, animated: true)
     }
     /// 忘记密码
     @objc fileprivate func forgetPassword() {
         
-        let vc = HQBViewController()
+        let vc = HQForgetPasswordController()
         vc.navItem.title = "忘记密码"
         navigationController?.pushViewController(vc, animated: true)
     }
