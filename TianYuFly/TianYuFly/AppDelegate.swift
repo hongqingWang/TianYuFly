@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.backgroundColor = UIColor.white
         window?.rootViewController = HQNavigationController(rootViewController: HQMainViewController())
+//        window?.rootViewController = HQNavigationController(rootViewController: HQLoginController())
         window?.makeKeyAndVisible()
         
         setupNotification(application: application)

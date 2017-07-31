@@ -1,36 +1,27 @@
 //
-//  HQLoginController.swift
-//  HQSwiftMVVM
+//  HQLoginView.swift
+//  TianYuFly
 //
-//  Created by 王红庆 on 2017/7/25.
+//  Created by 王红庆 on 2017/7/31.
 //  Copyright © 2017年 王红庆. All rights reserved.
 //
 
 import UIKit
-import SnapKit
 
-fileprivate let margin: CGFloat = 16.0
-fileprivate let buttonHeight: CGFloat = 40.0
+fileprivate let margin: CGFloat = 16
+fileprivate let buttonHeight: CGFloat = 40
 
-class HQLoginController: UIViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+class HQLoginView: UIView {
 
-        view.backgroundColor = UIColor.white
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
-//        title = "登录"
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(hq_title: "关闭", target: self, action: #selector(close))
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(hq_title: "注册", target: self, action: #selector(registe))
-        
-        setupUI()
+//        setupUI()
+//        backgroundColor = UIColor.yellow
     }
     
-    @objc fileprivate func close() {
-        dismiss(animated: false, completion: nil)
-    }
-    @objc fileprivate func registe() {
-        print("注册")
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - 私有控件
@@ -47,48 +38,35 @@ class HQLoginController: UIViewController {
         carve.backgroundColor = UIColor.lightGray
         return carve
     }()
-    fileprivate lazy var loginButton: UIButton = UIButton(hq_title: "登录", normalBackColor: UIColor.orange, highBackColor: UIColor.hq_color(withHex: 0xB5751F), size: CGSize(width: UIScreen.hq_screenWidth() - (margin * 2), height: buttonHeight))
-}
-
-// MARK: - Target Action
-extension HQLoginController {
-    
-    /// 登录
-    @objc fileprivate func login() {
-        dismiss(animated: false, completion: nil)
-        
-        HQNetWorkManager.shared.accessToken = "2.00It5tsGQ6eDJE4ecbf2d825DCpbBD"
-    }
+    lazy var loginButton: UIButton = UIButton(hq_title: "登录111", normalBackColor: UIColor.orange, highBackColor: UIColor.hq_color(withHex: 0xB5751F), size: CGSize(width: UIScreen.hq_screenWidth() - (margin * 2), height: buttonHeight))
 }
 
 // MARK: - 设置登录控制器界面
-extension HQLoginController {
+extension HQLoginView {
     
     fileprivate func setupUI() {
         
-        view.addSubview(logoImageView)
-        view.addSubview(accountTextField)
-        view.addSubview(carve01)
-        view.addSubview(passwordTextField)
-        view.addSubview(carve02)
-        view.addSubview(loginButton)
-        
-        loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
+        addSubview(logoImageView)
+        addSubview(accountTextField)
+        addSubview(carve01)
+        addSubview(passwordTextField)
+        addSubview(carve02)
+        addSubview(loginButton)
         
         logoImageView.snp.makeConstraints { (make) in
-            make.top.equalTo(view).offset(margin * 7)
-            make.centerX.equalTo(view)
+            make.top.equalTo(self).offset(margin * 7)
+            make.centerX.equalTo(self)
         }
         accountTextField.snp.makeConstraints { (make) in
             make.top.equalTo(logoImageView.snp.bottom).offset(margin * 2)
-            make.left.equalTo(view).offset(margin)
-            make.right.equalTo(view).offset(-margin)
+            make.left.equalTo(self).offset(margin)
+            make.right.equalTo(self).offset(-margin)
             make.height.equalTo(buttonHeight)
         }
         carve01.snp.makeConstraints { (make) in
             make.left.equalTo(accountTextField)
             make.bottom.equalTo(accountTextField)
-            make.right.equalTo(view)
+            make.right.equalTo(self)
             make.height.equalTo(0.5)
         }
         passwordTextField.snp.makeConstraints { (make) in

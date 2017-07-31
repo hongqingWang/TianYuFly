@@ -11,7 +11,7 @@ import UIKit
 class HQBaseViewController: UIViewController {
     
     /// 设置访客视图信息字典
-    var visitorInfoDictionary: [String: String]?
+//    var visitorInfoDictionary: [String: String]?
     
     /// 用户不登录就不显示`tableView`
     var tableView: UITableView?
@@ -72,7 +72,8 @@ extension HQBaseViewController {
         view.backgroundColor = UIColor.hq_randomColor()
         setupNavigationBar()
         
-        HQNetWorkManager.shared.userLogon ? setupTableView() : setupVistorView()
+        HQNetWorkManager.shared.userLogon ? setupTableView() : ()
+//        HQNetWorkManager.shared.userLogon ? setupTableView() : setupLoginView()
     }
     
     /// 设置 TableView
@@ -95,12 +96,19 @@ extension HQBaseViewController {
         refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
     }
     
+    func setupLoginView() {
+        
+        let loginView = HQLoginView(frame: view.bounds)
+        view.insertSubview(loginView, belowSubview: navigationBar)
+        
+    }
+    
     /// 设置访客视图
     fileprivate func setupVistorView() {
         
         let vistorView = HQVistorView(frame: view.bounds)
         view.insertSubview(vistorView, belowSubview: navigationBar)
-        vistorView.vistorInfo = visitorInfoDictionary
+//        vistorView.vistorInfo = visitorInfoDictionary
         vistorView.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
         vistorView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
         

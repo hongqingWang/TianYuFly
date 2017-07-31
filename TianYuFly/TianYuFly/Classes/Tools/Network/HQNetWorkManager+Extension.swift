@@ -58,3 +58,10 @@ extension HQNetWorkManager {
         }
     }
 }
+
+extension HQNetWorkManager {
+    
+    func loadToken() {
+        
+    }
+}
