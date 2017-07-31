@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		183FCD0F1F2ECF07007A4A5E /* HQLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183FCD0E1F2ECF07007A4A5E /* HQLoginView.swift */; };
 		1843EDB51F2AE38E006A487C /* HQEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDB41F2AE38E006A487C /* HQEViewController.swift */; };
 		1843EDB71F2AE39F006A487C /* HQFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDB61F2AE39F006A487C /* HQFViewController.swift */; };
 		1843EDB91F2AE3AB006A487C /* HQGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDB81F2AE3AB006A487C /* HQGViewController.swift */; };
@@ -50,7 +49,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		183FCD0E1F2ECF07007A4A5E /* HQLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLoginView.swift; sourceTree = "<group>"; };
 		1843EDB41F2AE38E006A487C /* HQEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQEViewController.swift; sourceTree = "<group>"; };
 		1843EDB61F2AE39F006A487C /* HQFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQFViewController.swift; sourceTree = "<group>"; };
 		1843EDB81F2AE3AB006A487C /* HQGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQGViewController.swift; sourceTree = "<group>"; };
@@ -331,7 +329,6 @@
 			isa = PBXGroup;
 			children = (
 				18C96E3A1F29C9F600774ACE /* HQLoginController.swift */,
-				183FCD0E1F2ECF07007A4A5E /* HQLoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -520,7 +517,6 @@
 				1843EDC11F2AE3D0006A487C /* HQKViewController.swift in Sources */,
 				18C96E461F29C9F600774ACE /* HQStatus.swift in Sources */,
 				18C96E5C1F29C9F600774ACE /* HQDemoViewController.swift in Sources */,
-				183FCD0F1F2ECF07007A4A5E /* HQLoginView.swift in Sources */,
 				18C96E4B1F29C9F600774ACE /* HQColor.swift in Sources */,
 				18C96E4A1F29C9F600774ACE /* HQButton.swift in Sources */,
 				18C96E4C1F29C9F600774ACE /* HQImage.swift in Sources */,

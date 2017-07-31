@@ -52,17 +52,17 @@ class HQBaseViewController: UIViewController {
     }
 }
 
-// MARK: - 注册/登录 点击事件
-extension HQBaseViewController {
-    
-    @objc fileprivate func login() {
-        
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: HQUserShouldLoginNotification), object: nil)
-    }
-    @objc fileprivate func register() {
-        print("注册")
-    }
-}
+//// MARK: - 注册/登录 点击事件
+//extension HQBaseViewController {
+//    
+//    @objc fileprivate func login() {
+//        
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: HQUserShouldLoginNotification), object: nil)
+//    }
+//    @objc fileprivate func register() {
+//        print("注册")
+//    }
+//}
 
 // MARK: - 设置界面
 extension HQBaseViewController {
@@ -96,24 +96,17 @@ extension HQBaseViewController {
         refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
     }
     
-    func setupLoginView() {
-        
-        let loginView = HQLoginView(frame: view.bounds)
-        view.insertSubview(loginView, belowSubview: navigationBar)
-        
-    }
-    
     /// 设置访客视图
     fileprivate func setupVistorView() {
         
         let vistorView = HQVistorView(frame: view.bounds)
         view.insertSubview(vistorView, belowSubview: navigationBar)
 //        vistorView.vistorInfo = visitorInfoDictionary
-        vistorView.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
-        vistorView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
+//        vistorView.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
+//        vistorView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
         
-        navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
-        navItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(login))
+//        navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
+//        navItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(login))
     }
     
     /// 设置导航条

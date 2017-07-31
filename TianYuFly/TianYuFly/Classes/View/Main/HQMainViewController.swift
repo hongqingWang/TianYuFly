@@ -15,10 +15,6 @@ fileprivate let loopViewHeight: CGFloat = 180
 
 class HQMainViewController: HQBaseViewController {
     
-    
-    var loginView: HQLoginView?
-//    var viewX: UIView?
-    
     /// 标题和图片字典数组
     var array: [[String: AnyObject]]?
     

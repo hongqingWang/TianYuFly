@@ -12,42 +12,40 @@ import SnapKit
 fileprivate let margin: CGFloat = 16.0
 fileprivate let buttonHeight: CGFloat = 40.0
 
-class HQLoginController: UIViewController {
+class HQLoginController: HQBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = UIColor.white
         
-//        title = "登录"
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(hq_title: "关闭", target: self, action: #selector(close))
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(hq_title: "注册", target: self, action: #selector(registe))
+        navigationController?.isNavigationBarHidden = true
+        view.backgroundColor = UIColor.white
         
         setupUI()
     }
     
-    @objc fileprivate func close() {
-        dismiss(animated: false, completion: nil)
-    }
-    @objc fileprivate func registe() {
-        print("注册")
-    }
-    
     // MARK: - 私有控件
+    /// Logo
     fileprivate lazy var logoImageView: UIImageView = UIImageView(hq_imageName: "logo")
+    /// 帐号
     fileprivate lazy var accountTextField: UITextField = UITextField(hq_placeholder: "13122223333")
     fileprivate lazy var carve01: UIView = {
         let carve = UIView()
         carve.backgroundColor = UIColor.lightGray
         return carve
     } ()
-    lazy var passwordTextField: UITextField = UITextField(hq_placeholder: "123456", isSecureText: true)
+    /// 密码
+    fileprivate lazy var passwordTextField: UITextField = UITextField(hq_placeholder: "123456", isSecureText: true)
     fileprivate lazy var carve02: UIView = {
         let carve = UIView()
         carve.backgroundColor = UIColor.lightGray
         return carve
     }()
+    /// 登录按钮
     fileprivate lazy var loginButton: UIButton = UIButton(hq_title: "登录", normalBackColor: UIColor.orange, highBackColor: UIColor.hq_color(withHex: 0xB5751F), size: CGSize(width: UIScreen.hq_screenWidth() - (margin * 2), height: buttonHeight))
+    /// 注册按钮
+    lazy var registeButton: UIButton = UIButton(hq_title: "新用户注册", fontSize: 14, normalColor: UIColor.orange, highlightedColor: UIColor.lightGray)
+    /// 忘记密码按钮
+    lazy var forgetPwdButton: UIButton = UIButton(hq_title: "忘记密码", fontSize: 14, normalColor: UIColor.orange, highlightedColor: UIColor.lightGray)
 }
 
 // MARK: - Target Action
@@ -55,9 +53,23 @@ extension HQLoginController {
     
     /// 登录
     @objc fileprivate func login() {
-        dismiss(animated: false, completion: nil)
         
+        dismiss(animated: false, completion: nil)
         HQNetWorkManager.shared.accessToken = "2.00It5tsGQ6eDJE4ecbf2d825DCpbBD"
+    }
+    /// 注册
+    @objc fileprivate func registe() {
+        
+        let vc = HQAViewController()
+        vc.navItem.title = "注册"
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    /// 忘记密码
+    @objc fileprivate func forgetPassword() {
+        
+        let vc = HQBViewController()
+        vc.navItem.title = "忘记密码"
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -72,8 +84,12 @@ extension HQLoginController {
         view.addSubview(passwordTextField)
         view.addSubview(carve02)
         view.addSubview(loginButton)
+        view.addSubview(registeButton)
+        view.addSubview(forgetPwdButton)
         
         loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
+        registeButton.addTarget(self, action: #selector(registe), for: .touchUpInside)
+        forgetPwdButton.addTarget(self, action: #selector(forgetPassword), for: .touchUpInside)
         
         logoImageView.snp.makeConstraints { (make) in
             make.top.equalTo(view).offset(margin * 7)
@@ -108,6 +124,14 @@ extension HQLoginController {
             make.left.equalTo(passwordTextField)
             make.right.equalTo(passwordTextField)
             make.height.equalTo(passwordTextField)
+        }
+        registeButton.snp.makeConstraints { (make) in
+            make.top.equalTo(loginButton.snp.bottom).offset(margin)
+            make.left.equalTo(loginButton)
+        }
+        forgetPwdButton.snp.makeConstraints { (make) in
+            make.top.equalTo(registeButton)
+            make.right.equalTo(loginButton)
         }
     }
 }
