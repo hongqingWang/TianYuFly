@@ -10,6 +10,7 @@
 		1833E7661F30117A0002D886 /* HQUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833E7641F30117A0002D886 /* HQUserAccount.swift */; };
 		1833E7671F30117A0002D886 /* userAccount.json in Resources */ = {isa = PBXBuildFile; fileRef = 1833E7651F30117A0002D886 /* userAccount.json */; };
 		1833E7891F3064F20002D886 /* HQRegisteSecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833E7881F3064F20002D886 /* HQRegisteSecondController.swift */; };
+		1833E78B1F30706D0002D886 /* HQForgetPasswordSecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833E78A1F30706D0002D886 /* HQForgetPasswordSecondController.swift */; };
 		183FCD8E1F2F305A007A4A5E /* HQRegisteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183FCD8D1F2F305A007A4A5E /* HQRegisteController.swift */; };
 		183FCD901F2F3081007A4A5E /* HQForgetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183FCD8F1F2F3081007A4A5E /* HQForgetPasswordController.swift */; };
 		1843EDB51F2AE38E006A487C /* HQEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDB41F2AE38E006A487C /* HQEViewController.swift */; };
@@ -57,6 +58,7 @@
 		1833E7641F30117A0002D886 /* HQUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQUserAccount.swift; sourceTree = "<group>"; };
 		1833E7651F30117A0002D886 /* userAccount.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userAccount.json; sourceTree = "<group>"; };
 		1833E7881F3064F20002D886 /* HQRegisteSecondController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQRegisteSecondController.swift; sourceTree = "<group>"; };
+		1833E78A1F30706D0002D886 /* HQForgetPasswordSecondController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQForgetPasswordSecondController.swift; sourceTree = "<group>"; };
 		183FCD8D1F2F305A007A4A5E /* HQRegisteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQRegisteController.swift; sourceTree = "<group>"; };
 		183FCD8F1F2F3081007A4A5E /* HQForgetPasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQForgetPasswordController.swift; sourceTree = "<group>"; };
 		1843EDB41F2AE38E006A487C /* HQEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQEViewController.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				183FCD8D1F2F305A007A4A5E /* HQRegisteController.swift */,
 				1833E7881F3064F20002D886 /* HQRegisteSecondController.swift */,
 				183FCD8F1F2F3081007A4A5E /* HQForgetPasswordController.swift */,
+				1833E78A1F30706D0002D886 /* HQForgetPasswordSecondController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				18C96E5C1F29C9F600774ACE /* HQDemoViewController.swift in Sources */,
 				183FCD8E1F2F305A007A4A5E /* HQRegisteController.swift in Sources */,
 				18C96E4B1F29C9F600774ACE /* HQColor.swift in Sources */,
+				1833E78B1F30706D0002D886 /* HQForgetPasswordSecondController.swift in Sources */,
 				18C96E4A1F29C9F600774ACE /* HQButton.swift in Sources */,
 				18C96E4C1F29C9F600774ACE /* HQImage.swift in Sources */,
 				1843EDB91F2AE3AB006A487C /* HQGViewController.swift in Sources */,

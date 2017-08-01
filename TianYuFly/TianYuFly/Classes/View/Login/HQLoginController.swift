@@ -55,7 +55,7 @@ extension HQLoginController {
     @objc fileprivate func login() {
         
         HQNetWorkManager.shared.loadAccessToken(account: accountTextField.text ?? "", password: passwordTextField.text ?? "")
-        //        dismiss(animated: false, completion: nil)
+        dismiss(animated: false, completion: nil)
     }
     /// 注册
     @objc fileprivate func registe() {
