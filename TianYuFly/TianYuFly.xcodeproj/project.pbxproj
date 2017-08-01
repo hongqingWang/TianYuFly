@@ -248,8 +248,8 @@
 		18DDACDE1F30CF8D00970B8A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				18DDAD301F30D05E00970B8A /* HQACell.swift */,
 				18DDAD311F30D05E00970B8A /* HQAViewController.swift */,
+				18DDAD301F30D05E00970B8A /* HQACell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

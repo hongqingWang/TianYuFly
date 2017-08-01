@@ -44,8 +44,8 @@ extension HQAViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        cell.textLabel?.text = listViewModel.statusList[indexPath.row].text
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQACell
+//        cell.textLabel?.text = listViewModel.statusList[indexPath.row].text
         return cell
     }
 }
@@ -59,5 +59,6 @@ extension HQAViewController {
         
 //        tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellId)
         tableView?.register(HQACell.classForCoder(), forCellReuseIdentifier: cellId)
+        tableView?.rowHeight = 66
     }
 }
