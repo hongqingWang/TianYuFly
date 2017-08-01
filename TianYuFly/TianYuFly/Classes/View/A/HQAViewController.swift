@@ -8,12 +8,12 @@
 
 import UIKit
 
-fileprivate let cellId = "cellId"
+fileprivate let cellId = "HQACell"
 
 class HQAViewController: HQBaseViewController {
     
     fileprivate lazy var listViewModel = HQStatusListViewModel()
-
+    
     /// 加载数据
     override func loadData() {
         listViewModel.loadStatus(pullup: self.isPullup) { (isSuccess, shouldRefresh) in
@@ -50,14 +50,14 @@ extension HQAViewController {
     }
 }
 
-// MARK: - 设置界面
+// MARK: - UI
 extension HQAViewController {
     
     /// 重写父类的方法
     override func setupTableView() {
         super.setupTableView()
         
-        navItem.leftBarButtonItem = UIBarButtonItem(hq_title: "好友", target: self, action: #selector(showFriends))
-        tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellId)
+//        tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellId)
+        tableView?.register(HQACell.classForCoder(), forCellReuseIdentifier: cellId)
     }
 }

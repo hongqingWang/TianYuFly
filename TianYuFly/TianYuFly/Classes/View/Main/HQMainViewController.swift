@@ -71,7 +71,8 @@ extension HQMainViewController: UICollectionViewDelegate {
         switch indexPath.item {
         case 0:
             let vc = HQAViewController()
-            vc.navItem.title = array?[indexPath.item]["title"] as? String
+//            vc.navItem.title = array?[indexPath.item]["title"] as? String
+            vc.navItem.title = "后勤保障信息"
             navigationController?.pushViewController(vc, animated: true)
         case 1:
             let vc = HQBViewController()
