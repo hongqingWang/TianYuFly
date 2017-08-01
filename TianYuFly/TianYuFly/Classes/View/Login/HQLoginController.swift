@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 fileprivate let margin: CGFloat = 16.0
-fileprivate let buttonHeight: CGFloat = 40.0
+fileprivate let height: CGFloat = 40.0
 
 class HQLoginController: HQBaseViewController {
     
@@ -41,7 +41,7 @@ class HQLoginController: HQBaseViewController {
         return carve
     }()
     /// 登录按钮
-    fileprivate lazy var loginButton: UIButton = UIButton(hq_title: "登录", normalBackColor: UIColor.orange, highBackColor: UIColor.hq_color(withHex: 0xB5751F), size: CGSize(width: UIScreen.hq_screenWidth() - (margin * 2), height: buttonHeight))
+    fileprivate lazy var loginButton: UIButton = UIButton(hq_title: "登录", normalBackColor: UIColor.orange, highBackColor: UIColor.hq_color(withHex: 0xB5751F), size: CGSize(width: UIScreen.hq_screenWidth() - (margin * 2), height: height))
     /// 注册按钮
     lazy var registeButton: UIButton = UIButton(hq_title: "新用户注册", fontSize: 14, normalColor: UIColor.orange, highlightedColor: UIColor.lightGray)
     /// 忘记密码按钮
@@ -99,7 +99,7 @@ extension HQLoginController {
             make.top.equalTo(logoImageView.snp.bottom).offset(margin * 2)
             make.left.equalTo(view).offset(margin)
             make.right.equalTo(view).offset(-margin)
-            make.height.equalTo(buttonHeight)
+            make.height.equalTo(height)
         }
         carve01.snp.makeConstraints { (make) in
             make.left.equalTo(accountTextField)

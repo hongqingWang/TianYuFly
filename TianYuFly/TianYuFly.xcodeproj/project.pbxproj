@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1833E7661F30117A0002D886 /* HQUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833E7641F30117A0002D886 /* HQUserAccount.swift */; };
 		1833E7671F30117A0002D886 /* userAccount.json in Resources */ = {isa = PBXBuildFile; fileRef = 1833E7651F30117A0002D886 /* userAccount.json */; };
+		1833E7891F3064F20002D886 /* HQRegisteSecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833E7881F3064F20002D886 /* HQRegisteSecondController.swift */; };
 		183FCD8E1F2F305A007A4A5E /* HQRegisteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183FCD8D1F2F305A007A4A5E /* HQRegisteController.swift */; };
 		183FCD901F2F3081007A4A5E /* HQForgetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183FCD8F1F2F3081007A4A5E /* HQForgetPasswordController.swift */; };
 		1843EDB51F2AE38E006A487C /* HQEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDB41F2AE38E006A487C /* HQEViewController.swift */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		1833E7641F30117A0002D886 /* HQUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQUserAccount.swift; sourceTree = "<group>"; };
 		1833E7651F30117A0002D886 /* userAccount.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userAccount.json; sourceTree = "<group>"; };
+		1833E7881F3064F20002D886 /* HQRegisteSecondController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQRegisteSecondController.swift; sourceTree = "<group>"; };
 		183FCD8D1F2F305A007A4A5E /* HQRegisteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQRegisteController.swift; sourceTree = "<group>"; };
 		183FCD8F1F2F3081007A4A5E /* HQForgetPasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQForgetPasswordController.swift; sourceTree = "<group>"; };
 		1843EDB41F2AE38E006A487C /* HQEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQEViewController.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 			children = (
 				18C96E3A1F29C9F600774ACE /* HQLoginController.swift */,
 				183FCD8D1F2F305A007A4A5E /* HQRegisteController.swift */,
+				1833E7881F3064F20002D886 /* HQRegisteSecondController.swift */,
 				183FCD8F1F2F3081007A4A5E /* HQForgetPasswordController.swift */,
 			);
 			path = Login;
@@ -561,6 +564,7 @@
 				18C96E5E1F29C9F600774ACE /* HQStatusListViewModel.swift in Sources */,
 				18C96E471F29C9F600774ACE /* HQCommon.swift in Sources */,
 				18C33F5B1F29E3C90043C448 /* HQMainView.swift in Sources */,
+				1833E7891F3064F20002D886 /* HQRegisteSecondController.swift in Sources */,
 				1844466A1F288D24006BF41B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
