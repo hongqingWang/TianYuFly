@@ -45,24 +45,10 @@ class HQMainViewController: HQBaseViewController {
     fileprivate lazy var loopView: UIView = {
         
         let view = UIView()
+        view.backgroundColor = UIColor.hq_randomColor()
         view.frame = CGRect(x: 0, y: loopViewY, width: UIScreen.hq_screenWidth(), height: loopViewHeight)
         return view
     }()
-    
-    /// initLoginViewController
-    func initLoginViewController() {
-        
-        let nav = UINavigationController(rootViewController: HQLoginController())
-        /*
-         用此方法会有下面的警告
-         Presenting view controllers on detached view controllers is discouraged <TianYuFly.HQMainViewController: 0x7ffea46061b0>
-         */
-//        present(nav, animated: false, completion: nil)
-        /*
-         解决控制台警告的问题
-         */
-        UIApplication.shared.delegate?.window??.rootViewController?.present(nav, animated: false, completion: nil)
-    }
 }
 
 // MARK: - Target Action
@@ -147,5 +133,20 @@ extension HQMainViewController {
         view.addSubview(collectionView)
         
         NotificationCenter.default.addObserver(self, selector: #selector(login), name: NSNotification.Name(rawValue: HQUserShouldLoginNotification), object: nil)
+    }
+    
+    /// initLoginViewController
+    func initLoginViewController() {
+        
+        let nav = UINavigationController(rootViewController: HQLoginController())
+        /*
+         用此方法会有下面的警告
+         Presenting view controllers on detached view controllers is discouraged <TianYuFly.HQMainViewController: 0x7ffea46061b0>
+         */
+        //        present(nav, animated: false, completion: nil)
+        /*
+         解决控制台警告的问题
+         */
+        UIApplication.shared.delegate?.window??.rootViewController?.present(nav, animated: false, completion: nil)
     }
 }
