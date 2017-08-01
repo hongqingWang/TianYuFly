@@ -1,0 +1,46 @@
+[
+ {
+    "imageName" : "main_part_a",
+    "title" : "吃住行"
+ },
+ {
+    "imageName" : "main_part_b",
+    "title" : "训练计划"
+ },
+ {
+    "imageName" : "main_part_c",
+    "title" : "消息"
+ },
+ {
+    "imageName" : "main_part_d",
+    "title" : "在线学习"
+ },
+ {
+    "imageName" : "main_part_e",
+    "title" : "训练记录上传"
+ },
+ {
+    "imageName" : "main_part_f",
+    "title" : "满意度调查"
+ },
+ {
+    "imageName" : "main_part_g",
+    "title" : "考试成绩"
+ },
+ {
+    "imageName" : "main_part_h",
+    "title" : "我的信息"
+ },
+ {
+    "imageName" : "main_part_i",
+    "title" : "系统设置"
+ },
+ {
+    "imageName" : "main_part_j",
+    "title" : "关于我们"
+ },
+ {
+    "imageName" : "main_part_k",
+    "title" : "训练指南"
+ },
+]
