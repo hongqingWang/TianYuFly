@@ -54,8 +54,8 @@ extension HQLoginController {
     /// 登录
     @objc fileprivate func login() {
         
-        dismiss(animated: false, completion: nil)
-        HQNetWorkManager.shared.accessToken = "2.00It5tsGQ6eDJE4ecbf2d825DCpbBD"
+        HQNetWorkManager.shared.loadAccessToken(account: accountTextField.text ?? "", password: passwordTextField.text ?? "")
+        //        dismiss(animated: false, completion: nil)
     }
     /// 注册
     @objc fileprivate func registe() {
@@ -73,7 +73,7 @@ extension HQLoginController {
     }
 }
 
-// MARK: - 设置登录控制器界面
+// MARK: - UI
 extension HQLoginController {
     
     fileprivate func setupUI() {

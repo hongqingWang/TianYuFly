@@ -12,24 +12,28 @@ class HQRegisteController: HQBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        view.backgroundColor = UIColor.lightGray
+        
+        navItem.leftBarButtonItem = UIBarButtonItem(hq_title: "返回", target: self, action: #selector(back), isBack: true)
+        
+        setupUI()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    // MARK: - 私有控件
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+// MARK: - Target Action
+extension HQRegisteController {
+    
+    @objc fileprivate func back() {
+        
+        navigationController?.popViewController(animated: true)
     }
-    */
+}
 
+// MARK: - UI
+extension HQRegisteController {
+    
+    fileprivate func setupUI() {
+        
+    }
 }

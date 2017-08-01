@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1833E7661F30117A0002D886 /* HQUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833E7641F30117A0002D886 /* HQUserAccount.swift */; };
+		1833E7671F30117A0002D886 /* userAccount.json in Resources */ = {isa = PBXBuildFile; fileRef = 1833E7651F30117A0002D886 /* userAccount.json */; };
 		183FCD8E1F2F305A007A4A5E /* HQRegisteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183FCD8D1F2F305A007A4A5E /* HQRegisteController.swift */; };
 		183FCD901F2F3081007A4A5E /* HQForgetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183FCD8F1F2F3081007A4A5E /* HQForgetPasswordController.swift */; };
 		1843EDB51F2AE38E006A487C /* HQEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EDB41F2AE38E006A487C /* HQEViewController.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1833E7641F30117A0002D886 /* HQUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQUserAccount.swift; sourceTree = "<group>"; };
+		1833E7651F30117A0002D886 /* userAccount.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userAccount.json; sourceTree = "<group>"; };
 		183FCD8D1F2F305A007A4A5E /* HQRegisteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQRegisteController.swift; sourceTree = "<group>"; };
 		183FCD8F1F2F3081007A4A5E /* HQForgetPasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQForgetPasswordController.swift; sourceTree = "<group>"; };
 		1843EDB41F2AE38E006A487C /* HQEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQEViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +120,15 @@
 				19320E539E743654C2786C87 /* Pods_TianYuFly.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1833E7631F3011630002D886 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1833E7641F30117A0002D886 /* HQUserAccount.swift */,
+				1833E7651F30117A0002D886 /* userAccount.json */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1843EDAD1F2AE354006A487C /* E */ = {
@@ -270,8 +283,9 @@
 		18C96E2D1F29C9F600774ACE /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				18C96E2E1F29C9F600774ACE /* HQNetWorkManager+Extension.swift */,
 				18C96E2F1F29C9F600774ACE /* HQNetWorkManager.swift */,
+				18C96E2E1F29C9F600774ACE /* HQNetWorkManager+Extension.swift */,
+				1833E7631F3011630002D886 /* Model */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -448,6 +462,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1833E7671F30117A0002D886 /* userAccount.json in Resources */,
 				1843EDCA1F2B12BA006A487C /* part.json in Resources */,
 				184446711F288D24006BF41B /* Assets.xcassets in Resources */,
 			);
@@ -536,6 +551,7 @@
 				18C96E541F29C9F600774ACE /* HQBViewController.swift in Sources */,
 				18C96E561F29C9F600774ACE /* HQDViewController.swift in Sources */,
 				18C96E591F29C9F600774ACE /* HQMainViewController.swift in Sources */,
+				1833E7661F30117A0002D886 /* HQUserAccount.swift in Sources */,
 				1843EDC81F2B0D36006A487C /* HQPartViewLayout.swift in Sources */,
 				18C96E4D1F29C9F600774ACE /* HQImageView.swift in Sources */,
 				18C96E571F29C9F600774ACE /* HQLoginController.swift in Sources */,

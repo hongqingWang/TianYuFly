@@ -22,14 +22,14 @@ class HQMainViewController: HQBaseViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.white
+        navItem.title = "天羽飞训"
         
-        setupNormalView()
+        setupUI()
         /*
          写在这里控制台会有警告
          Unbalanced calls to begin/end appearance transitions for <TianYuFly.HQNavigationController: 0x7ffea4824600>
          */
         HQNetWorkManager.shared.userLogon ? () : initLoginViewController()
-        title = "天羽飞训"
     }
     
 //    override func viewDidAppear(_ animated: Bool) {
@@ -45,33 +45,11 @@ class HQMainViewController: HQBaseViewController {
     fileprivate lazy var loopView: UIView = {
         
         let view = UIView()
-        view.backgroundColor = UIColor.hq_randomColor()
         view.frame = CGRect(x: 0, y: loopViewY, width: UIScreen.hq_screenWidth(), height: loopViewHeight)
         return view
     }()
     
-    // MARK: - Login
-    @objc fileprivate func login(n: Notification) {
-        
-        print("用户登录通知 \(n)")
-        let nav = UINavigationController(rootViewController: HQLoginController())
-        present(nav, animated: true, completion: nil)
-    }
-    
-    
-    func setupNormalView() {
-        
-        let collectionView = HQPartCollectionView()
-        collectionView.delegate = self
-
-        array = collectionView.partArray
-
-        view.addSubview(loopView)
-        view.addSubview(collectionView)
-
-        NotificationCenter.default.addObserver(self, selector: #selector(login), name: NSNotification.Name(rawValue: HQUserShouldLoginNotification), object: nil)
-    }
-    
+    /// initLoginViewController
     func initLoginViewController() {
         
         let nav = UINavigationController(rootViewController: HQLoginController())
@@ -87,32 +65,17 @@ class HQMainViewController: HQBaseViewController {
     }
 }
 
-//override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-//    let touch = touches.anyObject() as UITouch
-//    let point = touch.locationInView(self.view)
-//    
-//    if(testView.tag==100){
-//        println("Tag 100")
-//        testView.removeFromSuperview()
-//    }
-//    else{
-//        println("tag not found")
-//    }
-//    
-//}
-//
-//override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-//    let touch = touches.anyObject() as UITouch
-//    let point = touch.locationInView(self.view)
-//    
-//    if let viewWithTag = self.view.viewWithTag(100) {
-//        println("Tag 100")
-//        viewWithTag.removeFromSuperview()
-//    }
-//    else {
-//        println("tag not found")
-//    }
-//}
+// MARK: - Target Action
+extension HQMainViewController {
+    
+    // MARK: - Login
+    @objc fileprivate func login(n: Notification) {
+        
+        print("用户登录通知 \(n)")
+        let nav = UINavigationController(rootViewController: HQLoginController())
+        present(nav, animated: true, completion: nil)
+    }
+}
 
 // MARK: - UICollectionViewDelegate
 extension HQMainViewController: UICollectionViewDelegate {
@@ -167,5 +130,22 @@ extension HQMainViewController: UICollectionViewDelegate {
         default:
             break
         }
+    }
+}
+
+// MARK: - UI
+extension HQMainViewController {
+    
+    fileprivate func setupUI() {
+        
+        let collectionView = HQPartCollectionView()
+        collectionView.delegate = self
+        
+        array = collectionView.partArray
+        
+        view.addSubview(loopView)
+        view.addSubview(collectionView)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(login), name: NSNotification.Name(rawValue: HQUserShouldLoginNotification), object: nil)
     }
 }

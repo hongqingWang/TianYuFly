@@ -10,9 +10,6 @@ import UIKit
 
 class HQBaseViewController: UIViewController {
     
-    /// 设置访客视图信息字典
-//    var visitorInfoDictionary: [String: String]?
-    
     /// 用户不登录就不显示`tableView`
     var tableView: UITableView?
     /// 刷新控件
@@ -52,28 +49,15 @@ class HQBaseViewController: UIViewController {
     }
 }
 
-//// MARK: - 注册/登录 点击事件
-//extension HQBaseViewController {
-//    
-//    @objc fileprivate func login() {
-//        
-//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: HQUserShouldLoginNotification), object: nil)
-//    }
-//    @objc fileprivate func register() {
-//        print("注册")
-//    }
-//}
-
-// MARK: - 设置界面
+// MARK: - UI
 extension HQBaseViewController {
     
     fileprivate func setupUI() {
         
-        view.backgroundColor = UIColor.hq_randomColor()
+        view.backgroundColor = UIColor.white
         setupNavigationBar()
         
         HQNetWorkManager.shared.userLogon ? setupTableView() : ()
-//        HQNetWorkManager.shared.userLogon ? setupTableView() : setupLoginView()
     }
     
     /// 设置 TableView
