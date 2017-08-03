@@ -22,7 +22,7 @@ class HQForgetPasswordSecondController: UIViewController {
         
         setupUI()
     }
-    // MARK: - 私有控件
+    // MARK: - 私有控件 
     /// 描述`Label`
     fileprivate lazy var descLabel: UILabel = UILabel(hq_title: "输入你的新密码", color: UIColor.lightGray)
     /// 密码

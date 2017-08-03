@@ -56,7 +56,7 @@ extension HQACell {
         detailLable.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(margin / 4)
             make.left.equalTo(titleLabel)
-            make.right.equalTo(self).offset(0)
+            make.right.equalTo(self).offset(-margin / 4)
         }
     }
 }

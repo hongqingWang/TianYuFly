@@ -27,12 +27,6 @@ class HQAViewController: HQBaseViewController {
             }
         }
     }
-    
-    @objc fileprivate func showFriends() {
-        
-        let vc = HQDemoViewController()
-        navigationController?.pushViewController(vc, animated: true)
-    }
 }
 
 // MARK: - tableViewDataSource
@@ -50,6 +44,14 @@ extension HQAViewController {
     }
 }
 
+// MARK: - Target Action
+extension HQAViewController {
+    
+    @objc fileprivate func deleteToken() {
+        HQNetWorkManager.shared.userAccount.token = "aaa"
+    }
+}
+
 // MARK: - UI
 extension HQAViewController {
     
@@ -57,18 +59,8 @@ extension HQAViewController {
     override func setupTableView() {
         super.setupTableView()
         
-        navItem.rightBarButtonItem = UIBarButtonItem(hq_title: "清空token", target: self, action: #selector(deleteToken))
-        
 //        tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellId)
         tableView?.register(HQACell.classForCoder(), forCellReuseIdentifier: cellId)
         tableView?.rowHeight = 66
-    }
-}
-
-// MARK: - Target Action
-extension HQAViewController {
-    
-    @objc fileprivate func deleteToken() {
-        HQNetWorkManager.shared.userAccount.token = "aaa"
     }
 }

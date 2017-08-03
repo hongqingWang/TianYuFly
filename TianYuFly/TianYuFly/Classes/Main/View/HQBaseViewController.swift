@@ -109,6 +109,7 @@ extension HQBaseViewController {
                                                left: 0,
                                                bottom: tabBarController?.tabBar.bounds.height ?? 49,
                                                right: 0)
+        tableView?.scrollIndicatorInsets = tableView!.contentInset
         // 设置刷新控件
         refreshControl = UIRefreshControl()
         tableView?.addSubview(refreshControl!)
