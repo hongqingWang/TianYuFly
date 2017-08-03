@@ -1,16 +1,15 @@
 //
-//  HQStatus.swift
-//  HQSwiftMVVM
+//  HQAModel.swift
+//  TianYuFly
 //
-//  Created by 王红庆 on 2017/7/18.
+//  Created by 王红庆 on 2017/8/3.
 //  Copyright © 2017年 王红庆. All rights reserved.
 //
 
 import UIKit
 import YYModel
 
-/// 微博数据模型
-class HQStatus: NSObject {
+class HQAModel: NSObject {
     
     /*
      `Int`类型,在`64`位的机器是`64`位,在`32`位的机器是`32`位

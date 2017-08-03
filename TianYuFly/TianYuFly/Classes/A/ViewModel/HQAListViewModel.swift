@@ -1,8 +1,8 @@
 //
-//  HQStatusListViewModel.swift
-//  HQSwiftMVVM
+//  HQAListViewModel.swift
+//  TianYuFly
 //
-//  Created by 王红庆 on 2017/7/18.
+//  Created by 王红庆 on 2017/8/3.
 //  Copyright © 2017年 王红庆. All rights reserved.
 //
 
@@ -12,9 +12,9 @@ import Foundation
 fileprivate let maxPullupTryTimes = 3
 
 /// 微博数据列表视图模型
-class HQStatusListViewModel {
+class HQAListViewModel {
     
-    lazy var statusList = [HQStatus]()
+    lazy var statusList = [HQAModel]()
     
     /// 上拉刷新错误次数
     fileprivate var pullupErrorTimes = 0
@@ -39,7 +39,7 @@ class HQStatusListViewModel {
         
         HQNetWorkManager.shared.statusList(since_id: since_id, max_id: max_id) { (list, isSuccess) in
             
-            guard let array = NSArray.yy_modelArray(with: HQStatus.classForCoder(), json: list ?? []) as? [HQStatus] else {
+            guard let array = NSArray.yy_modelArray(with: HQAModel.classForCoder(), json: list ?? []) as? [HQAModel] else {
                 
                 completion(isSuccess, false)
                 

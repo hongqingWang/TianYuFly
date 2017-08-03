@@ -12,7 +12,7 @@ fileprivate let cellId = "HQACell"
 
 class HQAViewController: HQBaseViewController {
     
-    fileprivate lazy var listViewModel = HQStatusListViewModel()
+    fileprivate lazy var listViewModel = HQAListViewModel()
     
     /// 加载数据
     override func loadData() {
