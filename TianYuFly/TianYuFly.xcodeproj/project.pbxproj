@@ -11,6 +11,7 @@
 		1833E7671F30117A0002D886 /* userAccount.json in Resources */ = {isa = PBXBuildFile; fileRef = 1833E7651F30117A0002D886 /* userAccount.json */; };
 		1844466A1F288D24006BF41B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184446691F288D24006BF41B /* AppDelegate.swift */; };
 		184446711F288D24006BF41B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184446701F288D24006BF41B /* Assets.xcassets */; };
+		18A896BF1F32B6600064213B /* HQPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A896BE1F32B6600064213B /* HQPath.swift */; };
 		18C96E471F29C9F600774ACE /* HQCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E221F29C9F600774ACE /* HQCommon.swift */; };
 		18C96E481F29C9F600774ACE /* HQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E241F29C9F600774ACE /* HQBarButtonItem.swift */; };
 		18C96E491F29C9F600774ACE /* HQBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E251F29C9F600774ACE /* HQBundle.swift */; };
@@ -60,6 +61,7 @@
 		184446691F288D24006BF41B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		184446701F288D24006BF41B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		184446751F288D24006BF41B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A896BE1F32B6600064213B /* HQPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQPath.swift; sourceTree = "<group>"; };
 		18C96E221F29C9F600774ACE /* HQCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQCommon.swift; sourceTree = "<group>"; };
 		18C96E241F29C9F600774ACE /* HQBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQBarButtonItem.swift; sourceTree = "<group>"; };
 		18C96E251F29C9F600774ACE /* HQBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQBundle.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				18C96E281F29C9F600774ACE /* HQImage.swift */,
 				18C96E2A1F29C9F600774ACE /* HQLable.swift */,
 				18C96E2C1F29C9F600774ACE /* HQTextField.swift */,
+				18A896BE1F32B6600064213B /* HQPath.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -820,6 +823,7 @@
 				18C96E4B1F29C9F600774ACE /* HQColor.swift in Sources */,
 				18DDAD291F30D01E00970B8A /* HQLoginController.swift in Sources */,
 				18DDAD391F30D0A900970B8A /* HQDViewController.swift in Sources */,
+				18A896BF1F32B6600064213B /* HQPath.swift in Sources */,
 				18DDAD1C1F30CFF700970B8A /* HQPartCell.swift in Sources */,
 				18C96E4A1F29C9F600774ACE /* HQButton.swift in Sources */,
 				18DDAD371F30D09A00970B8A /* HQCViewController.swift in Sources */,

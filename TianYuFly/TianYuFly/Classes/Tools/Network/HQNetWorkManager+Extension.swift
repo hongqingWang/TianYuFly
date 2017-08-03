@@ -67,7 +67,8 @@ extension HQNetWorkManager {
     /// - Parameters:
     ///   - account: account
     ///   - password: password
-    func loadAccessToken(account: String, password: String) {
+    ///   - completion: 完成回调
+    func loadAccessToken(account: String, password: String, completion: (_ isSuccess: Bool)->()) {
         
         // 从`bundle`加载`data`
         let path = Bundle.main.path(forResource: "userAccount.json", ofType: nil)
@@ -81,6 +82,10 @@ extension HQNetWorkManager {
         
         // 直接用字典设置`userAccount`的属性
         self.userAccount.yy_modelSet(with: dict ?? [:])
-        print(self.userAccount.token ?? "")
+        
+        self.userAccount.saveAccount()
+        
+        // 完成回调
+        completion(true)
     }
 }

@@ -148,6 +148,6 @@ extension HQMainViewController {
         /*
          解决控制台警告的问题
          */
-        UIApplication.shared.delegate?.window??.rootViewController?.present(nav, animated: false, completion: nil)
+        UIApplication.shared.delegate?.window??.rootViewController?.present(nav, animated: true, completion: nil)
     }
 }

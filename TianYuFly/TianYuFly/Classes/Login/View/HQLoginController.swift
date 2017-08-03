@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import SVProgressHUD
 
 fileprivate let margin: CGFloat = 16.0
 fileprivate let height: CGFloat = 40.0
@@ -50,13 +51,33 @@ class HQLoginController: HQBaseViewController {
 
 // MARK: - Target Action
 extension HQLoginController {
-    
+
     /// 登录
     @objc fileprivate func login() {
         
-        HQNetWorkManager.shared.loadAccessToken(account: accountTextField.text ?? "", password: passwordTextField.text ?? "")
-        dismiss(animated: false, completion: nil)
+        HQNetWorkManager.shared.loadAccessToken(account: accountTextField.text ?? "", password: passwordTextField.text ?? "") { (isSuccess) in
+            
+            if !isSuccess {
+                
+                SVProgressHUD.showInfo(withStatus: "网络请求失败")
+                
+            } else {
+                
+                // 发送登录成功的通知
+                NotificationCenter.default.post(
+                    name: NSNotification.Name(rawValue: HQUserLoginSuccessNotification),
+                    object: nil)
+                // 关闭窗口
+                dismiss(animated: true, completion: nil)
+            }
+        }
     }
+//    /// 登录
+//    @objc fileprivate func login() {
+//        
+//        HQNetWorkManager.shared.loadAccessToken(account: accountTextField.text ?? "", password: passwordTextField.text ?? "")
+//
+//    }
     /// 注册
     @objc fileprivate func registe() {
         
