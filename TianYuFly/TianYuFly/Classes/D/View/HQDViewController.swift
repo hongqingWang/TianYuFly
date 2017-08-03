@@ -13,7 +13,7 @@ class HQDViewController: HQBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        HQNetWorkManager.shared.userAccount.token = nil
     }
 
     override func didReceiveMemoryWarning() {

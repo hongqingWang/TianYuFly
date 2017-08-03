@@ -30,8 +30,11 @@ class HQNetWorkManager: AFHTTPSessionManager {
         
         guard let token = userAccount.token else {
             
-            // FIXME: 发送通知,提示用户登录
+            // 发送通知,提示用户登录
             print("没有 token 需要重新登录")
+            NotificationCenter.default.post(
+                name: NSNotification.Name(rawValue: HQUserShouldLoginNotification),
+                object: "aaa")
             completion(nil, false)
             return
         }
@@ -66,6 +69,9 @@ class HQNetWorkManager: AFHTTPSessionManager {
                 print("token 过期了")
                 
                 // FIXME: 发送通知,提示用户再次登录
+                NotificationCenter.default.post(
+                    name: NSNotification.Name(rawValue: HQUserShouldLoginNotification),
+                    object: "bad token")
             }
             
             print("网络请求错误 \(error)")

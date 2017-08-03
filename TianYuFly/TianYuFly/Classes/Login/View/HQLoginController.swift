@@ -13,12 +13,11 @@ import SVProgressHUD
 fileprivate let margin: CGFloat = 16.0
 fileprivate let height: CGFloat = 40.0
 
-class HQLoginController: HQBaseViewController {
+class HQLoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.isNavigationBarHidden = true
         view.backgroundColor = UIColor.white
         
         setupUI()
@@ -72,24 +71,18 @@ extension HQLoginController {
             }
         }
     }
-//    /// 登录
-//    @objc fileprivate func login() {
-//        
-//        HQNetWorkManager.shared.loadAccessToken(account: accountTextField.text ?? "", password: passwordTextField.text ?? "")
-//
-//    }
     /// 注册
     @objc fileprivate func registe() {
         
         let vc = HQRegisteController()
-        vc.navItem.title = "注册"
+        vc.navigationItem.title = "注册"
         navigationController?.pushViewController(vc, animated: true)
     }
     /// 忘记密码
     @objc fileprivate func forgetPassword() {
         
         let vc = HQForgetPasswordController()
-        vc.navItem.title = "忘记密码"
+        vc.navigationItem.title = "忘记密码"
         navigationController?.pushViewController(vc, animated: true)
     }
 }

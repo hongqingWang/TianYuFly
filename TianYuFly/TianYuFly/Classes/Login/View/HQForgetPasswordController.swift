@@ -11,12 +11,13 @@ import UIKit
 fileprivate let margin: CGFloat = 16.0
 fileprivate let height: CGFloat = 40.0
 
-class HQForgetPasswordController: HQBaseViewController {
+class HQForgetPasswordController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navItem.leftBarButtonItem = UIBarButtonItem(hq_title: "返回", target: self, action: #selector(back), isBack: true)
+        view.backgroundColor = UIColor.white
+        navigationItem.leftBarButtonItem = UIBarButtonItem(hq_title: "返回", target: self, action: #selector(back), isBack: true)
         
         setupUI()
     }

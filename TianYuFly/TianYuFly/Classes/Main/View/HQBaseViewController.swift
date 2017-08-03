@@ -34,6 +34,20 @@ class HQBaseViewController: UIViewController {
         setupUI()
         
         HQNetWorkManager.shared.userLogon ? loadData() : ()
+        
+        // 监听登录成功的通知
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(loginSuccess),
+            name: NSNotification.Name(rawValue: HQUserLoginSuccessNotification),
+            object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(
+            self,
+            name: NSNotification.Name(rawValue: HQUserLoginSuccessNotification),
+            object: nil)
     }
     
     /// 加载数据,具体的实现由子类负责
@@ -49,6 +63,27 @@ class HQBaseViewController: UIViewController {
     }
 }
 
+// MARK: - Target Action
+extension HQBaseViewController {
+    
+    /// 登录成功
+    @objc fileprivate func loginSuccess(n: Notification) {
+        print("登录成功 \(n)")
+        
+//        navItem.leftBarButtonItem = nil
+//        navItem.rightBarButtonItem = nil
+        
+        // 在访问`view`的`getter`时,如果`view` == nil,会调用`loadView()`->`viewDidLoad()`
+        view = nil
+        
+        // 注销通知,因为重新执行`viewDidLoad()`会再次注册通知
+        NotificationCenter.default.removeObserver(
+            self,
+            name: NSNotification.Name(rawValue: HQUserLoginSuccessNotification),
+            object: nil)
+    }
+}
+
 // MARK: - UI
 extension HQBaseViewController {
     
@@ -57,7 +92,7 @@ extension HQBaseViewController {
         view.backgroundColor = UIColor.white
         setupNavigationBar()
         
-        HQNetWorkManager.shared.userLogon ? setupTableView() : ()
+        HQNetWorkManager.shared.userLogon ? setupTableView() : setupLoginView()
     }
     
     /// 设置 TableView
@@ -81,16 +116,8 @@ extension HQBaseViewController {
     }
     
     /// 设置访客视图
-    fileprivate func setupVistorView() {
+    fileprivate func setupLoginView() {
         
-//        let vistorView = HQVistorView(frame: view.bounds)
-//        view.insertSubview(vistorView, belowSubview: navigationBar)
-//        vistorView.vistorInfo = visitorInfoDictionary
-//        vistorView.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
-//        vistorView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
-        
-//        navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
-//        navItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(login))
     }
     
     /// 设置导航条

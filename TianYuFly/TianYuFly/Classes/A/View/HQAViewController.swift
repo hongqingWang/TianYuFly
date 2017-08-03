@@ -57,8 +57,18 @@ extension HQAViewController {
     override func setupTableView() {
         super.setupTableView()
         
+        navItem.rightBarButtonItem = UIBarButtonItem(hq_title: "清空token", target: self, action: #selector(deleteToken))
+        
 //        tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellId)
         tableView?.register(HQACell.classForCoder(), forCellReuseIdentifier: cellId)
         tableView?.rowHeight = 66
+    }
+}
+
+// MARK: - Target Action
+extension HQAViewController {
+    
+    @objc fileprivate func deleteToken() {
+        HQNetWorkManager.shared.userAccount.token = "aaa"
     }
 }

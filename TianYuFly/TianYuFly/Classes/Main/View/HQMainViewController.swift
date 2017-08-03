@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 
 fileprivate let HQPartCellIdentifier = "HQPartCellIdentifier"
 fileprivate let loopViewY: CGFloat = 64
@@ -57,9 +57,22 @@ extension HQMainViewController {
     // MARK: - Login
     @objc fileprivate func login(n: Notification) {
         
-        print("用户登录通知 \(n)")
-        let nav = UINavigationController(rootViewController: HQLoginController())
-        present(nav, animated: true, completion: nil)
+        print("=-=-用户登录通知 \(n)")
+        
+        if n.object != nil {
+            SVProgressHUD.setDefaultMaskType(.gradient)
+            SVProgressHUD.showInfo(withStatus: "登录超时，请重新登录")
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            
+            SVProgressHUD.setDefaultMaskType(.clear)
+            let nav = UINavigationController(rootViewController: HQLoginController())
+            self.present(nav, animated: true, completion: nil)
+        }
+        
+//        let nav = UINavigationController(rootViewController: HQLoginController())
+//        present(nav, animated: true, completion: nil)
     }
 }
 
