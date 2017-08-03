@@ -12,7 +12,17 @@ fileprivate let margin: CGFloat = 16.0
 fileprivate let height: CGFloat = 40.0
 
 class HQACell: UITableViewCell {
-
+    
+    var viewModel: HQAaViewModel? {
+        didSet {
+            
+            titleLabel.text = viewModel?.model.user?.screen_name
+            detailLable.text = viewModel?.model.text
+            iconImageView.hq_setImage(urlString: viewModel?.model.user?.profile_image_url, placeholderImage: UIImage(named: "placeholder_icon"), isAvatar: true)
+        }
+    }
+    
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         

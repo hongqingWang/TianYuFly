@@ -12,12 +12,12 @@ fileprivate let cellId = "HQACell"
 
 class HQAViewController: HQBaseViewController {
     
-    fileprivate lazy var listViewModel = HQAListViewModel()
+    fileprivate lazy var listViewModel = HQAViewModel()
     
     /// 加载数据
     override func loadData() {
         listViewModel.loadStatus(pullup: self.isPullup) { (isSuccess, shouldRefresh) in
-            print("最后一条微博数据是 \(self.listViewModel.statusList.last?.text ?? "")")
+//            print("最后一条微博数据是 \(self.listViewModel.statusList.last?.text ?? "")")
             
             self.refreshControl?.endRefreshing()
             self.isPullup = false
@@ -33,13 +33,17 @@ class HQAViewController: HQBaseViewController {
 extension HQAViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listViewModel.statusList.count
+        return listViewModel.viewModelArr.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQACell
-//        cell.textLabel?.text = listViewModel.statusList[indexPath.row].text
+        
+        let viewModel = listViewModel.viewModelArr[indexPath.row]
+        
+        cell.viewModel = viewModel
+        
         return cell
     }
 }

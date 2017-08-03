@@ -17,9 +17,9 @@ class HQAModel: NSObject {
      */
     /// 微博ID
     var id: Int64 = 0
-    
     /// 微博信息内容
     var text: String?
+    var user: HQAaModel?
     
     override var description: String {
         
