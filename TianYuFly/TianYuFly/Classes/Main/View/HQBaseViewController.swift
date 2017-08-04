@@ -135,8 +135,8 @@ extension HQBaseViewController {
     }
 }
 
-// MARK: - UITableViewDataSource, UITableViewDelegate
-extension HQBaseViewController: UITableViewDataSource, UITableViewDelegate {
+// MARK: - UITableViewDataSource
+extension HQBaseViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
@@ -167,5 +167,13 @@ extension HQBaseViewController: UITableViewDataSource, UITableViewDelegate {
             isPullup = true
             loadData()
         }
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension HQBaseViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

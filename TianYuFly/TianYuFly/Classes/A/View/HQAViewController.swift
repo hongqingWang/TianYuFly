@@ -51,8 +51,14 @@ extension HQAViewController {
 // MARK: - Target Action
 extension HQAViewController {
     
-    @objc fileprivate func deleteToken() {
-        HQNetWorkManager.shared.userAccount.token = "aaa"
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let viewModel = listViewModel.viewModelArr[indexPath.row]
+        let vc = HQADetailController()
+        vc.navItem.title = viewModel.model.user?.screen_name
+        vc.viewModel = viewModel
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -63,7 +69,6 @@ extension HQAViewController {
     override func setupTableView() {
         super.setupTableView()
         
-//        tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellId)
         tableView?.register(HQACell.classForCoder(), forCellReuseIdentifier: cellId)
         tableView?.rowHeight = 66
     }

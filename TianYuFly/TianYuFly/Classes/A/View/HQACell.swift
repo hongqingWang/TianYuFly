@@ -18,10 +18,9 @@ class HQACell: UITableViewCell {
             
             titleLabel.text = viewModel?.model.user?.screen_name
             detailLable.text = viewModel?.model.text
-            iconImageView.hq_setImage(urlString: viewModel?.model.user?.profile_image_url, placeholderImage: UIImage(named: "placeholder_icon"), isAvatar: true)
+            iconImageView.hq_setImage(urlString: viewModel?.model.user?.profile_image_url, placeholderImage: UIImage(named: "placeholder_icon"))
         }
     }
-    
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -36,9 +35,9 @@ class HQACell: UITableViewCell {
     /// 图片
     lazy var iconImageView: UIImageView = UIImageView(hq_imageName: "")
     /// 标题
-    lazy var titleLabel: UILabel = UILabel(hq_title: "飞行训练酒店安排", fontSize: 14, color: UIColor.darkGray)
+    lazy var titleLabel: UILabel = UILabel(hq_title: "飞行训练酒店安排", fontSize: 14, color: UIColor.hq_titleTextColor)
     /// 描述
-    lazy var detailLable: UILabel = UILabel (hq_title: "您参加的XX训练酒店安排为：XX月XX日到YY月YY日在海口XX酒店。地址：海口XX路某号。酒店房型为标准间。前台电话", fontSize: 12, color: UIColor.lightGray)
+    lazy var detailLable: UILabel = UILabel (hq_title: "您参加的XX训练酒店安排为：XX月XX日到YY月YY日在海口XX酒店。地址：海口XX路某号。酒店房型为标准间。前台电话", fontSize: 12, color: UIColor.hq_textColor)
 }
 
 // MARK: - UI
@@ -50,7 +49,6 @@ extension HQACell {
         addSubview(titleLabel)
         addSubview(detailLable)
         
-        iconImageView.backgroundColor = UIColor.red
         detailLable.numberOfLines = 2
         
         iconImageView.snp.makeConstraints { (make) in
@@ -64,7 +62,7 @@ extension HQACell {
             make.left.equalTo(iconImageView.snp.right).offset(margin / 2)
         }
         detailLable.snp.makeConstraints { (make) in
-            make.top.equalTo(titleLabel.snp.bottom).offset(margin / 4)
+            make.top.equalTo(titleLabel.snp.bottom).offset(margin / 2)
             make.left.equalTo(titleLabel)
             make.right.equalTo(self).offset(-margin / 4)
         }
