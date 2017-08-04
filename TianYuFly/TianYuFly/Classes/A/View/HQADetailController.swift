@@ -26,13 +26,13 @@ class HQADetailController: HQBaseViewController {
 extension HQADetailController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQADetaiCell
-        cell.textLabel?.text = "aaa"
+//        cell.textLabel?.text = "aaa"
         return cell
         
     }
@@ -45,6 +45,9 @@ extension HQADetailController {
         super.setupTableView()
         
         tableView?.register(HQADetaiCell.classForCoder(), forCellReuseIdentifier: cellId)
-        
+        tableView?.estimatedRowHeight = 300
+        tableView?.rowHeight = UITableViewAutomaticDimension
+        tableView?.separatorStyle = .none
+//        tableView?.rowHeight = 300
     }
 }

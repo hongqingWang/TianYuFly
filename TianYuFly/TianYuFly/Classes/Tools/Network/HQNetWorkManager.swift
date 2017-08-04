@@ -26,7 +26,7 @@ class HQNetWorkManager: AFHTTPSessionManager {
     }
     
     /// 带`token`的网络请求方法
-    func tokenRequest(method: HQHTTPMethod = .GET, URLString: String, parameters: [String: AnyObject]?, completion: @escaping (_ json: Any?, _ isSuccess: Bool)->()) {
+    func tokenRequest(method: HQHTTPMethod = .GET, URLString: String, parameters: [String: AnyObject]?, completion: @escaping (_ json: Any?, _ isSuccess: Bool) -> ()) {
         
         guard let token = userAccount.token else {
             
@@ -57,7 +57,7 @@ class HQNetWorkManager: AFHTTPSessionManager {
     ///   - URLString: URLString
     ///   - parameters: parameters
     ///   - completion: 完成回调(json, isSuccess)
-    func request(method: HQHTTPMethod = .GET, URLString: String, parameters: [String: AnyObject]?, completion: @escaping (_ json: Any?, _ isSuccess: Bool)->()) {
+    func request(method: HQHTTPMethod = .GET, URLString: String, parameters: [String: AnyObject]?, completion: @escaping (_ json: Any?, _ isSuccess: Bool) -> ()) {
         
         let success = { (task: URLSessionDataTask, json: Any?)->() in
             completion(json, true)
