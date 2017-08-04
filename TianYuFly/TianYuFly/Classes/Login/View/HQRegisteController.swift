@@ -8,9 +8,6 @@
 
 import UIKit
 
-fileprivate let margin: CGFloat = 16.0
-fileprivate let height: CGFloat = 40.0
-
 class HQRegisteController: UIViewController {
 
     override func viewDidLoad() {

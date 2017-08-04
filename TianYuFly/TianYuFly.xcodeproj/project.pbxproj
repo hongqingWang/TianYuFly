@@ -54,6 +54,7 @@
 		18DDAD451F30D0E600970B8A /* HQJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDAD441F30D0E600970B8A /* HQJViewController.swift */; };
 		18DDAD471F30D0FB00970B8A /* HQKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDAD461F30D0FB00970B8A /* HQKViewController.swift */; };
 		18E91EED1F341D72005B5C66 /* HQADetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E91EEC1F341D72005B5C66 /* HQADetailController.swift */; };
+		18E91EEF1F344A31005B5C66 /* HQADetaiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E91EEE1F344A31005B5C66 /* HQADetaiCell.swift */; };
 		3C367367431C189CF69239D0 /* Pods_TianYuFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19320E539E743654C2786C87 /* Pods_TianYuFly.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		18DDAD441F30D0E600970B8A /* HQJViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQJViewController.swift; sourceTree = "<group>"; };
 		18DDAD461F30D0FB00970B8A /* HQKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQKViewController.swift; sourceTree = "<group>"; };
 		18E91EEC1F341D72005B5C66 /* HQADetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQADetailController.swift; sourceTree = "<group>"; };
+		18E91EEE1F344A31005B5C66 /* HQADetaiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQADetaiCell.swift; sourceTree = "<group>"; };
 		19320E539E743654C2786C87 /* Pods_TianYuFly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TianYuFly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C11E7DBDF884B3E67DB2EC5 /* Pods-TianYuFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianYuFly.release.xcconfig"; path = "Pods/Target Support Files/Pods-TianYuFly/Pods-TianYuFly.release.xcconfig"; sourceTree = "<group>"; };
 		90D6F2B2B57E314D7A08CDD0 /* Pods-TianYuFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianYuFly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TianYuFly/Pods-TianYuFly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				18DDAD311F30D05E00970B8A /* HQAViewController.swift */,
 				18DDAD301F30D05E00970B8A /* HQACell.swift */,
 				18E91EEC1F341D72005B5C66 /* HQADetailController.swift */,
+				18E91EEE1F344A31005B5C66 /* HQADetaiCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -842,6 +845,7 @@
 				18C96E4C1F29C9F600774ACE /* HQImage.swift in Sources */,
 				18DDAD331F30D05E00970B8A /* HQAViewController.swift in Sources */,
 				18DDAD451F30D0E600970B8A /* HQJViewController.swift in Sources */,
+				18E91EEF1F344A31005B5C66 /* HQADetaiCell.swift in Sources */,
 				18C96E4E1F29C9F600774ACE /* HQLable.swift in Sources */,
 				18E91EED1F341D72005B5C66 /* HQADetailController.swift in Sources */,
 				18DDAD321F30D05E00970B8A /* HQACell.swift in Sources */,

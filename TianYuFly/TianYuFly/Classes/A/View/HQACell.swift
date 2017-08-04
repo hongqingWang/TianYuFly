@@ -8,9 +8,6 @@
 
 import UIKit
 
-fileprivate let margin: CGFloat = 16.0
-fileprivate let height: CGFloat = 40.0
-
 class HQACell: UITableViewCell {
     
     var viewModel: HQAaViewModel? {
@@ -22,6 +19,14 @@ class HQACell: UITableViewCell {
         }
     }
     
+    // MARK: - 懒加载控件
+    /// 图片
+    fileprivate lazy var iconImageView: UIImageView = UIImageView(hq_imageName: "")
+    /// 标题
+    fileprivate lazy var titleLabel: UILabel = UILabel(hq_title: "飞行训练酒店安排", fontSize: 14, color: UIColor.hq_titleTextColor)
+    /// 描述
+    fileprivate lazy var detailLable: UILabel = UILabel (hq_title: "您参加的XX训练酒店安排为：XX月XX日到YY月YY日在海口XX酒店。地址：海口XX路某号。酒店房型为标准间。前台电话", fontSize: 12, color: UIColor.hq_textColor)
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -31,13 +36,6 @@ class HQACell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    // MARK: - 懒加载控件
-    /// 图片
-    lazy var iconImageView: UIImageView = UIImageView(hq_imageName: "")
-    /// 标题
-    lazy var titleLabel: UILabel = UILabel(hq_title: "飞行训练酒店安排", fontSize: 14, color: UIColor.hq_titleTextColor)
-    /// 描述
-    lazy var detailLable: UILabel = UILabel (hq_title: "您参加的XX训练酒店安排为：XX月XX日到YY月YY日在海口XX酒店。地址：海口XX路某号。酒店房型为标准间。前台电话", fontSize: 12, color: UIColor.hq_textColor)
 }
 
 // MARK: - UI

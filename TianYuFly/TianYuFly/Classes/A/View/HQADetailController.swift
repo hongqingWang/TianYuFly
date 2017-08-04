@@ -8,6 +8,8 @@
 
 import UIKit
 
+fileprivate let cellId = "HQADetaiCell"
+
 class HQADetailController: HQBaseViewController {
 
     /// 接收上一个页面的`viewModel`的属性
@@ -15,8 +17,24 @@ class HQADetailController: HQBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         print(viewModel?.model.text ?? "")
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension HQADetailController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQADetaiCell
+        cell.textLabel?.text = "aaa"
+        return cell
+        
     }
 }
 
@@ -26,6 +44,7 @@ extension HQADetailController {
     override func setupTableView() {
         super.setupTableView()
         
+        tableView?.register(HQADetaiCell.classForCoder(), forCellReuseIdentifier: cellId)
         
     }
 }

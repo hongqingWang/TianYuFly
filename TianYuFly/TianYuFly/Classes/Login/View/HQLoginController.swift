@@ -10,9 +10,6 @@ import UIKit
 import SnapKit
 import SVProgressHUD
 
-fileprivate let margin: CGFloat = 16.0
-fileprivate let height: CGFloat = 40.0
-
 class HQLoginController: UIViewController {
     
     override func viewDidLoad() {
