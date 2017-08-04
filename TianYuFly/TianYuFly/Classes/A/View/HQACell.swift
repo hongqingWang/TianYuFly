@@ -12,7 +12,6 @@ class HQACell: UITableViewCell {
     
     var viewModel: HQAaViewModel? {
         didSet {
-            
             titleLabel.text = viewModel?.model.user?.screen_name
             detailLable.text = viewModel?.model.text
             iconImageView.hq_setImage(urlString: viewModel?.model.user?.profile_image_url, placeholderImage: UIImage(named: "placeholder_icon"))
@@ -23,9 +22,9 @@ class HQACell: UITableViewCell {
     /// 图片
     fileprivate lazy var iconImageView: UIImageView = UIImageView(hq_imageName: "")
     /// 标题
-    fileprivate lazy var titleLabel: UILabel = UILabel(hq_title: "飞行训练酒店安排", fontSize: 14, color: UIColor.hq_titleTextColor)
+    fileprivate lazy var titleLabel: UILabel = UILabel(hq_title: "", fontSize: 14, color: UIColor.hq_titleTextColor)
     /// 描述
-    fileprivate lazy var detailLable: UILabel = UILabel (hq_title: "您参加的XX训练酒店安排为：XX月XX日到YY月YY日在海口XX酒店。地址：海口XX路某号。酒店房型为标准间。前台电话", fontSize: 12, color: UIColor.hq_textColor)
+    fileprivate lazy var detailLable: UILabel = UILabel (hq_title: "", fontSize: 12, color: UIColor.hq_textColor)
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

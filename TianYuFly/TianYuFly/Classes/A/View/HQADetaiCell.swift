@@ -10,12 +10,20 @@ import UIKit
 
 class HQADetaiCell: UITableViewCell {
     
+    var viewModel: HQAaViewModel? {
+        didSet {
+            label.text = viewModel?.model.text
+        }
+    }
+    
     // MARK: - Property
     /// 详细信息
     fileprivate lazy var label: UILabel = UILabel(hq_spaceText: "您参加的XX训练酒店安排为：海口XX酒店。\n住宿日期范围：XX月XX日到YY月YY日。\n酒店房型：标准间。\n地址：海口XX路某号。\n前台电话089866666666\n酒店简介信息：XXXX\nXXXX\nXXXXX")
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        selectionStyle = .none
         
         setupUI()
     }

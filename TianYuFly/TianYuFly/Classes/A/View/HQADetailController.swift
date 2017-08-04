@@ -32,7 +32,9 @@ extension HQADetailController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQADetaiCell
-//        cell.textLabel?.text = "aaa"
+        
+        cell.viewModel = viewModel
+        
         return cell
         
     }
