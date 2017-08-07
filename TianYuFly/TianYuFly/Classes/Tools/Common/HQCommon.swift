@@ -21,3 +21,7 @@ let margin: CGFloat = 16.0
 /// Button 高度
 let height: CGFloat = 40.0
 
+// MARK: - 请求接口 URLString
+
+/// (C)消息列表
+let CListUrlString = "https://api.weibo.com/2/statuses/home_timeline.json"

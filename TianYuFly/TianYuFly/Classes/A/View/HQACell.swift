@@ -14,11 +14,11 @@ class HQACell: UITableViewCell {
         didSet {
             titleLabel.text = viewModel?.model.user?.screen_name
             detailLable.text = viewModel?.model.text
-            iconImageView.hq_setImage(urlString: viewModel?.model.user?.profile_image_url, placeholderImage: UIImage(named: "placeholder_icon"))
+            iconImageView.hq_setImage(urlString: viewModel?.model.user?.profile_image_url, placeholderImage: UIImage(named: "placeholder_icon"), isAvatar: true)
         }
     }
     
-    // MARK: - 懒加载控件
+    // MARK: - Property
     /// 图片
     fileprivate lazy var iconImageView: UIImageView = UIImageView(hq_imageName: "")
     /// 标题

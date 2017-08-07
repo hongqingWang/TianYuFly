@@ -8,6 +8,13 @@
 
 import Foundation
 
+// MARK: - Banner 模块网络请求
+extension HQNetWorkManager {
+    
+    
+}
+
+// MARK: - A(吃住行)模块网络请求
 extension HQNetWorkManager {
     
     /// 微博数据字典数组
@@ -26,7 +33,7 @@ extension HQNetWorkManager {
             "max_id": "\(max_id > 0 ? (max_id - 1) : 0)"
         ]
         
-        tokenRequest(URLString: urlString, parameters: para as [String : AnyObject]) { (json, isSuccess) in
+        tokenRequest(URLString: urlString, parameters: para as [String: AnyObject]) { (json, isSuccess) in
             /*
              从`json`中获取`statuses`字典数组
              如果`as?`失败,`result = nil`
@@ -57,6 +64,84 @@ extension HQNetWorkManager {
             completion(count ?? 0)
         }
     }
+}
+
+// MARK: - B(训练计划)模块网络请求
+extension HQNetWorkManager {
+    
+    
+}
+
+// MARK: - C(消息)模块网络请求
+extension HQNetWorkManager {
+    
+    func cList(since_id: Int64 = 0, max_id: Int64 = 0, completion: @escaping (_ list: [[String: AnyObject]]?, _ isSuccess: Bool) -> ()) {
+        
+        let urlString = CListUrlString
+        
+        // `swift`中,`Int`可以转换成`Anybject`,但是`Int 64`不行
+        let para = [
+            "since_id": "\(since_id)",
+            "max_id": "\(max_id > 0 ? (max_id - 1) : 0)"
+        ]
+        
+        tokenRequest(URLString: urlString, parameters: para as [String: AnyObject]) { (json, isSuccess) in
+            /*
+             从`json`中获取`statuses`字典数组
+             如果`as?`失败,`result = nil`
+             */
+            let result = (json as AnyObject)["statuses"] as? [[String: AnyObject]]
+            completion(result, isSuccess)
+        }
+    }
+}
+
+// MARK: - D(在线学习)模块网络请求
+extension HQNetWorkManager {
+    
+    
+}
+
+// MARK: - E(训练记录上传)模块网络请求
+extension HQNetWorkManager {
+    
+    
+}
+
+// MARK: - F(满意度调查)模块网络请求
+extension HQNetWorkManager {
+    
+    
+}
+
+// MARK: - G(考试成绩)模块网络请求
+extension HQNetWorkManager {
+    
+    
+}
+
+// MARK: - H(我的信息)模块网络请求
+extension HQNetWorkManager {
+    
+    
+}
+
+// MARK: - I(系统设置)模块网络请求
+extension HQNetWorkManager {
+    
+    
+}
+
+// MARK: - J(关于我们)模块网络请求
+extension HQNetWorkManager {
+    
+    
+}
+
+// MARK: - K(训练指南)模块网络请求
+extension HQNetWorkManager {
+    
+    
 }
 
 // MARK: - 请求`Token`
