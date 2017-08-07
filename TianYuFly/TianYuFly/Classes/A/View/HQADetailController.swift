@@ -13,7 +13,7 @@ fileprivate let cellId = "HQADetaiCell"
 class HQADetailController: HQBaseViewController {
 
     /// 接收上一个页面的`viewModel`的属性
-    var viewModel: HQAaViewModel?
+    var viewModel: HQAViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()

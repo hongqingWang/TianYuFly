@@ -10,7 +10,7 @@ import UIKit
 
 class HQADetaiCell: UITableViewCell {
     
-    var viewModel: HQAaViewModel? {
+    var viewModel: HQAViewModel? {
         didSet {
             label.text = viewModel?.model.text
         }

@@ -12,7 +12,7 @@ fileprivate let cellId = "HQACell"
 
 class HQAViewController: HQBaseViewController {
     
-    fileprivate lazy var listViewModel = HQAViewModel()
+    fileprivate lazy var listViewModel = HQAListViewModel()
     
     /// 加载数据
     override func loadData() {
@@ -33,14 +33,14 @@ class HQAViewController: HQBaseViewController {
 extension HQAViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listViewModel.viewModelArr.count
+        return listViewModel.aList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQACell
         
-        let viewModel = listViewModel.viewModelArr[indexPath.row]
+        let viewModel = listViewModel.aList[indexPath.row]
         
         cell.viewModel = viewModel
         
@@ -54,7 +54,7 @@ extension HQAViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let viewModel = listViewModel.viewModelArr[indexPath.row]
+        let viewModel = listViewModel.aList[indexPath.row]
         let vc = HQADetailController()
         vc.navItem.title = viewModel.model.user?.screen_name
         vc.viewModel = viewModel
