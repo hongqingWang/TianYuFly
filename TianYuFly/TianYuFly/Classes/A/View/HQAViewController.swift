@@ -29,7 +29,7 @@ class HQAViewController: HQBaseViewController {
     }
 }
 
-// MARK: - tableViewDataSource
+// MARK: - UITableViewDataSource
 extension HQAViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,7 +48,7 @@ extension HQAViewController {
     }
 }
 
-// MARK: - Target Action
+// MARK: - UITableViewDelegate
 extension HQAViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
