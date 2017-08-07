@@ -23,7 +23,10 @@ let height: CGFloat = 40.0
 /// Banner 纵坐标
 let loopViewY: CGFloat = 0
 /// Banner 高度
-let loopViewHeight: CGFloat = 166
+let loopViewHeight: CGFloat = 147
+/// Banner 底部间距
+let loopViewBottomMargin: CGFloat = 17
+
 
 // MARK: - 请求接口 URLString
 

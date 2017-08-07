@@ -17,7 +17,7 @@ class HQPartCollectionView: UICollectionView {
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         
-        let frame = CGRect(x: 0, y: loopViewY + loopViewHeight, width: UIScreen.hq_screenWidth(), height: UIScreen.hq_screenHeight() - loopViewHeight - loopViewY)
+        let frame = CGRect(x: 0, y: loopViewY + loopViewHeight + loopViewBottomMargin, width: UIScreen.hq_screenWidth(), height: UIScreen.hq_screenHeight() - loopViewHeight - loopViewY)
         
         super.init(frame: frame, collectionViewLayout: HQPartViewLayout())
         

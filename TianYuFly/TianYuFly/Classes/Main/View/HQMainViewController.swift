@@ -20,8 +20,9 @@ class HQMainViewController: HQBaseViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.white
-//        navItem.title = "天羽飞训"
-        navItem.titleView = UIImageView(hq_imageName: "logo")
+        tableView?.separatorStyle = .none
+        
+        navItem.titleView = UIImageView(hq_imageName: "logo(2)")
         // 设置导航栏透明色
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         // 除去导航栏下方阴影(一条分割线)

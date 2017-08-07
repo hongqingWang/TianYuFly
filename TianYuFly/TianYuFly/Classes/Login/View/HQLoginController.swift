@@ -22,7 +22,7 @@ class HQLoginController: UIViewController {
     
     // MARK: - 私有控件
     /// Logo
-    fileprivate lazy var logoImageView: UIImageView = UIImageView(hq_imageName: "logo")
+    fileprivate lazy var logoImageView: UIImageView = UIImageView(hq_imageName: "logo(2)")
     /// 帐号
     fileprivate lazy var accountTextField: UITextField = UITextField(hq_placeholder: "13122223333")
     fileprivate lazy var carve01: UIView = {

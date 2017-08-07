@@ -8,8 +8,8 @@
 
 import UIKit
 
-fileprivate let itemW: CGFloat = (UIScreen.hq_screenWidth() - 3) / 4
-fileprivate let itemH: CGFloat = itemW
+fileprivate let itemW: CGFloat = (UIScreen.hq_screenWidth() - 2) / 3
+fileprivate let itemH: CGFloat = 100
 
 class HQPartViewLayout: UICollectionViewFlowLayout {
     
