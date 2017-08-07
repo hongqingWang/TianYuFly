@@ -10,8 +10,6 @@ import UIKit
 import SVProgressHUD
 
 fileprivate let HQPartCellIdentifier = "HQPartCellIdentifier"
-fileprivate let loopViewY: CGFloat = 64
-fileprivate let loopViewHeight: CGFloat = 180
 
 class HQMainViewController: HQBaseViewController {
     
@@ -22,7 +20,12 @@ class HQMainViewController: HQBaseViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.white
-        navItem.title = "天羽飞训"
+//        navItem.title = "天羽飞训"
+        navItem.titleView = UIImageView(hq_imageName: "logo")
+        // 设置导航栏透明色
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        // 除去导航栏下方阴影(一条分割线)
+        navigationBar.shadowImage = UIImage()
         
         setupUI()
         /*
@@ -143,7 +146,8 @@ extension HQMainViewController {
         
         array = collectionView.partArray
         
-        view.addSubview(loopView)
+//        view.addSubview(loopView)
+        view.insertSubview(loopView, belowSubview: navigationBar)
         view.addSubview(collectionView)
         
         NotificationCenter.default.addObserver(self, selector: #selector(login), name: NSNotification.Name(rawValue: HQUserShouldLoginNotification), object: nil)

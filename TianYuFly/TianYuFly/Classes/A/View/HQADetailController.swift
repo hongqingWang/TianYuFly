@@ -36,7 +36,6 @@ extension HQADetailController {
         cell.viewModel = viewModel
         
         return cell
-        
     }
 }
 

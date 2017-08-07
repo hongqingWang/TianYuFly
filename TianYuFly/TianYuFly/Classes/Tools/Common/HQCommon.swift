@@ -20,6 +20,10 @@ let HQUserLoginSuccessNotification = "HQUserLoginSuccessNotification"
 let margin: CGFloat = 16.0
 /// Button 高度
 let height: CGFloat = 40.0
+/// Banner 纵坐标
+let loopViewY: CGFloat = 0
+/// Banner 高度
+let loopViewHeight: CGFloat = 166
 
 // MARK: - 请求接口 URLString
 

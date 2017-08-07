@@ -128,6 +128,13 @@ extension HQBaseViewController {
         navigationBar.items = [navItem]
         // 设置`navigationBar`的渲染颜色
         navigationBar.barTintColor = UIColor.hq_color(withHex: 0xF6F6F6)
+        
+//        // 设置导航栏透明色
+//        navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        
+//        // 除去导航栏下方阴影(一条分割线)
+//        navigationBar.shadowImage = UIImage()
+        
         // 设置导航栏`title`的颜色
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.darkGray]
         // 设置系统`leftBarButtonItem`渲染颜色

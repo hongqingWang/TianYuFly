@@ -9,8 +9,6 @@
 import UIKit
 
 fileprivate let HQPartCellIdentifier = "HQPartCellIdentifier"
-fileprivate let loopViewY: CGFloat = 64
-fileprivate let loopViewHeight: CGFloat = 180
 
 class HQPartCollectionView: UICollectionView {
     
