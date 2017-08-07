@@ -47,6 +47,20 @@ extension HQCViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
+extension HQCViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let viewModel = listViewModel.cList[indexPath.row]
+        let vc = HQCDetailViewController()
+        vc.navItem.title = "\(viewModel.model.id)"
+        vc.viewModel = viewModel
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
 // MARK: - UI
 extension HQCViewController {
     

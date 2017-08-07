@@ -50,6 +50,5 @@ extension HQADetailController {
         tableView?.estimatedRowHeight = 300
         tableView?.rowHeight = UITableViewAutomaticDimension
         tableView?.separatorStyle = .none
-//        tableView?.rowHeight = 300
     }
 }
