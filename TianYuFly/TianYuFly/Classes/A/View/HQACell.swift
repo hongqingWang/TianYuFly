@@ -24,7 +24,7 @@ class HQACell: UITableViewCell {
     /// 标题
     fileprivate lazy var titleLabel: UILabel = UILabel(hq_title: "", fontSize: 14, color: UIColor.hq_titleTextColor)
     /// 描述
-    fileprivate lazy var detailLable: UILabel = UILabel (hq_title: "", fontSize: 12, color: UIColor.hq_textColor)
+    fileprivate lazy var detailLable: UILabel = UILabel (hq_title: "", fontSize: 12, color: UIColor.hq_titleTextColor)
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

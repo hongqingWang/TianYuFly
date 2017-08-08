@@ -16,7 +16,7 @@ extension UILabel {
     ///   - hq_title: title
     ///   - fontSize: fontSize 默认 14
     ///   - color: color
-    convenience init(hq_title: String, fontSize: CGFloat = 14, color: UIColor = UIColor.darkGray) {
+    convenience init(hq_title: String, fontSize: CGFloat = 13, color: UIColor = UIColor.lightGray) {
         self.init()
         
         text = hq_title

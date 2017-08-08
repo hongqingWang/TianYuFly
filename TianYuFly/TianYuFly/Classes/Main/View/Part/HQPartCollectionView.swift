@@ -16,13 +16,13 @@ class HQPartCollectionView: UICollectionView {
     var partArray: [[String: AnyObject]]?
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
-        
-        let frame = CGRect(x: 0, y: loopViewY + loopViewHeight + loopViewBottomMargin, width: UIScreen.hq_screenWidth(), height: UIScreen.hq_screenHeight() - loopViewHeight - loopViewY)
+
+        let frame = CGRect(x: 0, y: loopViewY + loopViewHeight + loopViewBottomMargin, width: UIScreen.hq_screenWidth(), height: itemH * 4 + 4)
         
         super.init(frame: frame, collectionViewLayout: HQPartViewLayout())
         
         register(HQPartCell.classForCoder(), forCellWithReuseIdentifier: HQPartCellIdentifier)
-        backgroundColor = UIColor.hq_color(withHex: 0xEDEDED)
+        backgroundColor = UIColor.hq_color(withHex: 0xDFE6F9)
         
         dataSource = self
         
@@ -57,6 +57,7 @@ extension HQPartCollectionView: UICollectionViewDataSource {
         
         cell.image = UIImage(named: (partArray?[indexPath.item]["imageName"] as? String)!)
         cell.text = partArray?[indexPath.item]["title"] as? String
+        cell.englishLabel.text = partArray?[indexPath.item]["englishTitle"] as? String
         
         return cell
     }

@@ -10,19 +10,19 @@ import UIKit
 
 extension UIColor {
     
-    /// 普通字体颜色
-    open class var hq_textColor: UIColor {
-        
-        get {
-            return UIColor.lightGray
-        }
-    }
-    
     /// 标题字体颜色
     open class var hq_titleTextColor: UIColor {
         
         get {
-            return UIColor.darkGray
+            return UIColor.hq_color(withHex: 0x25396E)
+        }
+    }
+    
+    /// 普通字体颜色
+    open class var hq_lightTextColor: UIColor {
+        
+        get {
+            return UIColor.lightGray
         }
     }
     

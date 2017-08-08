@@ -8,9 +8,6 @@
 
 import UIKit
 
-fileprivate let itemW: CGFloat = (UIScreen.hq_screenWidth() - 2) / 3
-fileprivate let itemH: CGFloat = 100
-
 class HQPartViewLayout: UICollectionViewFlowLayout {
     
     override func prepare() {

@@ -1,46 +1,62 @@
 [
  {
     "imageName" : "main_part_a",
-    "title" : "吃住行"
+    "title" : "吃住行",
+    "englishTitle" : "Logistics Support"
  },
  {
     "imageName" : "main_part_b",
-    "title" : "训练计划"
+    "title" : "训练计划",
+    "englishTitle" : "Training Plan"
  },
  {
     "imageName" : "main_part_c",
-    "title" : "消息"
+    "title" : "消息",
+    "englishTitle" : "Message"
  },
  {
     "imageName" : "main_part_d",
-    "title" : "在线学习"
+    "title" : "在线学习",
+    "englishTitle" : "E-learning"
  },
  {
     "imageName" : "main_part_e",
-    "title" : "训练记录上传"
+    "title" : "训练记录上传",
+    "englishTitle" : "Training Record Upload"
  },
  {
     "imageName" : "main_part_f",
-    "title" : "满意度调查"
+    "title" : "满意度调查",
+    "englishTitle" : "Satisfaction Question"
  },
  {
     "imageName" : "main_part_g",
-    "title" : "考试成绩"
+    "title" : "考试成绩",
+    "englishTitle" : "Examination"
  },
  {
     "imageName" : "main_part_h",
-    "title" : "我的信息"
+    "title" : "我的信息",
+    "englishTitle" : "Me"
  },
  {
     "imageName" : "main_part_i",
-    "title" : "系统设置"
+    "title" : "系统设置",
+    "englishTitle" : "Settings"
  },
  {
     "imageName" : "main_part_j",
-    "title" : "关于我们"
+    "title" : "关于我们",
+    "englishTitle" : "About"
  },
  {
     "imageName" : "main_part_k",
-    "title" : "训练指南"
+    "title" : "训练指南",
+    "englishTitle" : "Training Guide"
  },
-]
+ {
+    "imageName" : "",
+    "title" : "",
+    "englishTitle" : ""
+ }
+ ]

@@ -25,10 +25,13 @@ let loopViewY: CGFloat = 0
 /// Banner 高度
 let loopViewHeight: CGFloat = 147
 /// Banner 底部间距
-let loopViewBottomMargin: CGFloat = 17
+let loopViewBottomMargin: CGFloat = 5
+/// 首页 item 宽度
+let itemW: CGFloat = (UIScreen.hq_screenWidth() - 2) / 3
+/// 首页 item 高度
+let itemH: CGFloat = 100
 
 
 // MARK: - 请求接口 URLString
-
 /// (C)消息列表
 let CListUrlString = "https://api.weibo.com/2/statuses/home_timeline.json"

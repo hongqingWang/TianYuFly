@@ -22,6 +22,14 @@ class HQPartCell: UICollectionViewCell {
         }
     }
     
+    // MARK: - Property
+    /// 图片
+    fileprivate lazy var imageView: UIImageView = UIImageView(hq_imageName: "")
+    /// 标题
+    fileprivate lazy var label: UILabel = UILabel(hq_title: "", fontSize: 13, color: UIColor.hq_titleTextColor)
+    /// 英文标题
+    lazy var englishLabel: UILabel = UILabel(hq_title: "", fontSize: 11, color: UIColor.hq_lightTextColor)
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -32,31 +40,28 @@ class HQPartCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    /// 图片
-    fileprivate lazy var imageView: UIImageView = UIImageView(hq_imageName: "")
-    /// 标题
-    fileprivate lazy var label: UILabel = UILabel(hq_title: "")
 }
 
-// MARK: - 界面布局
+// MARK: - UI
 extension HQPartCell {
     
     func setupUI() {
         
         addSubview(imageView)
         addSubview(label)
+        addSubview(englishLabel)
         
         imageView.snp.makeConstraints { (make) in
             make.centerX.equalTo(self)
-            make.centerY.equalTo(self).multipliedBy(0.8)
-            make.width.equalTo(30)
-            make.height.equalTo(30)
+            make.centerY.equalTo(self).multipliedBy(0.7)
         }
-        
         label.snp.makeConstraints { (make) in
             make.centerX.equalTo(self)
-            make.centerY.equalTo(self).multipliedBy(1.5)
+            make.centerY.equalTo(self).multipliedBy(1.35)
+        }
+        englishLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(label.snp.bottom)
+            make.centerX.equalTo(label)
         }
     }
 }
