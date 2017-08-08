@@ -124,7 +124,7 @@ extension UIButton {
         setBackgroundImage(normalIamge, for: .normal)
         setBackgroundImage(hightImage, for: .highlighted)
 
-        layer.cornerRadius = 3
+        layer.cornerRadius = 4
         clipsToBounds = true
         
         // 注意: 这里不写`sizeToFit()`那么`Button`就显示不出来

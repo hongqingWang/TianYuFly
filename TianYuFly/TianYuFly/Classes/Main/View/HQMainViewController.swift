@@ -22,7 +22,7 @@ class HQMainViewController: HQBaseViewController {
         view.backgroundColor = UIColor.white
         tableView?.separatorStyle = .none
         
-        navItem.titleView = UIImageView(hq_imageName: "logo(2)")
+        navItem.titleView = UIImageView(hq_imageName: "logo_02")
         // 设置导航栏透明色
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         // 除去导航栏下方阴影(一条分割线)

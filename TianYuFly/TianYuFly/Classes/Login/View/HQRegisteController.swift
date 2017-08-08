@@ -17,16 +17,18 @@ class HQRegisteController: HQLoginBaseController {
     }
     
     // MARK: - 私有控件
-    
-    lazy var logoImageView: UIImageView = UIImageView(hq_imageName: "")
+    /// 底部背景图片
+    fileprivate lazy var backImageView: UIImageView = UIImageView(hq_imageName: "background")
+    /// Logo
+    fileprivate lazy var logoImageView: UIImageView = UIImageView(hq_imageName: "logo_01")
     /// 手机号
-    fileprivate lazy var phoneTextField: UITextField = UITextField(hq_placeholder: "手机号", border: .roundedRect)
+    fileprivate lazy var phoneTextField: UITextField = UITextField(hq_placeholder: "请输入手机号", border: .roundedRect)
     /// 获取验证码按钮
-    fileprivate lazy var verifyCodeButton: HQButton = HQButton(hq_title: "获取验证码", fontSize: 14, normalBackColor: UIColor.orange, highBackColor: UIColor.hq_color(withHex: 0xB5751F), size: CGSize(width: UIScreen.hq_screenWidth() * 0.4, height: height))
+    fileprivate lazy var verifyCodeButton: HQButton = HQButton(hq_title: "获取验证码", fontSize: 16, normalBackColor: UIColor.hq_buttonBackgroundColor, highBackColor: UIColor.hq_buttonHighBackgroundColor, size: CGSize(width: UIScreen.hq_screenWidth() * 0.4, height: height))
     /// 验证码
-    fileprivate lazy var verifyCodeTextField: UITextField = UITextField(hq_placeholder: "验证码", border: .roundedRect)
+    fileprivate lazy var verifyCodeTextField: UITextField = UITextField(hq_placeholder: "请输入验证码", border: .roundedRect)
     /// 提交按钮
-    lazy var submitButton: UIButton = UIButton(hq_title: "提交", normalBackColor: UIColor.orange, highBackColor: UIColor.hq_color(withHex: 0xB5751F), size: CGSize(width: UIScreen.hq_screenWidth() - margin * 2, height: height))
+    fileprivate lazy var submitButton: UIButton = UIButton(hq_title: "提交", normalBackColor: UIColor.hq_buttonBackgroundColor, highBackColor: UIColor.hq_buttonHighBackgroundColor, size: CGSize(width: UIScreen.hq_screenWidth() - margin * 2, height: height))
 }
 
 // MARK: - Target Action
@@ -44,9 +46,6 @@ extension HQRegisteController {
     @objc fileprivate func getVerifyCode() {
         verifyCodeButton.timeDown(time: 60)
     }
-//    @objc fileprivate func back() {
-//        navigationController?.popViewController(animated: true)
-//    }
 }
 
 // MARK: - UI
@@ -54,37 +53,44 @@ extension HQRegisteController {
     
     fileprivate func setupUI() {
         
+        view.addSubview(backImageView)
+        view.addSubview(logoImageView)
         view.addSubview(phoneTextField)
-        view.addSubview(verifyCodeButton)
         view.addSubview(verifyCodeTextField)
+        view.addSubview(verifyCodeButton)
         view.addSubview(submitButton)
         
         verifyCodeButton.addTarget(self, action: #selector(getVerifyCode), for: .touchUpInside)
         submitButton.addTarget(self, action: #selector(submit), for: .touchUpInside)
         
-        phoneTextField.snp.makeConstraints { (make) in
-            make.top.equalTo(view).offset(64 + margin)
-            make.left.equalTo(view).offset(margin)
-            make.width.equalTo(UIScreen.hq_screenWidth() * 0.6)
-            make.height.equalTo(height)
+        backImageView.frame = view.bounds
+        logoImageView.snp.makeConstraints { (make) in
+            make.centerX.equalTo(view)
+            make.centerY.equalTo(view).multipliedBy(0.33)
         }
-        verifyCodeButton.snp.makeConstraints { (make) in
-            make.left.equalTo(phoneTextField.snp.right).offset(margin / 2)
+        phoneTextField.snp.makeConstraints { (make) in
+            make.left.equalTo(view).offset(margin)
             make.right.equalTo(view).offset(-margin)
-            make.centerY.equalTo(phoneTextField)
-            make.height.equalTo(phoneTextField)
+            make.height.equalTo(height)
+            make.centerY.equalTo(view).multipliedBy(0.72)
         }
         verifyCodeTextField.snp.makeConstraints { (make) in
-            make.top.equalTo(phoneTextField.snp.bottom).offset(margin)
+            make.top.equalTo(phoneTextField.snp.bottom).offset(margin - 5)
             make.left.equalTo(phoneTextField)
-            make.right.equalTo(verifyCodeButton)
+            make.right.equalTo(view).offset(-145)
             make.height.equalTo(phoneTextField)
         }
-        submitButton.snp.makeConstraints { (make) in
-            make.top.equalTo(verifyCodeTextField.snp.bottom).offset(margin * 2)
-            make.left.equalTo(verifyCodeTextField)
-            make.right.equalTo(verifyCodeTextField)
+        verifyCodeButton.snp.makeConstraints { (make) in
+            make.left.equalTo(verifyCodeTextField.snp.right).offset(margin / 2)
+            make.right.equalTo(view).offset(-margin)
+            make.centerY.equalTo(verifyCodeTextField)
             make.height.equalTo(verifyCodeTextField)
+        }
+        submitButton.snp.makeConstraints { (make) in
+            make.left.equalTo(view).offset(margin / 2)
+            make.right.equalTo(view).offset(-margin / 2)
+            make.height.equalTo(verifyCodeTextField)
+            make.centerY.equalTo(view).multipliedBy(1.52)
         }
     }
 }

@@ -35,5 +35,6 @@ extension UIScreen {
         let h = CGFloat(UIScreen.hq_screenHeight())
         
         return w / h
+//        return UIScreen.main.scale
     }
 }

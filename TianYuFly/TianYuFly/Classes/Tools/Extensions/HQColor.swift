@@ -12,24 +12,32 @@ extension UIColor {
     
     /// 标题字体颜色
     open class var hq_titleTextColor: UIColor {
-        
         get {
             return UIColor.hq_color(withHex: 0x25396E)
         }
     }
-    
     /// 普通字体颜色
     open class var hq_lightTextColor: UIColor {
-        
         get {
             return UIColor.lightGray
         }
     }
-    
+    /// 分割线颜色
     open class var hq_lineColor: UIColor {
-        
         get {
             return UIColor.hq_color(withHex: 0xDFE6F9)
+        }
+    }
+    /// Button 背景颜色
+    open class var hq_buttonBackgroundColor: UIColor {
+        get {
+            return UIColor.hq_color(withHex: 0xE23348)
+        }
+    }
+    /// Button 高亮状态背景颜色
+    open class var hq_buttonHighBackgroundColor: UIColor {
+        get {
+            return UIColor.hq_color(withHex: 0xB82234)
         }
     }
     
