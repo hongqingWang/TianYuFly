@@ -22,7 +22,7 @@ class HQPartCollectionView: UICollectionView {
         super.init(frame: frame, collectionViewLayout: HQPartViewLayout())
         
         register(HQPartCell.classForCoder(), forCellWithReuseIdentifier: HQPartCellIdentifier)
-        backgroundColor = UIColor.hq_color(withHex: 0xDFE6F9)
+        backgroundColor = UIColor.hq_lineColor
         
         dataSource = self
         

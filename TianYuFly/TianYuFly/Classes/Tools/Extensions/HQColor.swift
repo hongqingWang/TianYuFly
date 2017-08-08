@@ -26,6 +26,13 @@ extension UIColor {
         }
     }
     
+    open class var hq_lineColor: UIColor {
+        
+        get {
+            return UIColor.hq_color(withHex: 0xDFE6F9)
+        }
+    }
+    
     /// 随机色
     ///
     /// - Returns: 随机的颜色
