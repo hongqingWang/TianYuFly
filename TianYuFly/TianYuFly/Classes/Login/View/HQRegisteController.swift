@@ -13,11 +13,12 @@ class HQRegisteController: HQLoginBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         setupUI()
     }
+    
     // MARK: - 私有控件
+    
+    lazy var logoImageView: UIImageView = UIImageView(hq_imageName: "")
     /// 手机号
     fileprivate lazy var phoneTextField: UITextField = UITextField(hq_placeholder: "手机号", border: .roundedRect)
     /// 获取验证码按钮

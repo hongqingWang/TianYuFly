@@ -19,6 +19,8 @@ class HQLoginBaseController: UIViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         // 除去导航栏下方阴影(一条分割线)
         navigationController?.navigationBar.shadowImage = UIImage()
+        // 设置导航栏标题颜色
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.hq_color(withHex: 0x27334D)]
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(hq_title: "", target: self, action: #selector(back), isBack: true)
     }
