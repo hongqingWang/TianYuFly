@@ -28,10 +28,10 @@ class HQNavigationController: UINavigationController {
              */
             if let vc = viewController as? HQBaseViewController {
                 
-                var title = "返回"
+                var title = ""
                 
                 if childViewControllers.count == 1 {
-                    title = childViewControllers.first?.title ?? "返回"
+                    title = childViewControllers.first?.title ?? ""
                 }
                 
                 vc.navItem.leftBarButtonItem = UIBarButtonItem(hq_title: title, target: self, action: #selector(popToParent), isBack: true)

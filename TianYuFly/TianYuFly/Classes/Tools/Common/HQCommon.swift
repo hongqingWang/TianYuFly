@@ -30,6 +30,9 @@ let loopViewBottomMargin: CGFloat = 5
 let itemW: CGFloat = (UIScreen.hq_screenWidth() - 2) / 3
 /// 首页 item 高度
 let itemH: CGFloat = 100
+/// 导航栏高度
+let navHeight: CGFloat = 64
+
 
 
 // MARK: - 请求接口 URLString
