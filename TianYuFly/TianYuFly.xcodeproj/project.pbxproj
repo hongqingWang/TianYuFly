@@ -11,6 +11,7 @@
 		1833E7671F30117A0002D886 /* userAccount.json in Resources */ = {isa = PBXBuildFile; fileRef = 1833E7651F30117A0002D886 /* userAccount.json */; };
 		1844466A1F288D24006BF41B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184446691F288D24006BF41B /* AppDelegate.swift */; };
 		184446711F288D24006BF41B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184446701F288D24006BF41B /* Assets.xcassets */; };
+		18894D571F398F240093BB1C /* HQLoginBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18894D561F398F240093BB1C /* HQLoginBaseController.swift */; };
 		18A896BF1F32B6600064213B /* HQPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A896BE1F32B6600064213B /* HQPath.swift */; };
 		18A896C31F33199B0064213B /* HQAModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A896C21F33199B0064213B /* HQAModel.swift */; };
 		18A896C71F331ED30064213B /* HQAaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A896C61F331ED30064213B /* HQAaModel.swift */; };
@@ -71,6 +72,7 @@
 		184446691F288D24006BF41B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		184446701F288D24006BF41B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		184446751F288D24006BF41B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18894D561F398F240093BB1C /* HQLoginBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLoginBaseController.swift; sourceTree = "<group>"; };
 		18A896BE1F32B6600064213B /* HQPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQPath.swift; sourceTree = "<group>"; };
 		18A896C21F33199B0064213B /* HQAModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQAModel.swift; sourceTree = "<group>"; };
 		18A896C61F331ED30064213B /* HQAaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQAaModel.swift; sourceTree = "<group>"; };
@@ -635,6 +637,7 @@
 		18DDAD0A1F30CF8D00970B8A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18894D561F398F240093BB1C /* HQLoginBaseController.swift */,
 				18DDAD241F30D01E00970B8A /* HQLoginController.swift */,
 				18DDAD251F30D01E00970B8A /* HQRegisteController.swift */,
 				18DDAD261F30D01E00970B8A /* HQRegisteSecondController.swift */,
@@ -882,6 +885,7 @@
 				18C85F961F3839DD00D6C620 /* HQCViewModel.swift in Sources */,
 				18A896C71F331ED30064213B /* HQAaModel.swift in Sources */,
 				18DDAD171F30CFED00970B8A /* HQNavigationController.swift in Sources */,
+				18894D571F398F240093BB1C /* HQLoginBaseController.swift in Sources */,
 				18DDAD3F1F30D0C900970B8A /* HQGViewController.swift in Sources */,
 				18DDAD3D1F30D0C000970B8A /* HQFViewController.swift in Sources */,
 				18DDAD281F30D01E00970B8A /* HQForgetPasswordSecondController.swift in Sources */,

@@ -29,6 +29,15 @@ class HQAViewController: HQBaseViewController {
     }
 }
 
+// MARK: - Target Action
+extension HQAViewController {
+    
+    @objc fileprivate func deleteToken() {
+        HQNetWorkManager.shared.userAccount.token = "aa"
+        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
+    }
+}
+
 // MARK: - UITableViewDataSource
 extension HQAViewController {
     
@@ -68,6 +77,8 @@ extension HQAViewController {
     /// 重写父类的方法
     override func setupTableView() {
         super.setupTableView()
+        
+        navItem.rightBarButtonItem = UIBarButtonItem(hq_title: "删除", target: self, action: #selector(deleteToken))
         
         tableView?.register(HQACell.classForCoder(), forCellReuseIdentifier: cellId)
         tableView?.rowHeight = 66

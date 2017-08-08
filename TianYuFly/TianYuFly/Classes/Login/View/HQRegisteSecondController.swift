@@ -15,7 +15,7 @@ class HQRegisteSecondController: UIViewController {
         
         view.backgroundColor = UIColor.white
         navigationItem.title = "注册"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(hq_title: "返回", target: self, action: #selector(back), isBack: true)
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(hq_title: "返回", target: self, action: #selector(back), isBack: true)
         
         setupUI()
     }

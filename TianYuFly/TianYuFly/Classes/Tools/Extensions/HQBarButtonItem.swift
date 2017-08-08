@@ -27,6 +27,7 @@ extension UIBarButtonItem {
             let imageName = "nav_back"
             btn.setImage(UIImage.init(named: imageName), for: .normal)
             btn.setImage(UIImage.init(named: imageName + "_highlighted"), for: .highlighted)
+            
             btn.sizeToFit()
         }
         
