@@ -13,6 +13,8 @@ class HQLoginBaseController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = UIColor.white
+        
         // 设置导航栏透明色
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         // 除去导航栏下方阴影(一条分割线)

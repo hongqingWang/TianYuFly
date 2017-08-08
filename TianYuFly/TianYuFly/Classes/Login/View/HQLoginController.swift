@@ -10,12 +10,12 @@ import UIKit
 import SnapKit
 import SVProgressHUD
 
-class HQLoginController: UIViewController {
+class HQLoginController: HQLoginBaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.white
+        navigationItem.leftBarButtonItem = nil
         
         setupUI()
     }

@@ -13,8 +13,6 @@ class HQRegisteController: HQLoginBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.white
-        
         
         
         setupUI()

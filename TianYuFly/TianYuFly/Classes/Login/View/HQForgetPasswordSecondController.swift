@@ -8,14 +8,12 @@
 
 import UIKit
 
-class HQForgetPasswordSecondController: UIViewController {
+class HQForgetPasswordSecondController: HQLoginBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.white
         navigationItem.title = "忘记密码"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(hq_title: "返回", target: self, action: #selector(back), isBack: true)
         
         setupUI()
     }
@@ -36,9 +34,6 @@ extension HQForgetPasswordSecondController {
         print(passwordTextField.text ?? "")
         
         navigationController?.popToRootViewController(animated: true)
-    }
-    @objc fileprivate func back() {
-        navigationController?.popViewController(animated: true)
     }
 }
 

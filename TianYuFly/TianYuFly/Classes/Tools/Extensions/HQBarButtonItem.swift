@@ -22,12 +22,11 @@ extension UIBarButtonItem {
         
         let btn = UIButton(hq_title: hq_title, fontSize: fontSize, normalColor: UIColor.darkGray, highlightedColor: UIColor.orange)
         
-        
         if isBack {
             let imageName = "nav_back"
             btn.setImage(UIImage.init(named: imageName), for: .normal)
-            btn.setImage(UIImage.init(named: imageName + "_highlighted"), for: .highlighted)
-            
+            btn.setImage(UIImage.init(named: imageName), for: .highlighted)
+            btn.contentEdgeInsets = UIEdgeInsetsMake(0, 9, 0, -9)
             btn.sizeToFit()
         }
         

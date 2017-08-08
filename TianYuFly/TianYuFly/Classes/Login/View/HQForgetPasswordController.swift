@@ -8,13 +8,10 @@
 
 import UIKit
 
-class HQForgetPasswordController: UIViewController {
+class HQForgetPasswordController: HQLoginBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = UIColor.white
-        navigationItem.leftBarButtonItem = UIBarButtonItem(hq_title: "返回", target: self, action: #selector(back), isBack: true)
         
         setupUI()
     }
@@ -43,9 +40,6 @@ extension HQForgetPasswordController {
     /// 获取验证码
     @objc fileprivate func getVerifyCode() {
         verifyCodeButton.timeDown(time: 60)
-    }
-    @objc fileprivate func back() {
-        navigationController?.popViewController(animated: true)
     }
 }
 
