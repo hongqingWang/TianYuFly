@@ -8,28 +8,44 @@
 
 import UIKit
 
+fileprivate let cellId = "HQJCell"
+fileprivate let cellNormalId = "cellNormalId"
+
 class HQJViewController: HQBaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    fileprivate lazy var titleArr: Array = ["应用介绍", "天羽介绍", "承建商介绍"]
+}
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension HQJViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.row == 0 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+            return cell
+            
+        } else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellNormalId, for: indexPath)
+            cell.textLabel?.text = titleArr[indexPath.row - 1]
+            return cell
+        }
     }
-    */
+}
 
+// MARK: - UI
+extension HQJViewController {
+    
+    override func setupTableView() {
+        super.setupTableView()
+        
+        tableView?.register(HQJCell.classForCoder(), forCellReuseIdentifier: cellId)
+        tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellNormalId)
+        tableView?.tableFooterView = UIView()
+    }
 }
