@@ -15,7 +15,8 @@ fileprivate let logoutCellId = "HQHLogoutCell"
 class HQHViewController: HQBaseViewController {
     
     /// 标题和英文标题字典数组
-    var cellArray: [[String: AnyObject]]?
+    fileprivate var cellArray: [[String: AnyObject]]?
+    fileprivate lazy var listViewModel = HQHListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,18 @@ class HQHViewController: HQBaseViewController {
                 return
         }
         cellArray = array
+    }
+    
+    override func loadData() {
+        listViewModel.loadProfileInfo(pullup: self.isPullup) { (isSuccess, shouldRefresh) in
+            
+            self.refreshControl?.endRefreshing()
+            self.isPullup = false
+            
+            if shouldRefresh {
+                self.tableView?.reloadData()
+            }
+        }
     }
 }
 
@@ -48,9 +61,14 @@ extension HQHViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        
+        
         if indexPath.section == 0 {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: avatarCellId, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: avatarCellId, for: indexPath) as! HQAvatarCell
+//            print(listViewModel.hList)
+//            let viewModel = listViewModel.hList[indexPath.section]
+//            cell.viewModel = viewModel
             return cell
             
         }
@@ -64,6 +82,9 @@ extension HQHViewController {
         cell.titleLabel.text = cellArray?[indexPath.row]["title"] as? String
         cell.englishLabel.text = cellArray?[indexPath.row]["englishTitle"] as? String
         return cell
+    }
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
     }
 }
 

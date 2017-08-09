@@ -10,7 +10,6 @@ import UIKit
 
 class HQHCell: UITableViewCell {
     
-    // MARK: - 私有控件
     lazy var titleLabel: UILabel = UILabel(hq_title: "性别", fontSize: 14, color: UIColor.hq_titleTextColor)
     lazy var englishLabel: UILabel = UILabel(hq_title: "Gender", fontSize: 12, color: UIColor.hq_lightTextColor)
     /// 详解介绍

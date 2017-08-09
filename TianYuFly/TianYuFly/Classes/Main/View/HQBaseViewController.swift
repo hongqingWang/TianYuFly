@@ -107,7 +107,8 @@ extension HQBaseViewController {
         
         tableView?.contentInset = UIEdgeInsets(top: navigationBar.bounds.height,
                                                left: 0,
-                                               bottom: tabBarController?.tabBar.bounds.height ?? 49,
+                                               bottom: 0,
+//                                               bottom: tabBarController?.tabBar.bounds.height ?? 49,
                                                right: 0)
         tableView?.scrollIndicatorInsets = tableView!.contentInset
         // 设置刷新控件

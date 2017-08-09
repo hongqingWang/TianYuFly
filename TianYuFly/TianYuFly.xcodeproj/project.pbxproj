@@ -41,6 +41,9 @@
 		18D82A691F3AE8CE00CD95BC /* HQLogoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D82A681F3AE8CE00CD95BC /* HQLogoutCell.swift */; };
 		18D82A6B1F3AE93F00CD95BC /* HQAvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D82A6A1F3AE93F00CD95BC /* HQAvatarCell.swift */; };
 		18D82A6D1F3AF8C500CD95BC /* HQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D82A6C1F3AF8C500CD95BC /* HQView.swift */; };
+		18D82A6F1F3AFC3D00CD95BC /* HQHListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D82A6E1F3AFC3D00CD95BC /* HQHListViewModel.swift */; };
+		18D82A711F3AFC8600CD95BC /* HQHViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D82A701F3AFC8600CD95BC /* HQHViewModel.swift */; };
+		18D82A731F3AFCEF00CD95BC /* HQHModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D82A721F3AFCEF00CD95BC /* HQHModel.swift */; };
 		18D8CC321F3A00990094E1DA /* trainguide.html in Resources */ = {isa = PBXBuildFile; fileRef = 18D8CC311F3A00990094E1DA /* trainguide.html */; };
 		18D8CC341F3A047A0094E1DA /* HQJCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D8CC331F3A047A0094E1DA /* HQJCell.swift */; };
 		18DDAD151F30CFED00970B8A /* HQBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDAD121F30CFED00970B8A /* HQBaseViewController.swift */; };
@@ -110,6 +113,9 @@
 		18D82A681F3AE8CE00CD95BC /* HQLogoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLogoutCell.swift; sourceTree = "<group>"; };
 		18D82A6A1F3AE93F00CD95BC /* HQAvatarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQAvatarCell.swift; sourceTree = "<group>"; };
 		18D82A6C1F3AF8C500CD95BC /* HQView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQView.swift; sourceTree = "<group>"; };
+		18D82A6E1F3AFC3D00CD95BC /* HQHListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQHListViewModel.swift; sourceTree = "<group>"; };
+		18D82A701F3AFC8600CD95BC /* HQHViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQHViewModel.swift; sourceTree = "<group>"; };
+		18D82A721F3AFCEF00CD95BC /* HQHModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQHModel.swift; sourceTree = "<group>"; };
 		18D8CC311F3A00990094E1DA /* trainguide.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = trainguide.html; sourceTree = "<group>"; };
 		18D8CC331F3A047A0094E1DA /* HQJCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQJCell.swift; sourceTree = "<group>"; };
 		18DDAD121F30CFED00970B8A /* HQBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQBaseViewController.swift; sourceTree = "<group>"; };
@@ -527,6 +533,7 @@
 		18DDACF91F30CF8D00970B8A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18D82A721F3AFCEF00CD95BC /* HQHModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -545,6 +552,8 @@
 		18DDACFB1F30CF8D00970B8A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				18D82A6E1F3AFC3D00CD95BC /* HQHListViewModel.swift */,
+				18D82A701F3AFC8600CD95BC /* HQHViewModel.swift */,
 				18D82A641F3AD9A500CD95BC /* me.json */,
 			);
 			path = ViewModel;
@@ -902,6 +911,7 @@
 				18DDAD1C1F30CFF700970B8A /* HQPartCell.swift in Sources */,
 				18C96E4A1F29C9F600774ACE /* HQButton.swift in Sources */,
 				18DDAD371F30D09A00970B8A /* HQCViewController.swift in Sources */,
+				18D82A6F1F3AFC3D00CD95BC /* HQHListViewModel.swift in Sources */,
 				18D82A6D1F3AF8C500CD95BC /* HQView.swift in Sources */,
 				18DDAD1E1F30CFF700970B8A /* HQPartViewLayout.swift in Sources */,
 				18C96E4C1F29C9F600774ACE /* HQImage.swift in Sources */,
@@ -916,6 +926,7 @@
 				18E91EED1F341D72005B5C66 /* HQADetailController.swift in Sources */,
 				18DDAD321F30D05E00970B8A /* HQACell.swift in Sources */,
 				18DDAD151F30CFED00970B8A /* HQBaseViewController.swift in Sources */,
+				18D82A711F3AFC8600CD95BC /* HQHViewModel.swift in Sources */,
 				18C96E481F29C9F600774ACE /* HQBarButtonItem.swift in Sources */,
 				18DDAD211F30D00700970B8A /* HQDemoViewController.swift in Sources */,
 				1833E7661F30117A0002D886 /* HQUserAccount.swift in Sources */,
@@ -936,6 +947,7 @@
 				18D82A6B1F3AE93F00CD95BC /* HQAvatarCell.swift in Sources */,
 				18DDAD271F30D01E00970B8A /* HQForgetPasswordController.swift in Sources */,
 				18C85F941F38397300D6C620 /* HQCModel.swift in Sources */,
+				18D82A731F3AFCEF00CD95BC /* HQHModel.swift in Sources */,
 				1844466A1F288D24006BF41B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

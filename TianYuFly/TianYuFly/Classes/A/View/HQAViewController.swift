@@ -55,6 +55,10 @@ extension HQAViewController {
         
         return cell
     }
+    /// 重写此方法,为了滚动到最后一行不再请求加载数据
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+    }
 }
 
 // MARK: - UITableViewDelegate

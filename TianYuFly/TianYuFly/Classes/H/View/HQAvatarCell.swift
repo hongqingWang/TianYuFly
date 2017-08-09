@@ -10,6 +10,12 @@ import UIKit
 
 class HQAvatarCell: UITableViewCell {
     
+    var viewModel: HQHViewModel? {
+        didSet {
+//            nameLabel.text = viewModel?.model.idstr
+        }
+    }
+    
     /// 头像
     fileprivate lazy var avatarImageView: UIImageView = UIImageView(hq_imageName: "avatar_default")
     /// 姓名
