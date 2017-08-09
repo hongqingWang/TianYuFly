@@ -8,28 +8,90 @@
 
 import UIKit
 
-class HQHViewController: HQBaseViewController {
+fileprivate let avatarCellId = "HQAvatarCell"
+fileprivate let cellId = "HQHCell"
+fileprivate let logoutCellId = "HQHLogoutCell"
 
+class HQHViewController: HQBaseViewController {
+    
+    /// 标题和英文标题字典数组
+    var cellArray: [[String: AnyObject]]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let jsonPath = Bundle.main.path(forResource: "me.json", ofType: nil)
+        let data = NSData(contentsOfFile: jsonPath!)
+        guard let array = try? JSONSerialization.jsonObject(with: data! as Data, options: []) as? [[String: AnyObject]]
+            else {
+                return
+        }
+        cellArray = array
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+// MARK: - UITabelViewDataSource
+extension HQHViewController {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if section == 0 || section == 2 {
+            return 1
+        } else {
+            return cellArray?.count ?? 0
+        }
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.section == 0 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: avatarCellId, for: indexPath)
+            return cell
+            
+        }
+        if indexPath.section == 2 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: logoutCellId, for: indexPath)
+            return cell
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQHCell
+        cell.titleLabel.text = cellArray?[indexPath.row]["title"] as? String
+        cell.englishLabel.text = cellArray?[indexPath.row]["englishTitle"] as? String
+        return cell
+    }
+}
 
+// MARK: - UITableViewDelegate
+extension HQHViewController {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 74
+        } else if indexPath.section == 2 {
+            return 100
+        } else {
+            return 54
+        }
+    }
+}
+
+// MARK: - UI
+extension HQHViewController {
+    
+    override func setupTableView() {
+        super.setupTableView()
+        
+        tableView?.register(HQAvatarCell.classForCoder(), forCellReuseIdentifier: avatarCellId)
+        tableView?.register(HQHCell.classForCoder(), forCellReuseIdentifier: cellId)
+        tableView?.register(HQLogoutCell.classForCoder(), forCellReuseIdentifier: logoutCellId)
+        tableView?.tableFooterView = UIView()
+        tableView?.showsVerticalScrollIndicator = false
+        tableView?.separatorStyle = .none
+    }
 }

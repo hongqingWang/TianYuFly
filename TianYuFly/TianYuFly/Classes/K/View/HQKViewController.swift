@@ -28,6 +28,6 @@ extension HQKViewController {
         super.setupTableView()
         
         webView.frame = CGRect(x: 0, y: navHeight, width: UIScreen.hq_screenWidth(), height: UIScreen.hq_screenHeight() - navHeight)
-        view.addSubview(webView)
+        view.insertSubview(webView, belowSubview: navigationBar)
     }
 }

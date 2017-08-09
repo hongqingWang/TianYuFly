@@ -1,0 +1,30 @@
+[
+ {
+    "title" : "性别",
+    "englishTitle" : "Gender"
+ },
+ {
+    "title" : "机构名称",
+    "englishTitle" : "Organization name"
+ },
+ {
+    "title" : "职位",
+    "englishTitle" : "Position"
+ },
+ {
+    "title" : "技术级别",
+    "englishTitle" : "Technical level"
+ },
+ {
+    "title" : "手机号码",
+    "englishTitle" : "No."
+ },
+ {
+    "title" : "邮箱地址",
+    "englishTitle" : "E-mail"
+ },
+ {
+    "title" : "更改登录密码",
+    "englishTitle" : "Change your password"
+ }
+ ]
