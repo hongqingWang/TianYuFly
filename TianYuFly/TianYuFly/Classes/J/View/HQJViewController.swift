@@ -47,5 +47,6 @@ extension HQJViewController {
         tableView?.register(HQJCell.classForCoder(), forCellReuseIdentifier: cellId)
         tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellNormalId)
         tableView?.tableFooterView = UIView()
+        tableView?.isScrollEnabled = false
     }
 }
