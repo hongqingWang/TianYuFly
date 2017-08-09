@@ -8,28 +8,46 @@
 
 import UIKit
 
+fileprivate let cellId = "HQICell"
+
 class HQIViewController: HQBaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    /// 标题数组
+    fileprivate lazy var titleArray: Array = ["消息提示音", "清理应用缓存"]
+    /// 英文标题数组
+    fileprivate lazy var englishTitleArray: Array = ["message Sound", "Clear cache"]
+}
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+// MARK: - UITableViewDataSource
+extension HQIViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQICell
+        
+        cell.titleLabel.text = titleArray[indexPath.row]
+        cell.englishLabel.text = englishTitleArray[indexPath.row]
+        
+        if indexPath.row == 0 {
+            cell.messageSwitch.isHidden = false
+        }
+        
+        return cell
     }
-    */
+}
 
+// MARK: - UI
+extension HQIViewController {
+    
+    override func setupTableView() {
+        super.setupTableView()
+        tableView?.register(HQICell.classForCoder(), forCellReuseIdentifier: cellId)
+        tableView?.tableFooterView = UIView()
+        tableView?.isScrollEnabled = false
+        tableView?.rowHeight = 54
+    }
 }

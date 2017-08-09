@@ -35,6 +35,7 @@
 		18C96E501F29C9F600774ACE /* HQTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E2C1F29C9F600774ACE /* HQTextField.swift */; };
 		18C96E511F29C9F600774ACE /* HQNetWorkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E2E1F29C9F600774ACE /* HQNetWorkManager+Extension.swift */; };
 		18C96E521F29C9F600774ACE /* HQNetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96E2F1F29C9F600774ACE /* HQNetWorkManager.swift */; };
+		18D82A411F3A9C5800CD95BC /* HQICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D82A401F3A9C5800CD95BC /* HQICell.swift */; };
 		18D8CC321F3A00990094E1DA /* trainguide.html in Resources */ = {isa = PBXBuildFile; fileRef = 18D8CC311F3A00990094E1DA /* trainguide.html */; };
 		18D8CC341F3A047A0094E1DA /* HQJCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D8CC331F3A047A0094E1DA /* HQJCell.swift */; };
 		18DDAD151F30CFED00970B8A /* HQBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDAD121F30CFED00970B8A /* HQBaseViewController.swift */; };
@@ -98,6 +99,7 @@
 		18C96E2C1F29C9F600774ACE /* HQTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQTextField.swift; sourceTree = "<group>"; };
 		18C96E2E1F29C9F600774ACE /* HQNetWorkManager+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HQNetWorkManager+Extension.swift"; sourceTree = "<group>"; };
 		18C96E2F1F29C9F600774ACE /* HQNetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQNetWorkManager.swift; sourceTree = "<group>"; };
+		18D82A401F3A9C5800CD95BC /* HQICell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQICell.swift; sourceTree = "<group>"; };
 		18D8CC311F3A00990094E1DA /* trainguide.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = trainguide.html; sourceTree = "<group>"; };
 		18D8CC331F3A047A0094E1DA /* HQJCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQJCell.swift; sourceTree = "<group>"; };
 		18DDAD121F30CFED00970B8A /* HQBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQBaseViewController.swift; sourceTree = "<group>"; };
@@ -195,17 +197,17 @@
 			children = (
 				18DDAD0C1F30CF8D00970B8A /* Main */,
 				18DDAD081F30CF8D00970B8A /* Login */,
-				18DDACDC1F30CF8D00970B8A /* A */,
-				18DDACE01F30CF8D00970B8A /* B */,
-				18DDACE41F30CF8D00970B8A /* C */,
-				18DDACE81F30CF8D00970B8A /* D */,
-				18DDACEC1F30CF8D00970B8A /* E */,
-				18DDACF01F30CF8D00970B8A /* F */,
-				18DDACF41F30CF8D00970B8A /* G */,
-				18DDACF81F30CF8D00970B8A /* H */,
-				18DDACFC1F30CF8D00970B8A /* I */,
-				18DDAD001F30CF8D00970B8A /* J */,
-				18DDAD041F30CF8D00970B8A /* K */,
+				18DDACDC1F30CF8D00970B8A /* A(吃住行) */,
+				18DDACE01F30CF8D00970B8A /* B(训练计划) */,
+				18DDACE41F30CF8D00970B8A /* C(消息) */,
+				18DDACE81F30CF8D00970B8A /* D(在线学习) */,
+				18DDACEC1F30CF8D00970B8A /* E(训练记录上传) */,
+				18DDACF01F30CF8D00970B8A /* F(满意度调查) */,
+				18DDACF41F30CF8D00970B8A /* G(考试成绩) */,
+				18DDACF81F30CF8D00970B8A /* H(我的信息) */,
+				18DDACFC1F30CF8D00970B8A /* I(系统设置) */,
+				18DDAD001F30CF8D00970B8A /* J(关于我们) */,
+				18DDAD041F30CF8D00970B8A /* K(训练指南) */,
 				18C96E201F29C9F600774ACE /* Tools */,
 			);
 			path = Classes;
@@ -256,13 +258,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		18DDACDC1F30CF8D00970B8A /* A */ = {
+		18DDACDC1F30CF8D00970B8A /* A(吃住行) */ = {
 			isa = PBXGroup;
 			children = (
 				18DDACDD1F30CF8D00970B8A /* Model */,
 				18DDACDE1F30CF8D00970B8A /* View */,
 				18DDACDF1F30CF8D00970B8A /* ViewModel */,
 			);
+			name = "A(吃住行)";
 			path = A;
 			sourceTree = "<group>";
 		};
@@ -295,13 +298,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		18DDACE01F30CF8D00970B8A /* B */ = {
+		18DDACE01F30CF8D00970B8A /* B(训练计划) */ = {
 			isa = PBXGroup;
 			children = (
 				18DDACE11F30CF8D00970B8A /* Model */,
 				18DDACE21F30CF8D00970B8A /* View */,
 				18DDACE31F30CF8D00970B8A /* ViewModel */,
 			);
+			name = "B(训练计划)";
 			path = B;
 			sourceTree = "<group>";
 		};
@@ -327,13 +331,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		18DDACE41F30CF8D00970B8A /* C */ = {
+		18DDACE41F30CF8D00970B8A /* C(消息) */ = {
 			isa = PBXGroup;
 			children = (
 				18DDACE51F30CF8D00970B8A /* Model */,
 				18DDACE61F30CF8D00970B8A /* View */,
 				18DDACE71F30CF8D00970B8A /* ViewModel */,
 			);
+			name = "C(消息)";
 			path = C;
 			sourceTree = "<group>";
 		};
@@ -365,13 +370,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		18DDACE81F30CF8D00970B8A /* D */ = {
+		18DDACE81F30CF8D00970B8A /* D(在线学习) */ = {
 			isa = PBXGroup;
 			children = (
 				18DDACE91F30CF8D00970B8A /* Model */,
 				18DDACEA1F30CF8D00970B8A /* View */,
 				18DDACEB1F30CF8D00970B8A /* ViewModel */,
 			);
+			name = "D(在线学习)";
 			path = D;
 			sourceTree = "<group>";
 		};
@@ -397,13 +403,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		18DDACEC1F30CF8D00970B8A /* E */ = {
+		18DDACEC1F30CF8D00970B8A /* E(训练记录上传) */ = {
 			isa = PBXGroup;
 			children = (
 				18DDACED1F30CF8D00970B8A /* Model */,
 				18DDACEE1F30CF8D00970B8A /* View */,
 				18DDACEF1F30CF8D00970B8A /* ViewModel */,
 			);
+			name = "E(训练记录上传)";
 			path = E;
 			sourceTree = "<group>";
 		};
@@ -429,13 +436,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		18DDACF01F30CF8D00970B8A /* F */ = {
+		18DDACF01F30CF8D00970B8A /* F(满意度调查) */ = {
 			isa = PBXGroup;
 			children = (
 				18DDACF11F30CF8D00970B8A /* Model */,
 				18DDACF21F30CF8D00970B8A /* View */,
 				18DDACF31F30CF8D00970B8A /* ViewModel */,
 			);
+			name = "F(满意度调查)";
 			path = F;
 			sourceTree = "<group>";
 		};
@@ -461,13 +469,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		18DDACF41F30CF8D00970B8A /* G */ = {
+		18DDACF41F30CF8D00970B8A /* G(考试成绩) */ = {
 			isa = PBXGroup;
 			children = (
 				18DDACF51F30CF8D00970B8A /* Model */,
 				18DDACF61F30CF8D00970B8A /* View */,
 				18DDACF71F30CF8D00970B8A /* ViewModel */,
 			);
+			name = "G(考试成绩)";
 			path = G;
 			sourceTree = "<group>";
 		};
@@ -493,13 +502,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		18DDACF81F30CF8D00970B8A /* H */ = {
+		18DDACF81F30CF8D00970B8A /* H(我的信息) */ = {
 			isa = PBXGroup;
 			children = (
 				18DDACF91F30CF8D00970B8A /* Model */,
 				18DDACFA1F30CF8D00970B8A /* View */,
 				18DDACFB1F30CF8D00970B8A /* ViewModel */,
 			);
+			name = "H(我的信息)";
 			path = H;
 			sourceTree = "<group>";
 		};
@@ -525,13 +535,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		18DDACFC1F30CF8D00970B8A /* I */ = {
+		18DDACFC1F30CF8D00970B8A /* I(系统设置) */ = {
 			isa = PBXGroup;
 			children = (
 				18DDACFD1F30CF8D00970B8A /* Model */,
 				18DDACFE1F30CF8D00970B8A /* View */,
 				18DDACFF1F30CF8D00970B8A /* ViewModel */,
 			);
+			name = "I(系统设置)";
 			path = I;
 			sourceTree = "<group>";
 		};
@@ -546,6 +557,7 @@
 			isa = PBXGroup;
 			children = (
 				18DDAD421F30D0DD00970B8A /* HQIViewController.swift */,
+				18D82A401F3A9C5800CD95BC /* HQICell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -557,13 +569,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		18DDAD001F30CF8D00970B8A /* J */ = {
+		18DDAD001F30CF8D00970B8A /* J(关于我们) */ = {
 			isa = PBXGroup;
 			children = (
 				18DDAD011F30CF8D00970B8A /* Model */,
 				18DDAD021F30CF8D00970B8A /* View */,
 				18DDAD031F30CF8D00970B8A /* ViewModel */,
 			);
+			name = "J(关于我们)";
 			path = J;
 			sourceTree = "<group>";
 		};
@@ -590,13 +603,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		18DDAD041F30CF8D00970B8A /* K */ = {
+		18DDAD041F30CF8D00970B8A /* K(训练指南) */ = {
 			isa = PBXGroup;
 			children = (
 				18DDAD051F30CF8D00970B8A /* Model */,
 				18DDAD061F30CF8D00970B8A /* View */,
 				18DDAD071F30CF8D00970B8A /* ViewModel */,
 			);
+			name = "K(训练指南)";
 			path = K;
 			sourceTree = "<group>";
 		};
@@ -865,6 +879,7 @@
 				18C96E4B1F29C9F600774ACE /* HQColor.swift in Sources */,
 				18DDAD291F30D01E00970B8A /* HQLoginController.swift in Sources */,
 				18DDAD391F30D0A900970B8A /* HQDViewController.swift in Sources */,
+				18D82A411F3A9C5800CD95BC /* HQICell.swift in Sources */,
 				18A896BF1F32B6600064213B /* HQPath.swift in Sources */,
 				18A896C91F3322730064213B /* HQAViewModel.swift in Sources */,
 				18C85F921F380FE500D6C620 /* HQCCell.swift in Sources */,
