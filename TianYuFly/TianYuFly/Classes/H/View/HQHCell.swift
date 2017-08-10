@@ -13,7 +13,7 @@ class HQHCell: UITableViewCell {
     var viewModel: HQHViewModel? {
         didSet {
             
-            titleLabel.text = "\(viewModel?.model.id)"
+            titleLabel.text = "\(String(describing: viewModel?.model.id))"
         }
     }
     

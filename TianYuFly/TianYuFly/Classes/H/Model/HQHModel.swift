@@ -11,7 +11,7 @@ import UIKit
 class HQHModel: NSObject {
 
     /// 头像
-//    var original_pic: String?
+    var bmiddle_pic: String?
     /// 姓名
     var idstr: String?
     /// 用户ID
