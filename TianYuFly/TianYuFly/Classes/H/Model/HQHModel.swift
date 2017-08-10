@@ -12,8 +12,8 @@ class HQHModel: NSObject {
 
     /// 头像
 //    var original_pic: String?
-//    /// 姓名
-//    var idstr: String?
+    /// 姓名
+    var idstr: String?
     /// 用户ID
     var id: Int64 = 0
     /// 性别

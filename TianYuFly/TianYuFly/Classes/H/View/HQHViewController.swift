@@ -18,6 +18,8 @@ class HQHViewController: HQBaseViewController {
     fileprivate var cellArray: [[String: AnyObject]]?
     fileprivate lazy var listViewModel = HQHListViewModel()
     
+    var avatarCell: HQAvatarCell?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +37,11 @@ class HQHViewController: HQBaseViewController {
             
             self.refreshControl?.endRefreshing()
             self.isPullup = false
+            
+            // MARK: - 在这里处理接收到数据的业务逻辑
+            let viewModel = self.listViewModel.hList[0]
+            
+            self.avatarCell?.viewModel = viewModel
             
             if shouldRefresh {
                 self.tableView?.reloadData()
@@ -71,7 +78,10 @@ extension HQHViewController {
         if indexPath.section == 0 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: avatarCellId, for: indexPath) as! HQAvatarCell
-//            print("aaaa\(listViewModel.hList)")
+            
+            avatarCell = cell
+            
+            //            print("aaaa\(listViewModel.hList)")
 //            let viewModel = listViewModel.hList[indexPath.section]
 //            cell.viewModel = viewModel
             return cell

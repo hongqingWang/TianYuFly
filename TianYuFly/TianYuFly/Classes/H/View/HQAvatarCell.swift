@@ -12,7 +12,7 @@ class HQAvatarCell: UITableViewCell {
     
     var viewModel: HQHViewModel? {
         didSet {
-//            nameLabel.text = viewModel?.model.idstr
+            nameLabel.text = viewModel?.model.idstr
         }
     }
     
