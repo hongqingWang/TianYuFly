@@ -34,8 +34,6 @@ class HQHViewController: HQBaseViewController {
     /// 邮箱地址 Label
     fileprivate var mailLabel: UILabel?
     
-    fileprivate var logoutCell: HQLogoutCell?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -73,6 +71,21 @@ class HQHViewController: HQBaseViewController {
     }
 }
 
+// MARK: - Target Action
+extension HQHViewController {
+    
+    @objc fileprivate func logout() {
+        print("logout")
+        
+        guard let filePath = String.hq_appendDocmentDirectory(fileName: "useraccount.json") else {
+            return
+        }
+        try? FileManager.default.removeItem(atPath: filePath)
+
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: HQUserShouldLoginNotification), object: nil)
+    }
+}
+
 // MARK: - UITabelViewDataSource
 extension HQHViewController {
     
@@ -91,6 +104,7 @@ extension HQHViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        // MARK: - 头像、姓名、ID
         if indexPath.section == 0 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: avatarCellId, for: indexPath) as! HQAvatarCell
@@ -98,13 +112,16 @@ extension HQHViewController {
             return cell
             
         }
+        
+        // MARK: - 登出
         if indexPath.section == 2 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: logoutCellId, for: indexPath) as! HQLogoutCell
-            logoutCell = cell
+            cell.logoutButton .addTarget(self, action: #selector(logout), for: .touchUpInside)
             return cell
         }
         
+        // MARK: - 性别、机构名称、职位、技术级别、手机号码、邮箱地址、更改登录密码
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQHCell
         cell.titleLabel.text = cellArray?[indexPath.row]["title"] as? String
         cell.englishLabel.text = cellArray?[indexPath.row]["englishTitle"] as? String

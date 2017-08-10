@@ -10,15 +10,9 @@ import UIKit
 
 class HQHCell: UITableViewCell {
     
-//    var viewModel: HQHViewModel? {
-//        didSet {
-//            
-//            detailLabel.text = "\(String(describing: viewModel?.model.id))"
-//        }
-//    }
-    
     lazy var titleLabel: UILabel = UILabel(hq_title: "性别", fontSize: 14, color: UIColor.hq_titleTextColor)
     lazy var englishLabel: UILabel = UILabel(hq_title: "Gender", fontSize: 12, color: UIColor.hq_lightTextColor)
+    
     /// 详解介绍
     lazy var detailLabel: UILabel = UILabel(hq_title: "男", fontSize: 14, color: UIColor.hq_titleTextColor)
     fileprivate lazy var lineView: UIView = UIView.hq_line
