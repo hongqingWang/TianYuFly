@@ -8,6 +8,8 @@
 
 import UIKit
 
+fileprivate let cellId = "HQGCell"
+
 class HQGViewController: HQBaseViewController {
 
     override func viewDidLoad() {
@@ -15,21 +17,31 @@ class HQGViewController: HQBaseViewController {
 
         // Do any additional setup after loading the view.
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+// MARK: - UITableViewDataSource
+extension HQGViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        
+        return cell
     }
-    */
+}
 
+// MARK: - UI
+extension HQGViewController {
+    
+    override func setupTableView() {
+        super.setupTableView()
+        
+        tableView?.register(HQGCell.classForCoder(), forCellReuseIdentifier: cellId)
+        tableView?.rowHeight = 54
+        tableView?.tableFooterView = UIView()
+    }
 }

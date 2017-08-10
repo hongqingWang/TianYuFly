@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1809C1381F3C9F4D0050F33B /* HQGListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809C1371F3C9F4D0050F33B /* HQGListViewModel.swift */; };
+		1809C13A1F3C9F5E0050F33B /* HQGViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809C1391F3C9F5E0050F33B /* HQGViewModel.swift */; };
+		1809C13E1F3C9F830050F33B /* HQGModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809C13D1F3C9F830050F33B /* HQGModel.swift */; };
+		1809C1401F3C9FC00050F33B /* HQGCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809C13F1F3C9FC00050F33B /* HQGCell.swift */; };
 		1833E7661F30117A0002D886 /* HQUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833E7641F30117A0002D886 /* HQUserAccount.swift */; };
 		1833E7671F30117A0002D886 /* userAccount.json in Resources */ = {isa = PBXBuildFile; fileRef = 1833E7651F30117A0002D886 /* userAccount.json */; };
 		1844466A1F288D24006BF41B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184446691F288D24006BF41B /* AppDelegate.swift */; };
@@ -77,6 +81,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1809C1371F3C9F4D0050F33B /* HQGListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQGListViewModel.swift; sourceTree = "<group>"; };
+		1809C1391F3C9F5E0050F33B /* HQGViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQGViewModel.swift; sourceTree = "<group>"; };
+		1809C13D1F3C9F830050F33B /* HQGModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQGModel.swift; sourceTree = "<group>"; };
+		1809C13F1F3C9FC00050F33B /* HQGCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQGCell.swift; sourceTree = "<group>"; };
 		1833E7641F30117A0002D886 /* HQUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQUserAccount.swift; sourceTree = "<group>"; };
 		1833E7651F30117A0002D886 /* userAccount.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userAccount.json; sourceTree = "<group>"; };
 		184446661F288D24006BF41B /* TianYuFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TianYuFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -500,6 +508,7 @@
 		18DDACF51F30CF8D00970B8A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1809C13D1F3C9F830050F33B /* HQGModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -508,6 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				18DDAD3E1F30D0C900970B8A /* HQGViewController.swift */,
+				1809C13F1F3C9FC00050F33B /* HQGCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -515,6 +525,8 @@
 		18DDACF71F30CF8D00970B8A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1809C1371F3C9F4D0050F33B /* HQGListViewModel.swift */,
+				1809C1391F3C9F5E0050F33B /* HQGViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -904,6 +916,7 @@
 				18C96E4B1F29C9F600774ACE /* HQColor.swift in Sources */,
 				18DDAD291F30D01E00970B8A /* HQLoginController.swift in Sources */,
 				18DDAD391F30D0A900970B8A /* HQDViewController.swift in Sources */,
+				1809C13A1F3C9F5E0050F33B /* HQGViewModel.swift in Sources */,
 				18D82A411F3A9C5800CD95BC /* HQICell.swift in Sources */,
 				18A896BF1F32B6600064213B /* HQPath.swift in Sources */,
 				18A896C91F3322730064213B /* HQAViewModel.swift in Sources */,
@@ -928,6 +941,7 @@
 				18DDAD151F30CFED00970B8A /* HQBaseViewController.swift in Sources */,
 				18D82A711F3AFC8600CD95BC /* HQHViewModel.swift in Sources */,
 				18C96E481F29C9F600774ACE /* HQBarButtonItem.swift in Sources */,
+				1809C1401F3C9FC00050F33B /* HQGCell.swift in Sources */,
 				18DDAD211F30D00700970B8A /* HQDemoViewController.swift in Sources */,
 				1833E7661F30117A0002D886 /* HQUserAccount.swift in Sources */,
 				18DDAD2A1F30D01E00970B8A /* HQRegisteController.swift in Sources */,
@@ -937,6 +951,7 @@
 				18C85F961F3839DD00D6C620 /* HQCViewModel.swift in Sources */,
 				18D82A691F3AE8CE00CD95BC /* HQLogoutCell.swift in Sources */,
 				18A896C71F331ED30064213B /* HQAaModel.swift in Sources */,
+				1809C1381F3C9F4D0050F33B /* HQGListViewModel.swift in Sources */,
 				18DDAD171F30CFED00970B8A /* HQNavigationController.swift in Sources */,
 				18894D571F398F240093BB1C /* HQLoginBaseController.swift in Sources */,
 				18DDAD3F1F30D0C900970B8A /* HQGViewController.swift in Sources */,
@@ -944,6 +959,7 @@
 				18DDAD281F30D01E00970B8A /* HQForgetPasswordSecondController.swift in Sources */,
 				18DDAD351F30D08F00970B8A /* HQBViewController.swift in Sources */,
 				18C96E471F29C9F600774ACE /* HQCommon.swift in Sources */,
+				1809C13E1F3C9F830050F33B /* HQGModel.swift in Sources */,
 				18D82A6B1F3AE93F00CD95BC /* HQAvatarCell.swift in Sources */,
 				18DDAD271F30D01E00970B8A /* HQForgetPasswordController.swift in Sources */,
 				18C85F941F38397300D6C620 /* HQCModel.swift in Sources */,
