@@ -12,10 +12,18 @@ fileprivate let cellId = "HQGCell"
 
 class HQGViewController: HQBaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    fileprivate lazy var listViewModel = HQGListViewModel()
+    
+    override func loadData() {
+        listViewModel.loadData(pullup: self.isPullup) { (isSuccess, shouldRefresh) in
+            
+            self.refreshControl?.endRefreshing()
+            self.isPullup = false
+            
+            if shouldRefresh {
+                self.tableView?.reloadData()
+            }
+        }
     }
 }
 
@@ -23,14 +31,21 @@ class HQGViewController: HQBaseViewController {
 extension HQGViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return listViewModel.gList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQGCell
+        
+        let viewModel = listViewModel.gList[indexPath.row]
+        
+        cell.viewModel = viewModel
         
         return cell
+    }
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
     }
 }
 

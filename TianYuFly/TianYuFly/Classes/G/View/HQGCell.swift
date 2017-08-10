@@ -10,9 +10,22 @@ import UIKit
 
 class HQGCell: UITableViewCell {
 
+    var viewModel: HQGViewModel? {
+        didSet {
+            sujectLabel.text = "考试科目 : \(String(describing: viewModel!.model.idstr))"
+            areaLabel.text = "考试地点 : \(String(describing: viewModel!.model.idstr))"
+            timeLabel.text = "考试时间 : \(String(describing: viewModel!.model.idstr))"
+            resultLabel.text = "考试成绩 : \(String(describing: viewModel!.model.idstr))"
+        }
+    }
+    
+    /// 考试科目
     fileprivate lazy var sujectLabel: UILabel = UILabel(hq_title: "考试科目 : A320ZZZ科目第一次考试", fontSize: 12, color: UIColor.hq_titleTextColor)
+    /// 考试地点
     fileprivate lazy var areaLabel: UILabel = UILabel(hq_title: "考试地点 : 海口XXXX  ", fontSize: 12, color: UIColor.hq_titleTextColor)
+    /// 考试时间
     fileprivate lazy var timeLabel: UILabel = UILabel(hq_title: "考试时间 : 2016-10-XX ", fontSize: 12, color: UIColor.hq_titleTextColor)
+    /// 考试成绩
     fileprivate lazy var resultLabel: UILabel = UILabel(hq_title: "考试成绩 : 合格", fontSize: 12, color: UIColor.hq_titleTextColor)
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {

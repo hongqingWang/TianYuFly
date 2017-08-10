@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+class HQGViewModel: CustomStringConvertible {
+    
+    var model: HQGModel
+    
+    init(model: HQGModel) {
+        self.model = model
+    }
+    
+    var description: String {
+        return model.yy_modelDescription()
+    }
+}
