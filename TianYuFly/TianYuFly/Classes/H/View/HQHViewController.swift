@@ -51,22 +51,27 @@ extension HQHViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+//        return listViewModel.hList.count
+
         if section == 0 || section == 2 {
             return 1
         } else {
             return cellArray?.count ?? 0
+//            return listViewModel.hList.count
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQHCell
+////        print("aaaa\(listViewModel.hList)")
+//        let viewModel = listViewModel.hList[indexPath.row]
+//        cell.viewModel = viewModel
+//        return cell
         if indexPath.section == 0 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: avatarCellId, for: indexPath) as! HQAvatarCell
-//            print(listViewModel.hList)
+//            print("aaaa\(listViewModel.hList)")
 //            let viewModel = listViewModel.hList[indexPath.section]
 //            cell.viewModel = viewModel
             return cell
