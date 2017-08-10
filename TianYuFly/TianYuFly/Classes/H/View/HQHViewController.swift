@@ -18,7 +18,23 @@ class HQHViewController: HQBaseViewController {
     fileprivate var cellArray: [[String: AnyObject]]?
     fileprivate lazy var listViewModel = HQHListViewModel()
     
-    var avatarCell: HQAvatarCell?
+    /// 头像 Cell
+    fileprivate var avatarCell: HQAvatarCell?
+    
+    /// 性别 Label
+    fileprivate var genderLabel: UILabel?
+    /// 机构名称 Label
+    fileprivate var organizationLabel: UILabel?
+    /// 职位 Label
+    fileprivate var positionLabel: UILabel?
+    /// 技术级别 Label
+    fileprivate var techRankLabel: UILabel?
+    /// 手机号码 Label
+    fileprivate var phoneLabel: UILabel?
+    /// 邮箱地址 Label
+    fileprivate var mailLabel: UILabel?
+    
+    fileprivate var logoutCell: HQLogoutCell?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +59,13 @@ class HQHViewController: HQBaseViewController {
             
             self.avatarCell?.viewModel = viewModel
             
+            self.genderLabel?.text = viewModel.model.idstr
+            self.organizationLabel?.text = viewModel.model.text
+            self.positionLabel?.text = viewModel.model.idstr
+            self.techRankLabel?.text = viewModel.model.text
+            self.phoneLabel?.text = viewModel.model.idstr
+            self.mailLabel?.text = viewModel.model.text
+            
             if shouldRefresh {
                 self.tableView?.reloadData()
             }
@@ -58,44 +81,50 @@ extension HQHViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return listViewModel.hList.count
 
         if section == 0 || section == 2 {
             return 1
         } else {
             return cellArray?.count ?? 0
-//            return listViewModel.hList.count
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQHCell
-////        print("aaaa\(listViewModel.hList)")
-//        let viewModel = listViewModel.hList[indexPath.row]
-//        cell.viewModel = viewModel
-//        return cell
         if indexPath.section == 0 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: avatarCellId, for: indexPath) as! HQAvatarCell
-            
             avatarCell = cell
-            
-            //            print("aaaa\(listViewModel.hList)")
-//            let viewModel = listViewModel.hList[indexPath.section]
-//            cell.viewModel = viewModel
             return cell
             
         }
         if indexPath.section == 2 {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: logoutCellId, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: logoutCellId, for: indexPath) as! HQLogoutCell
+            logoutCell = cell
             return cell
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQHCell
         cell.titleLabel.text = cellArray?[indexPath.row]["title"] as? String
         cell.englishLabel.text = cellArray?[indexPath.row]["englishTitle"] as? String
+        
+        if indexPath.row == 0 {
+            genderLabel = cell.detailLabel
+        } else if indexPath.row == 1 {
+            organizationLabel = cell.detailLabel
+        } else if indexPath.row == 2 {
+            positionLabel = cell.detailLabel
+        } else if indexPath.row == 3 {
+            techRankLabel = cell.detailLabel
+        } else if indexPath.row == 4 {
+            phoneLabel = cell.detailLabel
+        } else if indexPath.row == 5 {
+            mailLabel = cell.detailLabel
+        } else {
+            cell.detailLabel.isHidden = true
+        }
+        
         return cell
     }
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

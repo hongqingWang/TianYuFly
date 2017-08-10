@@ -16,7 +16,6 @@ class HQAvatarCell: UITableViewCell {
             avatarImageView.hq_setImage(urlString: viewModel?.model.bmiddle_pic, placeholderImage: UIImage(named: "avatar_default"))
             nameLabel.text = viewModel?.model.idstr
             userIDLabel.text = "\(viewModel!.model.id)"
-//            userIDLabel.text = "\(String(describing: viewModel?.model.id))"
         }
     }
     
