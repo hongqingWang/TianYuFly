@@ -22,10 +22,9 @@ class HQFResearchController: HQBaseViewController {
         
         webView.load(request)
     }
-    
-    
 }
 
+// MARK: - WKNavigationDelegate
 extension HQFResearchController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {

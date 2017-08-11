@@ -105,7 +105,25 @@ extension HQNetWorkManager {
 // MARK: - E(训练记录上传)模块网络请求
 extension HQNetWorkManager {
     
-    
+    func eList(since_id: Int64 = 0, max_id: Int64 = 0, completion: @escaping (_ list: [[String: AnyObject]]?, _ isSuccess: Bool) -> ()) {
+        
+        let urlString = EListUrlString
+        
+        // `swift`中,`Int`可以转换成`Anybject`,但是`Int 64`不行
+        let para = [
+            "since_id": "\(since_id)",
+            "max_id": "\(max_id > 0 ? (max_id - 1) : 0)"
+        ]
+        
+        tokenRequest(URLString: urlString, parameters: para as [String: AnyObject]) { (json, isSuccess) in
+            /*
+             从`json`中获取`statuses`字典数组
+             如果`as?`失败,`result = nil`
+             */
+            let result = (json as AnyObject)["statuses"] as? [[String: AnyObject]]
+            completion(result, isSuccess)
+        }
+    }
 }
 
 // MARK: - F(满意度调查)模块网络请求

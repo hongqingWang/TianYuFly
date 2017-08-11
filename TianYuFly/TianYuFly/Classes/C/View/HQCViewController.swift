@@ -15,6 +15,7 @@ class HQCViewController: HQBaseViewController {
     fileprivate lazy var listViewModel = HQCListViewModel()
     
     override func loadData() {
+        
         listViewModel.loadData(pullup: self.isPullup) { (isSuccess, shouldRefresh) in
             
             self.refreshControl?.endRefreshing()
