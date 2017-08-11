@@ -12,10 +12,10 @@ class HQGCell: UITableViewCell {
 
     var viewModel: HQGViewModel? {
         didSet {
-            sujectLabel.text = "考试科目 : \(String(describing: viewModel!.model.idstr))"
-            areaLabel.text = "考试地点 : \(String(describing: viewModel!.model.idstr))"
-            timeLabel.text = "考试时间 : \(String(describing: viewModel!.model.idstr))"
-            resultLabel.text = "考试成绩 : \(String(describing: viewModel!.model.idstr))"
+            sujectLabel.text = "考试地点 : \(viewModel?.model.idstr ?? "")"
+            areaLabel.text = "考试地点 : \(viewModel?.model.idstr ?? "")"
+            timeLabel.text = "考试时间 : \(viewModel?.model.idstr ?? "")"
+            resultLabel.text = "考试成绩 : \(viewModel?.model.idstr ?? "")"
         }
     }
     
