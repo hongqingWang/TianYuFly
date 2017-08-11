@@ -14,6 +14,7 @@ class HQEModel: NSObject {
     var id: Int64 = 0
     /// 微博信息内容
     var text: String?
+    var idstr: String?
     /// 图片icon
     var bmiddle_pic: String?
     

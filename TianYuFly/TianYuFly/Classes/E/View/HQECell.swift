@@ -12,9 +12,11 @@ class HQECell: UITableViewCell {
     
     var viewModel: HQEViewModel? {
         didSet {
-//            iconImageView.hq_setImage(urlString: viewModel?.model.bmiddle_pic, placeholderImage: UIImage(named: "placeholder_icon"))
-//            titleLabel.text = "\(String(describing: viewModel?.model.id))"
-//            detailLable.text = viewModel?.model.text
+            titleLabel.text = "\(viewModel?.model.idstr ?? "")"
+            timeLabel.text = "训练周期 \(viewModel?.model.idstr ?? "")"
+            certificateButton.setTitle("\(viewModel?.model.idstr ?? "")", for: .normal)
+            resultLable.text = "训练成绩 : \(viewModel?.model.idstr ?? "")"
+            dataButton.setTitle("\(viewModel?.model.idstr ?? "")", for: .normal)
         }
     }
     
@@ -68,11 +70,11 @@ extension HQECell {
             make.left.equalTo(timeLabel)
         }
         certificateButton.snp.makeConstraints { (make) in
-            make.left.equalTo(certificateLable.snp.right).offset(margin / 2)
+            make.left.equalTo(certificateLable.snp.right).offset(margin / 4)
             make.centerY.equalTo(certificateLable)
         }
         resultLable.snp.makeConstraints { (make) in
-            make.centerX.equalTo(self).multipliedBy(1.3)
+            make.centerX.equalTo(self).multipliedBy(1.4)
             make.centerY.equalTo(timeLabel)
         }
         dataLable.snp.makeConstraints { (make) in
