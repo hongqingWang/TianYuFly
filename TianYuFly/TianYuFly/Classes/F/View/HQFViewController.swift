@@ -8,28 +8,56 @@
 
 import UIKit
 
+fileprivate let cellId = "HQFCell"
+
 class HQFViewController: HQBaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    fileprivate lazy var listViewModel = HQFListViewModel()
+    
+    override func loadData() {
+        
+        listViewModel.loadData(pullup: self.isPullup) { (isSuccess, shouldRefresh) in
+            
+            self.refreshControl?.endRefreshing()
+            self.isPullup = false
+            
+            if shouldRefresh {
+                self.tableView?.reloadData()
+            }
+        }
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+// MARK: - TableViewDataSource
+extension HQFViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listViewModel.fList.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQFCell
+        
+        let viewModel = listViewModel.fList[indexPath.row]
+        
+        cell.viewModel = viewModel
+        
+        return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+    }
+}
 
+// MARK: - UI
+extension HQFViewController {
+    
+    override func setupTableView() {
+        super.setupTableView()
+        
+        tableView?.register(HQFCell.classForCoder(), forCellReuseIdentifier: cellId)
+        tableView?.rowHeight = 54
+    }
 }
