@@ -51,6 +51,17 @@ extension HQFViewController {
     }
 }
 
+extension HQFViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let vc = HQFResearchController()
+        vc.navItem.title = "满意度调查"
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
 // MARK: - UI
 extension HQFViewController {
     

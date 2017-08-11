@@ -20,6 +20,7 @@
 		18A1C3781F3D53BD00C9144C /* HQFListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1C3771F3D53BD00C9144C /* HQFListViewModel.swift */; };
 		18A1C37A1F3D53D000C9144C /* HQFViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1C3791F3D53D000C9144C /* HQFViewModel.swift */; };
 		18A1C37C1F3D54E900C9144C /* HQFCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1C37B1F3D54E900C9144C /* HQFCell.swift */; };
+		18A1C37E1F3D59BE00C9144C /* HQFResearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1C37D1F3D59BD00C9144C /* HQFResearchController.swift */; };
 		18A896BF1F32B6600064213B /* HQPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A896BE1F32B6600064213B /* HQPath.swift */; };
 		18A896C31F33199B0064213B /* HQAModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A896C21F33199B0064213B /* HQAModel.swift */; };
 		18A896C71F331ED30064213B /* HQAaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A896C61F331ED30064213B /* HQAaModel.swift */; };
@@ -100,6 +101,7 @@
 		18A1C3771F3D53BD00C9144C /* HQFListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQFListViewModel.swift; sourceTree = "<group>"; };
 		18A1C3791F3D53D000C9144C /* HQFViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQFViewModel.swift; sourceTree = "<group>"; };
 		18A1C37B1F3D54E900C9144C /* HQFCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQFCell.swift; sourceTree = "<group>"; };
+		18A1C37D1F3D59BD00C9144C /* HQFResearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQFResearchController.swift; sourceTree = "<group>"; };
 		18A896BE1F32B6600064213B /* HQPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQPath.swift; sourceTree = "<group>"; };
 		18A896C21F33199B0064213B /* HQAModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQAModel.swift; sourceTree = "<group>"; };
 		18A896C61F331ED30064213B /* HQAaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQAaModel.swift; sourceTree = "<group>"; };
@@ -493,6 +495,7 @@
 			children = (
 				18DDAD3C1F30D0C000970B8A /* HQFViewController.swift */,
 				18A1C37B1F3D54E900C9144C /* HQFCell.swift */,
+				18A1C37D1F3D59BD00C9144C /* HQFResearchController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -960,6 +963,7 @@
 				1833E7661F30117A0002D886 /* HQUserAccount.swift in Sources */,
 				18DDAD2A1F30D01E00970B8A /* HQRegisteController.swift in Sources */,
 				18DDAD471F30D0FB00970B8A /* HQKViewController.swift in Sources */,
+				18A1C37E1F3D59BE00C9144C /* HQFResearchController.swift in Sources */,
 				18C96E4D1F29C9F600774ACE /* HQImageView.swift in Sources */,
 				18DDAD431F30D0DD00970B8A /* HQIViewController.swift in Sources */,
 				18C85F961F3839DD00D6C620 /* HQCViewModel.swift in Sources */,
