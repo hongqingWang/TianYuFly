@@ -25,6 +25,8 @@
 		18A1C3821F3D7F9800C9144C /* HQECell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1C3811F3D7F9800C9144C /* HQECell.swift */; };
 		18A1C3841F3D7FA800C9144C /* HQEListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1C3831F3D7FA800C9144C /* HQEListViewModel.swift */; };
 		18A1C3861F3D7FB600C9144C /* HQEViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1C3851F3D7FB600C9144C /* HQEViewModel.swift */; };
+		18A1C3881F3D93DF00C9144C /* HQELookCertificateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1C3871F3D93DF00C9144C /* HQELookCertificateController.swift */; };
+		18A1C38A1F3D93F100C9144C /* HQEUploadPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1C3891F3D93F100C9144C /* HQEUploadPhotoController.swift */; };
 		18A896BF1F32B6600064213B /* HQPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A896BE1F32B6600064213B /* HQPath.swift */; };
 		18A896C31F33199B0064213B /* HQAModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A896C21F33199B0064213B /* HQAModel.swift */; };
 		18A896C71F331ED30064213B /* HQAaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A896C61F331ED30064213B /* HQAaModel.swift */; };
@@ -110,6 +112,8 @@
 		18A1C3811F3D7F9800C9144C /* HQECell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQECell.swift; sourceTree = "<group>"; };
 		18A1C3831F3D7FA800C9144C /* HQEListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQEListViewModel.swift; sourceTree = "<group>"; };
 		18A1C3851F3D7FB600C9144C /* HQEViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQEViewModel.swift; sourceTree = "<group>"; };
+		18A1C3871F3D93DF00C9144C /* HQELookCertificateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQELookCertificateController.swift; sourceTree = "<group>"; };
+		18A1C3891F3D93F100C9144C /* HQEUploadPhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQEUploadPhotoController.swift; sourceTree = "<group>"; };
 		18A896BE1F32B6600064213B /* HQPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQPath.swift; sourceTree = "<group>"; };
 		18A896C21F33199B0064213B /* HQAModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQAModel.swift; sourceTree = "<group>"; };
 		18A896C61F331ED30064213B /* HQAaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQAaModel.swift; sourceTree = "<group>"; };
@@ -470,6 +474,8 @@
 			children = (
 				18DDAD3A1F30D0B400970B8A /* HQEViewController.swift */,
 				18A1C3811F3D7F9800C9144C /* HQECell.swift */,
+				18A1C3871F3D93DF00C9144C /* HQELookCertificateController.swift */,
+				18A1C3891F3D93F100C9144C /* HQEUploadPhotoController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -928,6 +934,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DDAD2B1F30D01E00970B8A /* HQRegisteSecondController.swift in Sources */,
+				18A1C3881F3D93DF00C9144C /* HQELookCertificateController.swift in Sources */,
+				18A1C38A1F3D93F100C9144C /* HQEUploadPhotoController.swift in Sources */,
 				18D8CC341F3A047A0094E1DA /* HQJCell.swift in Sources */,
 				18DDAD411F30D0D200970B8A /* HQHViewController.swift in Sources */,
 				18C96E511F29C9F600774ACE /* HQNetWorkManager+Extension.swift in Sources */,

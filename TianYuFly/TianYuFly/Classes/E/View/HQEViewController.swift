@@ -29,6 +29,26 @@ class HQEViewController: HQBaseViewController {
 
 }
 
+// MARK: - Target Action
+extension HQEViewController {
+    
+    /// 查看证书
+    @objc fileprivate func lookCertificate() {
+    
+        let vc = HQELookCertificateController()
+        vc.navItem.title = "训练证书"
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    /// 上传图片
+    @objc fileprivate func uploadPhoto() {
+        
+        let vc = HQELookCertificateController()
+        vc.navItem.title = "训练资料详情"
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
 // MARK: - UITableViewDelegate
 extension HQEViewController {
     
@@ -39,6 +59,9 @@ extension HQEViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQECell
+        
+        cell.certificateButton.addTarget(self, action: #selector(lookCertificate), for: .touchUpInside)
+        cell.dataButton.addTarget(self, action: #selector(uploadPhoto), for: .touchUpInside)
         
         let viewModel = listViewModel.eList[indexPath.row]
         

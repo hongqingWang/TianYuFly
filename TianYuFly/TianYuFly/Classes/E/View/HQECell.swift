@@ -26,12 +26,12 @@ class HQECell: UITableViewCell {
     fileprivate lazy var timeLabel: UILabel = UILabel(hq_title: "训练周期 2017-5-1X －2017-5-XX", fontSize: 11, color: UIColor.hq_lightTextColor)
     fileprivate lazy var certificateLable: UILabel = UILabel (hq_title: "训练证书 :", fontSize: 11, color: UIColor.hq_lightTextColor)
     /// 训练证书
-    fileprivate lazy var certificateButton: UIButton = UIButton(hq_title: "已印发", fontSize: 11, normalColor: UIColor.hq_titleTextColor, highlightedColor: UIColor.hq_lightTextColor)
+    lazy var certificateButton: UIButton = UIButton(hq_title: "已印发", fontSize: 11, normalColor: UIColor.hq_titleTextColor, highlightedColor: UIColor.hq_lightTextColor)
     /// 训练成绩
     fileprivate lazy var resultLable: UILabel = UILabel (hq_title: "训练成绩 : XXXXX", fontSize: 11, color: UIColor.hq_lightTextColor)
     fileprivate lazy var dataLable: UILabel = UILabel (hq_title: "训练资料 : ", fontSize: 11, color: UIColor.hq_lightTextColor)
     /// 训练资料
-    fileprivate lazy var dataButton: UIButton = UIButton(hq_title: "未上传，点击上传", fontSize: 11, normalColor: UIColor.hq_titleTextColor, highlightedColor: UIColor.hq_lightTextColor)
+    lazy var dataButton: UIButton = UIButton(hq_title: "未上传，点击上传", fontSize: 11, normalColor: UIColor.hq_titleTextColor, highlightedColor: UIColor.hq_lightTextColor)
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
