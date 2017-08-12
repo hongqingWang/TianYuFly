@@ -10,18 +10,26 @@ import UIKit
 
 class HQELookCertificateView: UIView {
 
-//    var viewModel: HQEViewModel {
-//        didSet {
-//            
-//        }
-//    }
-    // /Users/wanghongqing/Documents/07-天羽/02-Code/TianYuFly/TianYuFly/TianYuFly/Classes/E/View/HQELookCertificateView.swift:25:15: Property 'self.viewModel' not initialized at super.init call
+    var viewModel: HQEViewModel? {
+        didSet {
+            titleLabel.text = viewModel?.model.idstr
+            photoImageView.hq_setNormalImage(urlString: viewModel?.model.bmiddle_pic, placeholderImage: UIImage(named: "avatar_default"))
+        }
+    }
     
+    /// 标题
     fileprivate lazy var titleLabel: UILabel = UILabel(hq_title: "理论训练 A320 初始改装训练证书", fontSize: 14, color: UIColor.hq_titleTextColor)
+    fileprivate lazy var backView: UIView = UIView()
+    /// 证书图片
     fileprivate lazy var photoImageView: UIImageView = UIImageView()
-//    (hq_imageName: "main_part_a")
     
     override init(frame: CGRect) {
+        /*
+         下面这两句话是解决这个问题的
+         Property 'self.viewModel' not initialized at super.init call
+         */
+        let model = HQEModel()
+        viewModel = HQEViewModel(model: model)
         
         super.init(frame: frame)
         
@@ -41,19 +49,23 @@ extension HQELookCertificateView {
     fileprivate func setupUI() {
         
         addSubview(titleLabel)
-        addSubview(photoImageView)
+        addSubview(backView)
+        backView.addSubview(photoImageView)
         
-        photoImageView.backgroundColor = UIColor.red
+        photoImageView.contentMode = .scaleAspectFit
         
         titleLabel.snp.makeConstraints { (make) in
             make.centerX.equalTo(self)
             make.top.equalTo(self).offset(margin)
         }
-        photoImageView.snp.makeConstraints { (make) in
+        backView.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom)
             make.left.equalTo(self)
             make.bottom.equalTo(self)
             make.right.equalTo(self)
+        }
+        photoImageView.snp.makeConstraints { (make) in
+            make.margins.equalTo(backView)
         }
     }
 }

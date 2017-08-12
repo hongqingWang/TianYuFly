@@ -47,4 +47,21 @@ extension UIImageView {
             }
         }
     }
+    
+    /// 隔离`SDWebImage`设置图像函数
+    func hq_setNormalImage(urlString: String?, placeholderImage: UIImage?) {
+        
+        guard let urlString = urlString,
+            let url = URL(string: urlString)
+            else {
+                
+                image = placeholderImage
+                return
+        }
+        
+        sd_setImage(with: url, placeholderImage: placeholderImage, options: []) { [weak self] (image, _, _, _) in
+            
+            self?.image = image
+        }
+    }
 }

@@ -11,6 +11,8 @@ import UIKit
 class HQELookCertificateController: HQBaseViewController {
     
     var viewModel: HQEViewModel?
+    
+    
 }
 
 // MARK: - UI
@@ -22,5 +24,6 @@ extension HQELookCertificateController {
         let newView = HQELookCertificateView()
         newView.frame = CGRect(x: 0, y: navHeight, width: UIScreen.hq_screenWidth(), height: UIScreen.hq_screenHeight() - navHeight)
         view.insertSubview(newView, belowSubview: navigationBar)
+        newView.viewModel = viewModel
     }
 }

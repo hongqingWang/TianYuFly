@@ -33,10 +33,11 @@ class HQEViewController: HQBaseViewController {
 extension HQEViewController {
     
     /// 查看证书
-    @objc fileprivate func lookCertificate() {
+     @objc fileprivate func lookCertificate(btn: UIButton) {
     
         let vc = HQELookCertificateController()
         vc.navItem.title = "训练证书"
+        vc.viewModel = listViewModel.eList[btn.tag]
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -61,6 +62,7 @@ extension HQEViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HQECell
         
         cell.certificateButton.addTarget(self, action: #selector(lookCertificate), for: .touchUpInside)
+        cell.certificateButton.tag = indexPath.row
         cell.dataButton.addTarget(self, action: #selector(uploadPhoto), for: .touchUpInside)
         
         let viewModel = listViewModel.eList[indexPath.row]
