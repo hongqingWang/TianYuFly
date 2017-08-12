@@ -11,8 +11,6 @@ import UIKit
 class HQELookCertificateController: HQBaseViewController {
     
     var viewModel: HQEViewModel?
-    
-    
 }
 
 // MARK: - UI

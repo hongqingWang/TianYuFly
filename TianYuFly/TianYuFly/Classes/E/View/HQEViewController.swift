@@ -44,7 +44,7 @@ extension HQEViewController {
     /// 上传图片
     @objc fileprivate func uploadPhoto() {
         
-        let vc = HQELookCertificateController()
+        let vc = HQEUploadPhotoController()
         vc.navItem.title = "训练资料详情"
         navigationController?.pushViewController(vc, animated: true)
     }
