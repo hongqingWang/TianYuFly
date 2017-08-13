@@ -13,6 +13,7 @@
 		1809C1401F3C9FC00050F33B /* HQGCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809C13F1F3C9FC00050F33B /* HQGCell.swift */; };
 		1833E7661F30117A0002D886 /* HQUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833E7641F30117A0002D886 /* HQUserAccount.swift */; };
 		1833E7671F30117A0002D886 /* userAccount.json in Resources */ = {isa = PBXBuildFile; fileRef = 1833E7651F30117A0002D886 /* userAccount.json */; };
+		183D18A71F40965D00C0F17C /* HQDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D18A61F40965D00C0F17C /* HQDCell.swift */; };
 		1844466A1F288D24006BF41B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184446691F288D24006BF41B /* AppDelegate.swift */; };
 		184446711F288D24006BF41B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184446701F288D24006BF41B /* Assets.xcassets */; };
 		186D9E151F3F39AE00B8CC0E /* HQEUploadPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D9E141F3F39AE00B8CC0E /* HQEUploadPhotoView.swift */; };
@@ -100,6 +101,7 @@
 		1809C13F1F3C9FC00050F33B /* HQGCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQGCell.swift; sourceTree = "<group>"; };
 		1833E7641F30117A0002D886 /* HQUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQUserAccount.swift; sourceTree = "<group>"; };
 		1833E7651F30117A0002D886 /* userAccount.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userAccount.json; sourceTree = "<group>"; };
+		183D18A61F40965D00C0F17C /* HQDCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQDCell.swift; sourceTree = "<group>"; };
 		184446661F288D24006BF41B /* TianYuFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TianYuFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184446691F288D24006BF41B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		184446701F288D24006BF41B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 			isa = PBXGroup;
 			children = (
 				18DDAD381F30D0A900970B8A /* HQDViewController.swift */,
+				183D18A61F40965D00C0F17C /* HQDCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -959,6 +962,7 @@
 				18DDAD291F30D01E00970B8A /* HQLoginController.swift in Sources */,
 				18DDAD391F30D0A900970B8A /* HQDViewController.swift in Sources */,
 				1809C13A1F3C9F5E0050F33B /* HQGViewModel.swift in Sources */,
+				183D18A71F40965D00C0F17C /* HQDCell.swift in Sources */,
 				18D82A411F3A9C5800CD95BC /* HQICell.swift in Sources */,
 				18A896BF1F32B6600064213B /* HQPath.swift in Sources */,
 				18A1C37C1F3D54E900C9144C /* HQFCell.swift in Sources */,

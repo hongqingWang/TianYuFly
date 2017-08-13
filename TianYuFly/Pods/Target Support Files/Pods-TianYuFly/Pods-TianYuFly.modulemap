@@ -1,0 +1,6 @@
+framework module Pods_TianYuFly {
+  umbrella header "Pods-TianYuFly-umbrella.h"
+
+  export *
+  module * { export * }
+}
