@@ -10,26 +10,18 @@ import UIKit
 
 class HQEUploadPhotoController: HQBaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var viewModel: HQEViewModel?
+}
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+// MARK: - UI
+extension HQEUploadPhotoController {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func setupTableView() {
+        super.setupTableView()
+        
+        let newView = HQEUploadPhotoView()
+        newView.frame = CGRect(x: 0, y: navHeight, width: UIScreen.hq_screenWidth(), height: UIScreen.hq_screenHeight() - navHeight)
+        view.insertSubview(newView, belowSubview: navigationBar)
+        newView.viewModel = viewModel
     }
-    */
-
 }

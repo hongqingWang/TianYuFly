@@ -42,10 +42,11 @@ extension HQEViewController {
     }
     
     /// 上传图片
-    @objc fileprivate func uploadPhoto() {
+    @objc fileprivate func uploadPhoto(btn: UIButton) {
         
         let vc = HQEUploadPhotoController()
         vc.navItem.title = "训练资料详情"
+        vc.viewModel = listViewModel.eList[btn.tag]
         navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -64,6 +65,7 @@ extension HQEViewController {
         cell.certificateButton.addTarget(self, action: #selector(lookCertificate), for: .touchUpInside)
         cell.certificateButton.tag = indexPath.row
         cell.dataButton.addTarget(self, action: #selector(uploadPhoto), for: .touchUpInside)
+        cell.certificateButton.tag = indexPath.row
         
         let viewModel = listViewModel.eList[indexPath.row]
         
