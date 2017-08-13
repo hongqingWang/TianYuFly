@@ -38,6 +38,8 @@ let navHeight: CGFloat = 64
 // MARK: - 请求接口 URLString
 /// (C)消息列表
 let CListUrlString = "https://api.weibo.com/2/statuses/home_timeline.json"
+/// (D)在线学习
+let DListUrlString = "https://api.weibo.com/2/statuses/home_timeline.json"
 /// (E)训练记录
 let EListUrlString = "https://api.weibo.com/2/statuses/home_timeline.json"
 /// (F)满意度调查
