@@ -46,6 +46,13 @@ extension HQRegisteController {
     @objc fileprivate func getVerifyCode() {
         verifyCodeButton.timeDown(time: 60)
     }
+    
+//    @objc func textChange() {
+    
+//        if (phoneTextField.text?.characters.count)! > 10 {
+//            verifyCodeButton.isEnabled = true
+//        }
+//    }
 }
 
 // MARK: - UI
@@ -59,9 +66,6 @@ extension HQRegisteController {
         view.addSubview(verifyCodeTextField)
         view.addSubview(verifyCodeButton)
         view.addSubview(submitButton)
-        
-        verifyCodeButton.addTarget(self, action: #selector(getVerifyCode), for: .touchUpInside)
-        submitButton.addTarget(self, action: #selector(submit), for: .touchUpInside)
         
         backImageView.frame = view.bounds
         logoImageView.snp.makeConstraints { (make) in
@@ -86,11 +90,18 @@ extension HQRegisteController {
             make.centerY.equalTo(verifyCodeTextField)
             make.height.equalTo(verifyCodeTextField)
         }
+//        verifyCodeButton.isEnabled = false
         submitButton.snp.makeConstraints { (make) in
             make.left.equalTo(view).offset(margin / 2)
             make.right.equalTo(view).offset(-margin / 2)
             make.height.equalTo(verifyCodeTextField)
             make.centerY.equalTo(view).multipliedBy(1.52)
         }
+        
+        verifyCodeButton.addTarget(self, action: #selector(getVerifyCode), for: .touchUpInside)
+        submitButton.addTarget(self, action: #selector(submit), for: .touchUpInside)
+        
+//        NotificationCenter.default.addObserver(self, selector: #selector(textChange), name: .UITextFieldTextDidChange, object: phoneTextField)
+//        NotificationCenter.default.addObserver(self, selector: #selector(textChange), name: .UITextFieldTextDidChange, object: verifyCodeTextField)
     }
 }

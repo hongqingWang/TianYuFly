@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = HQNavigationController(rootViewController: HQMainViewController())
 //        window?.rootViewController = HQNavigationController(rootViewController: HQLoginController())
         window?.makeKeyAndVisible()
-        
+        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
         setupNotification(application: application)
         
         return true
