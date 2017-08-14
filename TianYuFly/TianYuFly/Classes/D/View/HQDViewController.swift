@@ -49,6 +49,19 @@ extension HQDViewController {
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {}
 }
 
+// MARK: - UITableViewDelegate
+extension HQDViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let vc = HQDLearnViewController()
+        vc.navItem.title = "在线学习"
+        vc.viewModel = listViewModel.dList[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
 // MARK: - UI
 extension HQDViewController {
     

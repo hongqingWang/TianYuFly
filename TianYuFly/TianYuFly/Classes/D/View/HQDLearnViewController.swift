@@ -10,10 +10,12 @@ import UIKit
 
 class HQDLearnViewController: HQBaseViewController {
 
+    var viewModel: HQDViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print(viewModel?.model.idstr)
     }
 
     override func didReceiveMemoryWarning() {
