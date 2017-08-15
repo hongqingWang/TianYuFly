@@ -26,6 +26,7 @@
 		18839E871F42961E005F47A2 /* HQBListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18839E861F42961E005F47A2 /* HQBListViewModel.swift */; };
 		18839E891F4296EC005F47A2 /* HQBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18839E881F4296EC005F47A2 /* HQBViewModel.swift */; };
 		18839E8B1F429A6F005F47A2 /* HQBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18839E8A1F429A6F005F47A2 /* HQBCell.swift */; };
+		18839E8F1F42C9BA005F47A2 /* HQBTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18839E8E1F42C9BA005F47A2 /* HQBTableHeaderView.swift */; };
 		18894D571F398F240093BB1C /* HQLoginBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18894D561F398F240093BB1C /* HQLoginBaseController.swift */; };
 		18A1C3761F3D532900C9144C /* HQFModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1C3751F3D532900C9144C /* HQFModel.swift */; };
 		18A1C3781F3D53BD00C9144C /* HQFListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1C3771F3D53BD00C9144C /* HQFListViewModel.swift */; };
@@ -125,6 +126,7 @@
 		18839E861F42961E005F47A2 /* HQBListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQBListViewModel.swift; sourceTree = "<group>"; };
 		18839E881F4296EC005F47A2 /* HQBViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQBViewModel.swift; sourceTree = "<group>"; };
 		18839E8A1F429A6F005F47A2 /* HQBCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQBCell.swift; sourceTree = "<group>"; };
+		18839E8E1F42C9BA005F47A2 /* HQBTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQBTableHeaderView.swift; sourceTree = "<group>"; };
 		18894D561F398F240093BB1C /* HQLoginBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLoginBaseController.swift; sourceTree = "<group>"; };
 		18A1C3751F3D532900C9144C /* HQFModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQFModel.swift; sourceTree = "<group>"; };
 		18A1C3771F3D53BD00C9144C /* HQFListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQFListViewModel.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 			children = (
 				18DDAD341F30D08F00970B8A /* HQBViewController.swift */,
 				18839E8A1F429A6F005F47A2 /* HQBCell.swift */,
+				18839E8E1F42C9BA005F47A2 /* HQBTableHeaderView.swift */,
 				18839E821F429557005F47A2 /* HQBCalendarView.swift */,
 			);
 			path = View;
@@ -999,6 +1002,7 @@
 				18DDAD1C1F30CFF700970B8A /* HQPartCell.swift in Sources */,
 				18C96E4A1F29C9F600774ACE /* HQButton.swift in Sources */,
 				18A1C3781F3D53BD00C9144C /* HQFListViewModel.swift in Sources */,
+				18839E8F1F42C9BA005F47A2 /* HQBTableHeaderView.swift in Sources */,
 				18839E891F4296EC005F47A2 /* HQBViewModel.swift in Sources */,
 				18DDAD371F30D09A00970B8A /* HQCViewController.swift in Sources */,
 				18D82A6F1F3AFC3D00CD95BC /* HQHListViewModel.swift in Sources */,

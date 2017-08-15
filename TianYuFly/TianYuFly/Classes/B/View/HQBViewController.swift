@@ -9,6 +9,7 @@
 import UIKit
 
 fileprivate let HQBCellId = "HQBCellId"
+fileprivate let HQBTableHeaderViewId = "HQBTableHeaderViewId"
 
 class HQBViewController: HQBaseViewController {
 
@@ -47,6 +48,17 @@ extension HQBViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {}
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: HQBTableHeaderViewId)
+        
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
+    }
 }
 
 // MARK: - UI
@@ -56,5 +68,6 @@ extension HQBViewController {
         super.setupTableView()
         
         tableView?.register(HQBCell.classForCoder(), forCellReuseIdentifier: HQBCellId)
+        tableView?.register(HQBTableHeaderView.classForCoder(), forHeaderFooterViewReuseIdentifier: HQBTableHeaderViewId)
     }
 }
