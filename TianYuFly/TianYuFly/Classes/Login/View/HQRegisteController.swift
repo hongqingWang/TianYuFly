@@ -36,11 +36,13 @@ extension HQRegisteController {
     
     /// 提交
     @objc fileprivate func submit() {
-        print(phoneTextField.text ?? "")
-        print(verifyCodeTextField.text ?? "")
         
-        let vc = HQRegisteSecondController()
-        navigationController?.pushViewController(vc, animated: true)
+        HQNetWorkManager.shared.registe()
+//        print(phoneTextField.text ?? "")
+//        print(verifyCodeTextField.text ?? "")
+//        
+//        let vc = HQRegisteSecondController()
+//        navigationController?.pushViewController(vc, animated: true)
     }
     /// 获取验证码
     @objc fileprivate func getVerifyCode() {

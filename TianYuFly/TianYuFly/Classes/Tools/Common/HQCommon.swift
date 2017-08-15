@@ -37,11 +37,13 @@ let navHeight: CGFloat = 64
 
 // MARK: - 请求接口 URLString
 
-fileprivate let HQBaseUrl = "http://10.28.81.119:8080/skyplumage-webface/mobile/process"
+let HQBaseUrl = "http://10.28.81.119:8080/skyplumage-webface/mobile/process"
 
 /// 获取注册验证码
-let Loginaaa = "APP_ACCOUNT_REGIVALIDATE"
+let LoginRouteCodeString = "APP_ACCOUNT_REGIVALIDATE"
 
+/// (B)训练计划列表
+let BListUrlString = "https://api.weibo.com/2/statuses/home_timeline.json"
 /// (C)消息列表
 let CListUrlString = "https://api.weibo.com/2/statuses/home_timeline.json"
 /// (D)在线学习
