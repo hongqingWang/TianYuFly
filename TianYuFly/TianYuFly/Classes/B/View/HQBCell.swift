@@ -10,8 +10,17 @@ import UIKit
 
 class HQBCell: UITableViewCell {
 
+    var viewModel: HQBViewModel? {
+        didSet {
+            titleLabel.text = viewModel?.model.idstr
+            subTitleLabel.text = viewModel?.model.text
+        }
+    }
+    
+    /// 标题
     fileprivate lazy var titleLabel: UILabel = UILabel(hq_title: "5月16日", fontSize: 14, color: UIColor.hq_titleTextColor)
     fileprivate lazy var detailLabel: UILabel = UILabel(hq_title: "点击查看详情", fontSize: 12, color: UIColor.hq_lightTextColor)
+    /// 副标题
     fileprivate lazy var subTitleLabel: UILabel = UILabel(hq_title: "10:00-12:00 海口 模拟机训练 A330 复训", fontSize: 12, color: UIColor.hq_lightTextColor)
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -32,6 +41,8 @@ extension HQBCell {
         addSubview(titleLabel)
         addSubview(detailLabel)
         addSubview(subTitleLabel)
+        
+        subTitleLabel.numberOfLines = 2
         
         titleLabel.snp.makeConstraints { (make) in
             make.left.equalTo(self).offset(margin)

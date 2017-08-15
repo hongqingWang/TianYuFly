@@ -12,19 +12,36 @@ fileprivate let HQBCellId = "HQBCellId"
 
 class HQBViewController: HQBaseViewController {
 
+    fileprivate lazy var listViewModel = HQBListViewModel()
     
+    override func loadData() {
+        
+        listViewModel.loadData(pullup: self.isPullup) { (isSuccess, shouldRefresh) in
+            
+            self.refreshControl?.endRefreshing()
+            self.isPullup = false
+            
+            if shouldRefresh {
+                self.tableView?.reloadData()
+            }
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
 extension HQBViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return listViewModel.bList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: HQBCellId, for: indexPath) as! HQBCell
+        
+        let viewModel = listViewModel.bList[indexPath.row]
+        
+        cell.viewModel = viewModel
         
         return cell
     }
